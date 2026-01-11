@@ -101,25 +101,25 @@ function melanger(numero)
 							'<input type="checkbox" id="R3" name="A3" value="1">Charge de travail adaptée et effectifs suffisants<br/>',
 							'<input type="checkbox" id="R4" name="A4" value="1">Respect du temps de travail<br/>',
 							'<input type="checkbox" id="R5" name="A5" value="1">Reconnaissance<br/>',
-							'<input type="checkbox" id="R5" name="A6" value="1">Ambiance de travail agréable<br/>',
-							'<input type="checkbox" id="R5" name="A7" value="1">Déconnexion réelle<br/>',
-							'<input type="checkbox" id="R5" name="A8" value="1">Télétravail satisfaisant<br/>',
-							'<input type="checkbox" id="R6" name="B1" value="1">Interrogation sur le sens du travail<br/>',
-							'<input type="checkbox" id="R7" name="B2" value="1">Pressions et contrôles hiérarchiques<br/>',
-							'<input type="checkbox" id="R8" name="B3" value="1">Augmentation du volume de travail<br/>',
-							'<input type="checkbox" id="R9" name="B4" value="1">Pas de prise en compte des heures supplémentaires<br/>',
-							'<input type="checkbox" id="R10" name="B5" value="1">Manque de reconnaissance<br/>',
-							'<input type="checkbox" id="R11" name="B6" value="1">Relations interprofessionnelles dégradées<br/>',
-							'<input type="checkbox" id="R12" name="B7" value="1">Difficulté à se déconnecter<br/>',
-							'<input type="checkbox" id="R13" name="B8" value="1">Télétravail en mode dégradé<br/>',
-							'<input type="checkbox" id="R14" name="C1" value="1">Perte de sens du travail<br/>',
-							'<input type="checkbox" id="R15" name="C2" value="1">Subordination exacerbée, corvéabilité<br/>',
-							'<input type="checkbox" id="R16" name="C3" value="1">Charge de travail surdimensionnée ou sous-dimensionnée<br/>',
-							'<input type="checkbox" id="R17" name="C4" value="1">Dépassement généralisé du temps de travail et travail gris<br/>',
-							'<input type="checkbox" id="R18" name="C5" value="1">Aucune reconnaissance<br/>',
-							'<input type="checkbox" id="R19" name="C6" value="1">Reproches incessants, humiliations, isolement<br/>',
-							'<input type="checkbox" id="R20" name="C7" value="1">Impossibilité à se déconnecter<br/>',
-							'<input type="checkbox" id="R21" name="C8" value="1">Télétravail subi en mode très dégradé<br/>'];
+							'<input type="checkbox" id="R6" name="A6" value="1">Ambiance de travail agréable<br/>',
+							'<input type="checkbox" id="R7" name="A7" value="1">Déconnexion réelle<br/>',
+							'<input type="checkbox" id="R8" name="A8" value="1">Télétravail satisfaisant<br/>',
+							'<input type="checkbox" id="R9" name="B1" value="1">Interrogation sur le sens du travail<br/>',
+							'<input type="checkbox" id="R10" name="B2" value="1">Pressions et contrôles hiérarchiques<br/>',
+							'<input type="checkbox" id="R11" name="B3" value="1">Augmentation du volume de travail<br/>',
+							'<input type="checkbox" id="R12" name="B4" value="1">Pas de prise en compte des heures supplémentaires<br/>',
+							'<input type="checkbox" id="R13" name="B5" value="1">Manque de reconnaissance<br/>',
+							'<input type="checkbox" id="R14" name="B6" value="1">Relations interprofessionnelles dégradées<br/>',
+							'<input type="checkbox" id="R15" name="B7" value="1">Difficulté à se déconnecter<br/>',
+							'<input type="checkbox" id="R16" name="B8" value="1">Télétravail en mode dégradé<br/>',
+							'<input type="checkbox" id="R17" name="C1" value="1">Perte de sens du travail<br/>',
+							'<input type="checkbox" id="R18" name="C2" value="1">Subordination exacerbée, corvéabilité<br/>',
+							'<input type="checkbox" id="R19" name="C3" value="1">Charge de travail surdimensionnée ou sous-dimensionnée<br/>',
+							'<input type="checkbox" id="R20" name="C4" value="1">Dépassement généralisé du temps de travail et travail gris<br/>',
+							'<input type="checkbox" id="R21" name="C5" value="1">Aucune reconnaissance<br/>',
+							'<input type="checkbox" id="R22" name="C6" value="1">Reproches incessants, humiliations, isolement<br/>',
+							'<input type="checkbox" id="R23" name="C7" value="1">Impossibilité à se déconnecter<br/>',
+							'<input type="checkbox" id="R24" name="C8" value="1">Télétravail subi en mode très dégradé<br/>'];
 				suffixe = "-rps";
 			}
 			break;
@@ -170,9 +170,9 @@ function calcul(numero)
             }
             if (A+B+C != 0)
             {
-                var rE = [0,0,0,0,0];
-                var rD = [0,0,0,0,0];
-                var rC = [0,0,0,0,0];                
+                var rA = [0,0,0];
+                var rB = [0,0,0];
+                var rC = [0,0,0];                
                 rA[0] = A;
                 rB[1] = (B>0) ? B+8 : 0;
                 rC[2] = (C>0) ? C+16 : 0;
@@ -229,8 +229,33 @@ function calcul(numero)
                 responsive: true
                 }
                 Plotly.newPlot("rose-encadrant", data, layout, config);
-                break;
+                var restitution = "";
+                var coches = [];
+                var couleur = ["vert","vert","vert","vert","vert","vert","vert","vert","orange","orange","orange","orange","orange","orange","orange","orange","rouge","rouge","rouge","rouge","rouge","rouge","rouge","rouge"];
+                for (var i=0;i<24;i++)
+                {
+                restitution += document.getElementById("E" + (i+1)).outerHTML + document.getElementById("labelE" + (i+1)).outerHTML + "<br>";
+                if (document.getElementById("E" + (i+1)).checked)
+                {
+                    coches[i] = true;
+                }
+                else
+                {
+                    coches[i] = false;
+                }
+                }
+                document.getElementById("form-encadrant").innerHTML = restitution;
+                for (var i=0;i<coches.length;i++)
+                {      
+                if (coches[i] == true)
+                {
+                    document.getElementById("E" + (i+1)).checked = true;
+                }
+                document.getElementById("E" + (i+1)).disabled = true;
+                document.getElementById("labelE" + (i+1)).className = couleur[i];
+                }
             }
+			break;
         case 1:
             // Calcul du violentomètre
             var A = 0;
@@ -399,9 +424,9 @@ function calcul(numero)
             }
             if (A+B+C != 0)
             {
-                var rE = [0,0,0,0,0];
-                var rD = [0,0,0,0,0];
-                var rC = [0,0,0,0,0];                
+                var rA = [0,0,0];
+                var rB = [0,0,0];
+                var rC = [0,0,0];                
                 rA[0] = A;
                 rB[1] = (B>0) ? B+8 : 0;
                 rC[2] = (C>0) ? C+16 : 0;
@@ -458,7 +483,31 @@ function calcul(numero)
                 responsive: true
                 }
                 Plotly.newPlot("rose-rps", data, layout, config);
-                break;
+                var restitution = "";
+                var coches = [];
+                var couleur = ["vert","vert","vert","vert","vert","vert","vert","vert","orange","orange","orange","orange","orange","orange","orange","orange","rouge","rouge","rouge","rouge","rouge","rouge","rouge","rouge"];
+                for (var i=0;i<24;i++)
+                {
+                restitution += document.getElementById("R" + (i+1)).outerHTML + document.getElementById("labelR" + (i+1)).outerHTML + "<br>";
+                if (document.getElementById("R" + (i+1)).checked)
+                {
+                    coches[i] = true;
+                }
+                else
+                {
+                    coches[i] = false;
+                }
+                }
+                document.getElementById("form-rps").innerHTML = restitution;
+                for (var i=0;i<coches.length;i++)
+                {      
+                if (coches[i] == true)
+                {
+                    document.getElementById("R" + (i+1)).checked = true;
+                }
+                document.getElementById("R" + (i+1)).disabled = true;
+                document.getElementById("labelR" + (i+1)).className = couleur[i];
+                }
             }
             break;
         default:
