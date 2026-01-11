@@ -105,3 +105,17 @@ table {
 .subtabcontent {
     display: none;
 }
+.matable {
+    visibility: collapse;
+    border-collapse: collapse;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #cdcccc;
+    color: #cdcccc;
+}
+.matable td {
+    border-collapse: collapse;
+    border: 1px solid #cdcccc;
+    padding: 5px;
+    word-wrap: break-word;
+}
