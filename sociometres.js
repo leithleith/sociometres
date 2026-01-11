@@ -34,84 +34,93 @@ function melanger(numero)
     {
         case 0:
             // Tableau de l'encadrant
-            tableau = ['<input type="checkbox" id="1" name="A1" value="1">Adéquation entre moyens et objectifs du service<br/>',
-                        '<input type="checkbox" id="2" name="A2" value="1">Respect du rôle contributif en comité de direction<br/>',
-                        '<input type="checkbox" id="3" name="A3" value="1">Reconnaissance du rôle d\'encadrant<br/>',
-                        '<input type="checkbox" id="4" name="A4" value="1">Collectif de travail participatif<br/>',
-                        '<input type="checkbox" id="5" name="A5" value="1">Autonomie et confiance pour la gestion quotidienne de l\'équipe<br/>',
-                        '<input type="checkbox" id="6" name="A6" value="1">Echanges et communications hiérarchiques respectueux<br/>',
-                        '<input type="checkbox" id="7" name="A7" value="1">Respect du temps de travail<br/>',
-                        '<input type="checkbox" id="8" name="A8" value="1">Déconnexion réelle<br/>',
-                        '<input type="checkbox" id="9" name="B1" value="1">Remise en cause culpabilisante du fonctionnement du service<br/>',
-                        '<input type="checkbox" id="10" name="B2" value="1">Pas d\'écoute et isolmement en comité de direction<br/>',
-                        '<input type="checkbox" id="11" name="B3" value="1">Personnalisation des difficultés rencontrées<br/>',
-                        '<input type="checkbox" id="12" name="B4" value="1">Défiance des supérieurs, déni des difficultés exprimées<br/>',
-                        '<input type="checkbox" id="13" name="B5" value="1">Consignes paradoxales et contrôle<br/>',
-                        '<input type="checkbox" id="14" name="B6" value="1">Echanges conflictuels avec la hiérarchie<br/>',
-                        '<input type="checkbox" id="15" name="B7" value="1">Travail supplémentaire non pris en compte<br/>',
-                        '<input type="checkbox" id="16" name="B8" value="1">Difficulté de déconnexion<br/>',
-                        '<input type="checkbox" id="17" name="C1" value="1">Inadéquation des moyens face aux objectifs du service<br/>',
-                        '<input type="checkbox" id="18" name="C2" value="1">Dénigrement et diffamation<br/>',
-                        '<input type="checkbox" id="19" name="C3" value="1">Mise sous tutelle et retrait des missions d\'encadrement<br/>',
-                        '<input type="checkbox" id="20" name="C4" value="1">Mise à l\'écart des circuits d\'information<br/>',
-                        '<input type="checkbox" id="21" name="C5" value="1">Extrême surveillance et déstabilisation<br/>',
-                        '<input type="checkbox" id="22" name="C6" value="1">Convocations récurrentes par la hiérarchie, sanctions<br/>',
-                        '<input type="checkbox" id="23" name="C7" value="1">Injonction à la mobilité, déroulement de carrière bloqué<br/>',
-                        '<input type="checkbox" id="24" name="C8" value="1">Exclusion, mise au placard<br/>'];
-            suffixe = "-encadrant";
-            break;
+			if (document.getElementById("form-encadrant").innerHTML == "<h2>Questionnaire</h2>")
+			{
+				tableau = ['<input type="checkbox" id="E1" name="A1" value="1">Adéquation entre moyens et objectifs du service<br/>',
+							'<input type="checkbox" id="E2" name="A2" value="1">Respect du rôle contributif en comité de direction<br/>',
+							'<input type="checkbox" id="E3" name="A3" value="1">Reconnaissance du rôle d\'encadrant<br/>',
+							'<input type="checkbox" id="E4" name="A4" value="1">Collectif de travail participatif<br/>',
+							'<input type="checkbox" id="E5" name="A5" value="1">Autonomie et confiance pour la gestion quotidienne de l\'équipe<br/>',
+							'<input type="checkbox" id="E6" name="A6" value="1">Echanges et communications hiérarchiques respectueux<br/>',
+							'<input type="checkbox" id="E7" name="A7" value="1">Respect du temps de travail<br/>',
+							'<input type="checkbox" id="E8" name="A8" value="1">Déconnexion réelle<br/>',
+							'<input type="checkbox" id="E9" name="B1" value="1">Remise en cause culpabilisante du fonctionnement du service<br/>',
+							'<input type="checkbox" id="E10" name="B2" value="1">Pas d\'écoute et isolmement en comité de direction<br/>',
+							'<input type="checkbox" id="E11" name="B3" value="1">Personnalisation des difficultés rencontrées<br/>',
+							'<input type="checkbox" id="E12" name="B4" value="1">Défiance des supérieurs, déni des difficultés exprimées<br/>',
+							'<input type="checkbox" id="E13" name="B5" value="1">Consignes paradoxales et contrôle<br/>',
+							'<input type="checkbox" id="E14" name="B6" value="1">Echanges conflictuels avec la hiérarchie<br/>',
+							'<input type="checkbox" id="E15" name="B7" value="1">Travail supplémentaire non pris en compte<br/>',
+							'<input type="checkbox" id="E16" name="B8" value="1">Difficulté de déconnexion<br/>',
+							'<input type="checkbox" id="E17" name="C1" value="1">Inadéquation des moyens face aux objectifs du service<br/>',
+							'<input type="checkbox" id="E18" name="C2" value="1">Dénigrement et diffamation<br/>',
+							'<input type="checkbox" id="E19" name="C3" value="1">Mise sous tutelle et retrait des missions d\'encadrement<br/>',
+							'<input type="checkbox" id="E20" name="C4" value="1">Mise à l\'écart des circuits d\'information<br/>',
+							'<input type="checkbox" id="E21" name="C5" value="1">Extrême surveillance et déstabilisation<br/>',
+							'<input type="checkbox" id="E22" name="C6" value="1">Convocations récurrentes par la hiérarchie, sanctions<br/>',
+							'<input type="checkbox" id="E23" name="C7" value="1">Injonction à la mobilité, déroulement de carrière bloqué<br/>',
+							'<input type="checkbox" id="E24" name="C8" value="1">Exclusion, mise au placard<br/>'];
+				suffixe = "-encadrant";
+			}
+			break;
         case 1:
             // Tableau du violentomètre
-            tableau = ['<input type="checkbox" id="1" name="A1" value="1"><label id="label1" for="1">Remarques et critiques acceptées</label><br>',
-                        '<input type="checkbox" id="2" name="A2" value="1"><label id="label2" for="2">Promotions pour les femmes comme pour les hommes</label><br>',
-                        '<input type="checkbox" id="3" name="A3" value="1"><label id="label3" for="3">Travail en confiance et autonomie</label><br>',
-                        '<input type="checkbox" id="4" name="A4" value="1"><label id="label4" for="4">Reconnaissance du travail</label><br>',
-                        '<input type="checkbox" id="5" name="A5" value="1"><label id="label5" for="5">Refus de relations extraprofessionnelles accepté</label><br>',
-                        '<input type="checkbox" id="6" name="B1" value="1"><label id="label6" for="6">Commentaires sur l\'apparence</label><br>',
-                        '<input type="checkbox" id="7" name="B2" value="1"><label id="label7" for="7">Parole coupée systématiquement</label><br>',
-                        '<input type="checkbox" id="8" name="B3" value="1"><label id="label8" for="8">Blague sur les promotions canapé</label><br>',
-                        '<input type="checkbox" id="9" name="B4" value="1"><label id="label9" for="9">Questions indiscrètes insistantes sur la vie privée</label><br>',
-                        '<input type="checkbox" id="10" name="B5" value="1"><label id="label10" for="10">Blagues sexistes sur les blondes</label><br>',
-                        '<input type="checkbox" id="11" name="B6" value="1"><label id="label11" for="11">Evocation de sexualité sans accord</label><br>',
-                        '<input type="checkbox" id="12" name="B7" value="1"><label id="label12" for="12">Mécontentement après refus d\'être raccompagnée</label><br>',
-                        '<input type="checkbox" id="13" name="B8" value="1"><label id="label13" for="13">Recherche systématique d\'être seul avec une femme</label><br>',
-                        '<input type="checkbox" id="14" name="C1" value="1"><label id="label14" for="14">Images à caractère pornographique visibles</label><br>',
-                        '<input type="checkbox" id="15" name="C2" value="1"><label id="label15" for="15">Regards insistants sur la poitrine et les fesses</label><br>',
-                        '<input type="checkbox" id="16" name="C3" value="1"><label id="label16" for="16">SMS ou courriels à caractère sexuel sans accord</label><br>',
-                        '<input type="checkbox" id="17" name="C4" value="1"><label id="label17" for="17">Demande insistante d\'un acte sexuel</label><br>',
-                        '<input type="checkbox" id="18" name="C5" value="1"><label id="label18" for="18">Hostilité liée au refus d\'un acte sexuel</label><br>',
-                        '<input type="checkbox" id="19" name="D1" value="1"><label id="label19" for="19">Menaces professionnelles pour obtenir un acte sexuel</label><br>',
-                        '<input type="checkbox" id="20" name="D2" value="1"><label id="label20" for="20">Baiser forcé ou par surprise</label><br>',
-                        '<input type="checkbox" id="21" name="D3" value="1"><label id="label21" for="21">Toucher les seins, fesses ou cuisses sans consentement</label><br>',
-                        '<input type="checkbox" id="22" name="E1" value="1"><label id="label22" for="22">Fellation ou pénétration forcée</label><br>'];
-            suffixe = "-violentometre";
-            break;
+			if (document.getElementById("form-violentometre").innerHTML == "<h2>Questionnaire</h2>")
+			{
+				tableau = ['<input type="checkbox" id="V1" name="A1" value="1"><label id="labelV1" for="1">Remarques et critiques acceptées</label><br>',
+							'<input type="checkbox" id="V2" name="A2" value="1"><label id="labelV2" for="2">Promotions pour les femmes comme pour les hommes</label><br>',
+							'<input type="checkbox" id="V3" name="A3" value="1"><label id="labelV3" for="3">Travail en confiance et autonomie</label><br>',
+							'<input type="checkbox" id="V4" name="A4" value="1"><label id="labelV4" for="4">Reconnaissance du travail</label><br>',
+							'<input type="checkbox" id="V5" name="A5" value="1"><label id="labelV5" for="5">Refus de relations extraprofessionnelles accepté</label><br>',
+							'<input type="checkbox" id="V6" name="B1" value="1"><label id="labelV6" for="6">Commentaires sur l\'apparence</label><br>',
+							'<input type="checkbox" id="V7" name="B2" value="1"><label id="labelV7" for="7">Parole coupée systématiquement</label><br>',
+							'<input type="checkbox" id="V8" name="B3" value="1"><label id="labelV8" for="8">Blague sur les promotions canapé</label><br>',
+							'<input type="checkbox" id="V9" name="B4" value="1"><label id="labelV9" for="9">Questions indiscrètes insistantes sur la vie privée</label><br>',
+							'<input type="checkbox" id="V10" name="B5" value="1"><label id="labelV10" for="10">Blagues sexistes sur les blondes</label><br>',
+							'<input type="checkbox" id="V11" name="B6" value="1"><label id="labelV11" for="11">Evocation de sexualité sans accord</label><br>',
+							'<input type="checkbox" id="V12" name="B7" value="1"><label id="labelV12" for="12">Mécontentement après refus d\'être raccompagnée</label><br>',
+							'<input type="checkbox" id="V13" name="B8" value="1"><label id="labelV13" for="13">Recherche systématique d\'être seul avec une femme</label><br>',
+							'<input type="checkbox" id="V14" name="C1" value="1"><label id="labelV14" for="14">Images à caractère pornographique visibles</label><br>',
+							'<input type="checkbox" id="V15" name="C2" value="1"><label id="labelV15" for="15">Regards insistants sur la poitrine et les fesses</label><br>',
+							'<input type="checkbox" id="V16" name="C3" value="1"><label id="labelV16" for="16">SMS ou courriels à caractère sexuel sans accord</label><br>',
+							'<input type="checkbox" id="V17" name="C4" value="1"><label id="labelV17" for="17">Demande insistante d\'un acte sexuel</label><br>',
+							'<input type="checkbox" id="V18" name="C5" value="1"><label id="labelV18" for="18">Hostilité liée au refus d\'un acte sexuel</label><br>',
+							'<input type="checkbox" id="V19" name="D1" value="1"><label id="labelV19" for="19">Menaces professionnelles pour obtenir un acte sexuel</label><br>',
+							'<input type="checkbox" id="V20" name="D2" value="1"><label id="labelV20" for="20">Baiser forcé ou par surprise</label><br>',
+							'<input type="checkbox" id="V21" name="D3" value="1"><label id="labelV21" for="21">Toucher les seins, fesses ou cuisses sans consentement</label><br>',
+							'<input type="checkbox" id="V22" name="E1" value="1"><label id="labelV22" for="22">Fellation ou pénétration forcée</label><br>'];
+				suffixe = "-violentometre";
+			}
+			break;
         case 2:
             // Tableau du sociomètre RPS
-            tableau = ['<input type="checkbox" id="1" name="A1" value="1">Je me sens bien au travail<br/>',
-                        '<input type="checkbox" id="2" name="A2" value="1">Je reçois un soutien suffisant de mes collègues<br/>',
-                        '<input type="checkbox" id="3" name="A3" value="1">Je peux compter sur mes collègues en cas de problème<br/>',
-                        '<input type="checkbox" id="4" name="A4" value="1">Je me sens respecté(e) par mes collègues<br/>',
-                        '<input type="checkbox" id="5" name="A5" value="1">Je reçois un soutien suffisant de ma hiérarchie<br/>',
-                        '<input type="checkbox" id="6" name="B1" value="1">Je me sens isolé(e) au travail<br/>',
-                        '<input type="checkbox" id="7" name="B2" value="1">Je me sens rejeté(e) par mes collègues<br/>',
-                        '<input type="checkbox" id="8" name="B3" value="1">Je me sens ignoré(e) par ma hiérarchie<br/>',
-                        '<input type="checkbox" id="9" name="B4" value="1">Mes collègues parlent derrière mon dos<br/>',
-                        '<input type="checkbox" id="10" name="B5" value="1">Ma hiérarchie minimise mes difficultés<br/>',
-                        '<input type="checkbox" id="11" name="B6" value="1">Je subis des critiques injustifiées<br/>',
-                        '<input type="checkbox" id="12" name="B7" value="1">On me met à l\'écart des activités sociales<br/>',
-                        '<input type="checkbox" id="13" name="B8" value="1">On me donne des tâches dévalorisantes<br/>',
-                        '<input type="checkbox" id="14" name="C1" value="1">On me menace de sanctions<br/>',
-                        '<input type="checkbox" id="15" name="C2" value="1">On me ridiculise en public<br/>',
-                        '<input type="checkbox" id="16" name="C3" value="1">On me humilie<br/>',
-                        '<input type="checkbox" id="17" name="C4" value="1">On me traite de manière injuste<br/>',
-                        '<input type="checkbox" id="18" name="C5" value="1">On me fait des blagues humiliantes<br/>',
-                        '<input type="checkbox" id="19" name="C6" value="1">On me met la pression pour que je quitte l\'entreprise<br/>',
-                        '<input type="checkbox" id="20" name="C7" value="1">On me donne des objectifs impossibles à atteindre<br/>',
-                        '<input type="checkbox" id="21" name="C8" value="1">On me prive d\'informations nécessaires à mon travail<br/>',
-                        '<input type="checkbox" id="22" name="C9" value="1">On répand des rumeurs à mon sujet<br/>'];
-            suffixe = "-rps";
-            break;
+			if (document.getElementById("form-rps").innerHTML == "<h2>Questionnaire</h2>")
+			{
+				tableau = ['<input type="checkbox" id="R1" name="A1" value="1">Je me sens bien au travail<br/>',
+							'<input type="checkbox" id="R2" name="A2" value="1">Je reçois un soutien suffisant de mes collègues<br/>',
+							'<input type="checkbox" id="R3" name="A3" value="1">Je peux compter sur mes collègues en cas de problème<br/>',
+							'<input type="checkbox" id="R4" name="A4" value="1">Je me sens respecté(e) par mes collègues<br/>',
+							'<input type="checkbox" id="R5" name="A5" value="1">Je reçois un soutien suffisant de ma hiérarchie<br/>',
+							'<input type="checkbox" id="R6" name="B1" value="1">Je me sens isolé(e) au travail<br/>',
+							'<input type="checkbox" id="R7" name="B2" value="1">Je me sens rejeté(e) par mes collègues<br/>',
+							'<input type="checkbox" id="R8" name="B3" value="1">Je me sens ignoré(e) par ma hiérarchie<br/>',
+							'<input type="checkbox" id="R9" name="B4" value="1">Mes collègues parlent derrière mon dos<br/>',
+							'<input type="checkbox" id="R10" name="B5" value="1">Ma hiérarchie minimise mes difficultés<br/>',
+							'<input type="checkbox" id="R11" name="B6" value="1">Je subis des critiques injustifiées<br/>',
+							'<input type="checkbox" id="R12" name="B7" value="1">On me met à l\'écart des activités sociales<br/>',
+							'<input type="checkbox" id="R13" name="B8" value="1">On me donne des tâches dévalorisantes<br/>',
+							'<input type="checkbox" id="R14" name="C1" value="1">On me menace de sanctions<br/>',
+							'<input type="checkbox" id="R15" name="C2" value="1">On me ridiculise en public<br/>',
+							'<input type="checkbox" id="R16" name="C3" value="1">On me humilie<br/>',
+							'<input type="checkbox" id="R17" name="C4" value="1">On me traite de manière injuste<br/>',
+							'<input type="checkbox" id="R18" name="C5" value="1">On me fait des blagues humiliantes<br/>',
+							'<input type="checkbox" id="R19" name="C6" value="1">On me met la pression pour que je quitte l\'entreprise<br/>',
+							'<input type="checkbox" id="R20" name="C7" value="1">On me donne des objectifs impossibles à atteindre<br/>',
+							'<input type="checkbox" id="R21" name="C8" value="1">On me prive d\'informations nécessaires à mon travail<br/>',
+							'<input type="checkbox" id="R22" name="C9" value="1">On répand des rumeurs à mon sujet<br/>'];
+				suffixe = "-rps";
+			}
+			break;
         default:
             tableau = ['Une erreur s\'est produite. Recharger la page.'];
             break;
@@ -139,9 +148,9 @@ function calcul(numero)
             var C = 0;
             for (i=1;i<25;i++)
             {
-            if (document.getElementById("" + i).checked)
+            if (document.getElementById("E" + i).checked)
             {
-                switch (document.getElementById("" + i).name.charAt(0))
+                switch (document.getElementById("E" + i).name.charAt(0))
                 {
                 case "A":
                     A += 1;
@@ -229,9 +238,9 @@ function calcul(numero)
             var E = 0;
             for (var i=1;i<23;i++)
             {
-                if (document.getElementById("" + i).checked)
+                if (document.getElementById("V" + i).checked)
                 {
-                switch (document.getElementById("" + i).name.charAt(0))
+                switch (document.getElementById("V" + i).name.charAt(0))
                 {
                     case "A":
                     A += 1;
@@ -337,10 +346,10 @@ function calcul(numero)
                 var restitution = "";
                 var coches = [];
                 var couleur = ["vert","vert","vert","vert","vert","jaune","jaune","jaune","jaune","jaune","jaune","jaune","jaune","orange","orange","orange","orange","orange","rouge","rouge","rouge","noir"];
-                for (var i=0;i<tableau.length;i++)
+                for (var i=0;i<22;i++)
                 {
-                restitution += document.getElementById((i+1).toString()).outerHTML + document.getElementById("label" + (i+1).toString()).outerHTML + "<br>";
-                if (document.getElementById((i+1).toString()).checked)
+                restitution += document.getElementById("V" + (i+1)).outerHTML + document.getElementById("labelV" + (i+1)).outerHTML + "<br>";
+                if (document.getElementById("V" + (i+1)).checked)
                 {
                     coches[i] = true;
                 }
@@ -354,15 +363,101 @@ function calcul(numero)
                 {      
                 if (coches[i] == true)
                 {
-                    document.getElementById((i+1).toString()).checked = true;
+                    document.getElementById("V" + (i+1)).checked = true;
                 }
-                document.getElementById((i+1).toString()).disabled = true;
-                document.getElementById("label" + (i+1).toString()).className = couleur[i];
+                document.getElementById("V" + (i+1)).disabled = true;
+                document.getElementById("labelV" + (i+1)).className = couleur[i];
                 }
             }
             break;
         case 2:
             // Calcul du sociomètre RPS
+			var A = 0;
+            var B = 0;
+            var C = 0;
+            for (i=1;i<25;i++)
+            {
+            if (document.getElementById("R" + i).checked)
+            {
+                switch (document.getElementById("R" + i).name.charAt(0))
+                {
+                case "A":
+                    A += 1;
+                    break;
+                case "B":
+                    B += 1;
+                    break;
+                case "C":
+                    C += 1;
+                    break;
+                default:
+                    break;
+                }
+            }
+            }
+            if (A+B+C != 0)
+            {
+                var rE = [0,0,0,0,0];
+                var rD = [0,0,0,0,0];
+                var rC = [0,0,0,0,0];                
+                rA[0] = A;
+                rB[1] = (B>0) ? B+8 : 0;
+                rC[2] = (C>0) ? C+16 : 0;
+                var vtheta = ["Qualité", "Dégradé", "Rupture"];
+                var data = [{
+                r: rA,
+                theta: vtheta,
+                name: "Environnement de travail de qualité",
+                marker: {color: "green"},
+                type: "barpolar",
+                hoverinfo: "name"
+                },
+                {
+                r: rB,
+                theta: vtheta,
+                name: "Environnement de travail dégradé",
+                marker: {color: "orange"},
+                type: "barpolar",
+                hoverinfo: "name"
+                },
+                        {
+                r: rC,
+                theta: vtheta,
+                name: "Environnement de travail de rupture",
+                marker: {color: "red"},
+                type: "barpolar",
+                hoverinfo: "name"
+                }]
+                var layout = {
+                    paper_bgcolor: '#1e1e1e',
+                    font: {size: 14, color: '#cdcccc'},
+                    margin: {
+                    b: 10,
+                    l: 10,
+                    r: 10,
+                    t: 50
+                    },
+                    legend: {
+                    x: 0.2,
+                    y: -0.5
+                    },
+                    showlegend: true,
+                    polar: {
+                    bgcolor: "#d7d9dc",
+                    barmode: "overlay",
+                    bargap: 0,
+                    radialaxis: {ticks: "", showline: false, showticklabels: false},
+                    angularaxis: {direction: "clockwise"}
+                    },
+                    autosize: true
+                }
+                var config = {
+                staticPlot: true,
+                responsive: true
+                }
+                Plotly.newPlot("rose-rps", data, layout, config);
+                break;
+            }
             break;
         default:
             break;

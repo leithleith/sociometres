@@ -21,9 +21,9 @@
     <nav class="tab">
         <button class="tablinks" onclick="opentab(event, 'accueil')">Accueil</button>
         <button class="tablinks" onclick="opentab(event, 'qvt')">QVT</button>
-        <button class="tablinks" onclick="opentab(event, 'violentometre'); melanger(1)">Violentomètre</button>
-        <button class="tablinks" onclick="opentab(event, 'rps'); melanger(2)">Sociomètre RPS</button>
-        <button class="tablinks" onclick="opentab(event, 'encadrant'); melanger(0)">Sociomètre Encadrant</button>
+        <button class="tablinks" onclick="opentab(event, 'violentometre')">Violentomètre</button>
+        <button class="tablinks" onclick="opentab(event, 'rps')">Sociomètre RPS</button>
+        <button class="tablinks" onclick="opentab(event, 'encadrant')">Sociomètre Encadrant</button>
     </nav>
     <main>
         <section id="accueil" class="tabcontent">
@@ -55,7 +55,7 @@
             <p>Environnement pro de qualit&eacute;, sexiste et hostile, harc&egrave;lement sexuel, agression sexuelle, viol ? Faites le test !</p>
             <div id="menu-violentometre" class="tab">
                 <button class="subtablinks" onclick="opensubtab(event, 'ref-violentometre')">R&eacute;f&eacute;rentiel</button>
-                <button class="subtablinks" onclick="opensubtab(event, 'form-violentometre')">Questionnaire</button>
+                <button class="subtablinks" onclick="opensubtab(event, 'form-violentometre'); melanger(1)">Questionnaire</button>
             </div>
             <div id="ref-violentometre" class="subtabcontent">
                 <table>
@@ -83,17 +83,15 @@
                     <tr class="noir"><td>Viol</td><td><ul><li>Fellation ou pénétration forcée</li></ul></td></tr>
                 </table>
             </div>
-            <div id="form-violentometre" class="subtabcontent">
-                <h2>Questionnaire</h2>
-            </div>
-            <div id="rose-violentometre" class="subtabcontent"></div>
+            <div id="form-violentometre" class="subtabcontent"><h2>Questionnaire</h2></div>
+            <div id="rose-violentometre"></div>
         </section>
         <section id="rps" class="tabcontent">
             <h2>Sociomètre RPS</h2>
             <p>Environnement de travail de qualit&eacute;, d&eacute;grad&eacute;, ou de rupture ? Faites le test !</p>
             <div id="menu-rps" class="tab">
                 <button class="subtablinks" onclick="opensubtab(event, 'ref-rps')">R&eacute;f&eacute;rentiel</button>
-                <button class="subtablinks" onclick="opensubtab(event, 'form-rps')">Questionnaire</button>
+                <button class="subtablinks" onclick="opensubtab(event, 'form-rps'); melanger(2)">Questionnaire</button>
             </div>
             <div id="ref-rps" class="subtabcontent">
                 <table>
@@ -106,17 +104,15 @@
                     <tr class="jaune"><td><ul><li>Manque de reconnaissance</li></ul></td></tr>
                 </table>
             </div>
-            <div id="form-rps" class="subtabcontent">
-                <h2>Questionnaire</h2>
-            </div>
-            <div id="rose-rps" class="subtabcontent"></div>
+            <div id="form-rps" class="subtabcontent"><h2>Questionnaire</h2></div>
+            <div id="rose-rps"></div>
         </section>
         <section id="encadrant" class="tabcontent">
             <h2>Sociomètre de l'encadrant</h2>
             <p>Environnement de travail de qualit&eacute;, d&eacute;grad&eacute;, ou de rupture ? Faites le test !</p>
             <div id="menu-encadrant" class="tab">
                 <button class="subtablinks" onclick="opensubtab(event, 'ref-encadrant')">R&eacute;f&eacute;rentiel</button>
-                <button class="subtablinks" onclick="opensubtab(event, 'form-encadrant')">Questionnaire</button>
+                <button class="subtablinks" onclick="opensubtab(event, 'form-encadrant'); melanger(0)">Questionnaire</button>
             </div>
             <div id="ref-encadrant" class="subtabcontent">
                 <table>
@@ -129,10 +125,8 @@
                     <tr class="jaune"><td><ul><li>Manque de reconnaissance</li></ul></td></tr>
                 </table>
             </div>
-            <div id="form-encadrant" class="subtabcontent">
-                <h2>Questionnaire</h2>
-            </div>
-            <div id="rose-encadrant" class="subtabcontent"></div>
+            <div id="form-encadrant" class="subtabcontent"><h2>Questionnaire</h2></div>
+            <div id="rose-encadrant"></div>
         </section>
     </main>
     <footer>
