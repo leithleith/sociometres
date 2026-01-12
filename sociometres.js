@@ -177,55 +177,55 @@ function calcul(numero)
                 rC[2] = (C>0) ? C+16 : 0;
                 var vtheta = ["Qualité", "Dégradé", "Rupture"];
                 var data = [{
-                r: rA,
-                theta: vtheta,
-                name: "Environnement de travail de qualité",
-                marker: {color: "green"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rA,
+					theta: vtheta,
+					name: "Environnement de travail de qualité",
+					marker: {color: "green"},
+					type: "barpolar",
+					hoverinfo: "name"
                 },
                 {
-                r: rB,
-                theta: vtheta,
-                name: "Environnement de travail dégradé",
-                marker: {color: "orange"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rB,
+					theta: vtheta,
+					name: "Environnement de travail dégradé",
+					marker: {color: "orange"},
+					type: "barpolar",
+					hoverinfo: "name"
                 },
                 {
-                r: rC,
-                theta: vtheta,
-                name: "Environnement de travail de rupture",
-                marker: {color: "red"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rC,
+					theta: vtheta,
+					name: "Environnement de travail de rupture",
+					marker: {color: "red"},
+					type: "barpolar",
+					hoverinfo: "name"
                 }]
                 var layout = {
                     paper_bgcolor: '#1e1e1e',
                     font: {size: 14, color: '#cdcccc'},
                     margin: {
-                    b: 10,
-                    l: 10,
-                    r: 10,
-                    t: 50
+						b: 10,
+						l: 10,
+						r: 10,
+						t: 50
                     },
                     legend: {
-                    x: 0.2,
-                    y: -0.5
+						x: 0.2,
+						y: -0.5
                     },
                     showlegend: true,
                     polar: {
-                    bgcolor: "#d7d9dc",
-                    barmode: "overlay",
-                    bargap: 0,
-                    radialaxis: {ticks: "", showline: false, showticklabels: false},
-                    angularaxis: {direction: "clockwise"}
+						bgcolor: "#d7d9dc",
+						barmode: "overlay",
+						bargap: 0,
+						radialaxis: {ticks: "", showline: false, showticklabels: false},
+						angularaxis: {direction: "clockwise"}
                     },
                     autosize: true
                 }
                 var config = {
-                staticPlot: true,
-                responsive: true
+					staticPlot: true,
+					responsive: true
                 }
                 Plotly.newPlot("rose-encadrant", data, layout, config);
                 var restitution = "";
@@ -233,25 +233,25 @@ function calcul(numero)
                 var couleur = ["vert","vert","vert","vert","vert","vert","vert","vert","orange","orange","orange","orange","orange","orange","orange","orange","rouge","rouge","rouge","rouge","rouge","rouge","rouge","rouge"];
                 for (var i=0;i<24;i++)
                 {
-                restitution += document.getElementById("E" + (i+1)).outerHTML + document.getElementById("labelE" + (i+1)).outerHTML + "<br>";
-                if (document.getElementById("E" + (i+1)).checked)
-                {
-                    coches[i] = true;
-                }
-                else
-                {
-                    coches[i] = false;
-                }
+					restitution += document.getElementById("E" + (i+1)).outerHTML + document.getElementById("labelE" + (i+1)).outerHTML + "<br>";
+					if (document.getElementById("E" + (i+1)).checked)
+					{
+						coches[i] = true;
+					}
+					else
+					{
+						coches[i] = false;
+					}
                 }
                 document.getElementById("form-encadrant").innerHTML = restitution;
                 for (var i=0;i<coches.length;i++)
                 {      
-                if (coches[i] == true)
-                {
-                    document.getElementById("E" + (i+1)).checked = true;
-                }
-                document.getElementById("E" + (i+1)).disabled = true;
-                document.getElementById("labelE" + (i+1)).className = couleur[i];
+					if (coches[i] == true)
+					{
+						document.getElementById("E" + (i+1)).checked = true;
+					}
+					document.getElementById("E" + (i+1)).disabled = true;
+					document.getElementById("labelE" + (i+1)).className = couleur[i];
                 }
             }
 			break;
@@ -266,25 +266,25 @@ function calcul(numero)
             {
                 if (document.getElementById("V" + i).checked)
                 {
-                switch (document.getElementById("V" + i).name.charAt(0))
-                {
-                    case "A":
-                    A += 1;
-                    break;
-                    case "B":
-                    B += 1;
-                    break;
-                    case "C":
-                    C += 1;
-                    break;
-                    case "D":
-                    D += 1;
-                    break;
-                    case "E":
-                    E += 1;
-                    break;
-                    default:
-                }
+					switch (document.getElementById("V" + i).name.charAt(0))
+					{
+						case "A":
+						A += 1;
+						break;
+						case "B":
+						B += 1;
+						break;
+						case "C":
+						C += 1;
+						break;
+						case "D":
+						D += 1;
+						break;
+						case "E":
+						E += 1;
+						break;
+						default:
+					}
                 }
             }
             if (A+B+C+D+E != 0)
@@ -301,66 +301,66 @@ function calcul(numero)
                 rE[4] = (E>0) ? E+21 : 0;
                 var vtheta = ["EPS", "EPSH", "HS", "AS", "V"];
                 var data = [{
-                r: rA,
-                theta: vtheta,
-                name: "Environnement pro sain",
-                marker: {color: "green"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rA,
+					theta: vtheta,
+					name: "Environnement pro sain",
+					marker: {color: "green"},
+					type: "barpolar",
+					hoverinfo: "name"
                 },
                 {
-                r: rB,
-                theta: vtheta,
-                name: "Environnement pro sexiste et hostile",
-                marker: {color: "yellow"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rB,
+					theta: vtheta,
+					name: "Environnement pro sexiste et hostile",
+					marker: {color: "yellow"},
+					type: "barpolar",
+					hoverinfo: "name"
                 },
                 {
-                r: rC,
-                theta: vtheta,
-                name: "Harcèlement sexuel",
-                marker: {color: "orange"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rC,
+					theta: vtheta,
+					name: "Harcèlement sexuel",
+					marker: {color: "orange"},
+					type: "barpolar",
+					hoverinfo: "name"
                 },
                 {
-                r: rD,
-                theta: vtheta,
-                name: "Agression sexuelle",
-                marker: {color: "red"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rD,
+					theta: vtheta,
+					name: "Agression sexuelle",
+					marker: {color: "red"},
+					type: "barpolar",
+					hoverinfo: "name"
                 },
                 {
-                r: rE,
-                theta: vtheta,
-                name: "Viol",
-                marker: {color: "black"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rE,
+					theta: vtheta,
+					name: "Viol",
+					marker: {color: "black"},
+					type: "barpolar",
+					hoverinfo: "name"
                 }
                 ];
                 var layout = {
                     paper_bgcolor: '#1e1e1e',
                     font: {size: 14, color: '#cdcccc'},
                     margin: {
-                    b: 10,
-                    l: 10,
-                    r: 10,
-                    t: 50
+						b: 10,
+						l: 10,
+						r: 10,
+						t: 50
                     },
                     legend: {
-                    x: 0.2,
-                    y: -0.5
+						x: 0.2,
+						y: -0.5
                     },
                     showlegend: true,
                     polar: {
-                    bgcolor: "#d7d9dc",
-                    barmode: "overlay",
-                    bargap: 0,
-                    radialaxis: {ticks: "", showline: false, showticklabels: false},
-                    angularaxis: {direction: "clockwise"}
+						bgcolor: "#d7d9dc",
+						barmode: "overlay",
+						bargap: 0,
+						radialaxis: {ticks: "", showline: false, showticklabels: false},
+						angularaxis: {direction: "clockwise"}
                     },
                     autosize: true
                 };
@@ -374,25 +374,25 @@ function calcul(numero)
                 var couleur = ["vert","vert","vert","vert","vert","jaune","jaune","jaune","jaune","jaune","jaune","jaune","jaune","orange","orange","orange","orange","orange","rouge","rouge","rouge","noir"];
                 for (var i=0;i<22;i++)
                 {
-                restitution += document.getElementById("V" + (i+1)).outerHTML + document.getElementById("labelV" + (i+1)).outerHTML + "<br>";
-                if (document.getElementById("V" + (i+1)).checked)
-                {
-                    coches[i] = true;
-                }
-                else
-                {
-                    coches[i] = false;
-                }
+					restitution += document.getElementById("V" + (i+1)).outerHTML + document.getElementById("labelV" + (i+1)).outerHTML + "<br>";
+					if (document.getElementById("V" + (i+1)).checked)
+					{
+						coches[i] = true;
+					}
+					else
+					{
+						coches[i] = false;
+					}
                 }
                 document.getElementById("form-violentometre").innerHTML = restitution;
                 for (var i=0;i<coches.length;i++)
                 {      
-                if (coches[i] == true)
-                {
-                    document.getElementById("V" + (i+1)).checked = true;
-                }
-                document.getElementById("V" + (i+1)).disabled = true;
-                document.getElementById("labelV" + (i+1)).className = couleur[i];
+					if (coches[i] == true)
+					{
+						document.getElementById("V" + (i+1)).checked = true;
+					}
+					document.getElementById("V" + (i+1)).disabled = true;
+					document.getElementById("labelV" + (i+1)).className = couleur[i];
                 }
             }
             break;
@@ -403,23 +403,23 @@ function calcul(numero)
             var C = 0;
             for (i=1;i<25;i++)
             {
-            if (document.getElementById("R" + i).checked)
-            {
-                switch (document.getElementById("R" + i).name.charAt(0))
-                {
-                case "A":
-                    A += 1;
-                    break;
-                case "B":
-                    B += 1;
-                    break;
-                case "C":
-                    C += 1;
-                    break;
-                default:
-                    break;
-                }
-            }
+				if (document.getElementById("R" + i).checked)
+				{
+					switch (document.getElementById("R" + i).name.charAt(0))
+					{
+						case "A":
+							A += 1;
+							break;
+						case "B":
+							B += 1;
+							break;
+						case "C":
+							C += 1;
+							break;
+						default:
+							break;
+					}
+				}
             }
             if (A+B+C != 0)
             {
@@ -431,55 +431,55 @@ function calcul(numero)
                 rC[2] = (C>0) ? C+16 : 0;
                 var vtheta = ["Qualité", "Dégradé", "Rupture"];
                 var data = [{
-                r: rA,
-                theta: vtheta,
-                name: "Environnement de travail de qualité",
-                marker: {color: "green"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rA,
+					theta: vtheta,
+					name: "Environnement de travail de qualité",
+					marker: {color: "green"},
+					type: "barpolar",
+					hoverinfo: "name"
                 },
                 {
-                r: rB,
-                theta: vtheta,
-                name: "Environnement de travail dégradé",
-                marker: {color: "orange"},
-                type: "barpolar",
-                hoverinfo: "name"
+					r: rB,
+					theta: vtheta,
+					name: "Environnement de travail dégradé",
+					marker: {color: "orange"},
+					type: "barpolar",
+					hoverinfo: "name"
                 },
-                        {
-                r: rC,
-                theta: vtheta,
-                name: "Environnement de travail de rupture",
-                marker: {color: "red"},
-                type: "barpolar",
-                hoverinfo: "name"
+				{
+					r: rC,
+					theta: vtheta,
+					name: "Environnement de travail de rupture",
+					marker: {color: "red"},
+					type: "barpolar",
+					hoverinfo: "name"
                 }]
                 var layout = {
                     paper_bgcolor: '#1e1e1e',
                     font: {size: 14, color: '#cdcccc'},
                     margin: {
-                    b: 10,
-                    l: 10,
-                    r: 10,
-                    t: 50
+						b: 10,
+						l: 10,
+						r: 10,
+						t: 50
                     },
                     legend: {
-                    x: 0.2,
-                    y: -0.5
+						x: 0.2,
+						y: -0.5
                     },
                     showlegend: true,
                     polar: {
-                    bgcolor: "#d7d9dc",
-                    barmode: "overlay",
-                    bargap: 0,
-                    radialaxis: {ticks: "", showline: false, showticklabels: false},
-                    angularaxis: {direction: "clockwise"}
+						bgcolor: "#d7d9dc",
+						barmode: "overlay",
+						bargap: 0,
+						radialaxis: {ticks: "", showline: false, showticklabels: false},
+						angularaxis: {direction: "clockwise"}
                     },
                     autosize: true
                 }
                 var config = {
-                staticPlot: true,
-                responsive: true
+					staticPlot: true,
+					responsive: true
                 }
                 Plotly.newPlot("rose-rps", data, layout, config);
                 var restitution = "";
@@ -487,25 +487,25 @@ function calcul(numero)
                 var couleur = ["vert","vert","vert","vert","vert","vert","vert","vert","orange","orange","orange","orange","orange","orange","orange","orange","rouge","rouge","rouge","rouge","rouge","rouge","rouge","rouge"];
                 for (var i=0;i<24;i++)
                 {
-                restitution += document.getElementById("R" + (i+1)).outerHTML + document.getElementById("labelR" + (i+1)).outerHTML + "<br>";
-                if (document.getElementById("R" + (i+1)).checked)
-                {
-                    coches[i] = true;
-                }
-                else
-                {
-                    coches[i] = false;
-                }
+					restitution += document.getElementById("R" + (i+1)).outerHTML + document.getElementById("labelR" + (i+1)).outerHTML + "<br>";
+					if (document.getElementById("R" + (i+1)).checked)
+					{
+						coches[i] = true;
+					}
+					else
+					{
+						coches[i] = false;
+					}
                 }
                 document.getElementById("form-rps").innerHTML = restitution;
                 for (var i=0;i<coches.length;i++)
                 {      
-                if (coches[i] == true)
-                {
-                    document.getElementById("R" + (i+1)).checked = true;
-                }
-                document.getElementById("R" + (i+1)).disabled = true;
-                document.getElementById("labelR" + (i+1)).className = couleur[i];
+					if (coches[i] == true)
+					{
+						document.getElementById("R" + (i+1)).checked = true;
+					}
+					document.getElementById("R" + (i+1)).disabled = true;
+					document.getElementById("labelR" + (i+1)).className = couleur[i];
                 }
             }
             break;
@@ -513,31 +513,6 @@ function calcul(numero)
             break;
     }
 }
-
-// Violentomètre
-
-function couleur(score, categorie)
-{
-  if (score == 0)
-  {
-    return "#d7d9dc";
-  }
-  else
-  {
-    const hachagedefaut = "#d7d9dc";
-    const hachagecategorie = {
-      "V": "black",
-      "A": "red",
-      "H": "orange",
-      "SH": "yellow",
-      "OK": "green"
-    };
-    return hachagecategorie[categorie] || hachagedefaut;
-  }
-}
-
-// QVT
-
 function traiter(flag)
 {
 	document.body.style.cursor="wait";
