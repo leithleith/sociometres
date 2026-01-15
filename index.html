@@ -32,37 +32,32 @@
                 <li>Respectueux de la vie privée et de l'anonymat</li>
                 <li>Bas&eacute;s sur :</li>
                     <ul>
-                        <li>Sociom&egrave;tre de l'encadrant : le marque-page "le Sociom&egrave;tre de l'encadrant" de l'UFICT F&eacute;d&eacute;ration des Services Publics</li>
-                        <li>Violentom&egrave;tre : le r&eacute;f&eacute;rentiel du collectif #NousToutes</li>
-                        <li>Sociom&egrave;tre RPS : le r&eacute;f&eacute;rentiel de l'INRS</li>
-                        <li>QVT & Num&eacute;rique : impl&eacute;mentation des mod&egrave;les Karasek et Siegrist</li>
+                        <li>Sociom&egrave;tre de l'encadrant : <a href="https://www.cgtservicespublics.fr/la-federation/ufict/elections-professionnelles-2022/article/ufict-marque-pages-sociometres-de-l-encadrant-et-des-risques-psycho-sociaux" target="_sociometre">le marque-page "le Sociom&egrave;tre de l'encadrant" de l'UFICT F&eacute;d&eacute;ration des Services Publics</a></li>
+                        <li>Violentom&egrave;tre : <a href="https://www.egalite-professionnelle.cgt.fr/sexisme/" target="_violentometre">le marque-page "le Violentom&egrave;tre" CGT</a></li>
+                        <li>Sociom&egrave;tre RPS : <a href="https://www.cgtservicespublics.fr/la-federation/ufict/elections-professionnelles-2022/article/ufict-marque-pages-sociometres-de-l-encadrant-et-des-risques-psycho-sociaux" target="_rps">le marque-page "le Sociom&egrave;tre RPS" de l'UFICT F&eacute;d&eacute;ration des Services Publics</a></li>
+                        <li>QVT & Num&eacute;rique : <a href="https://lenumeriqueautrement.fr/" target="_qvt">campagne "Construire le Num&eacute;rique Autrement" UGICT CGT</a></li>
                     </ul>
                 <li>Mis à disposition selon les termes de la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a></li>
-                <li><a href="https://github.com/leithleith/sociometres" target="github">Code</a> sous licence MIT dont bibliothèque graphique <a href="https://github.com/plotly/plotly.js" target="plotly">Plotly.js</a></li>
+                <li><a href="https://github.com/leithleith/sociometres" target="github">Code</a> sous licence MIT dont bibliothèque graphique <a href="https://github.com/plotly/plotly.js" target="plotly">Plotly.js</a> modifi&eacute;e</li>
                 <li>Pour toute demande ou remarque : <a href="mailto:contact@ugictcgt.fr?subject=sociometres">contacter l'UGICT CGT</a></li>
             </ul>
         </section>
         <section id="qvt" class="tabcontent">
             <h2>QVT & Num&eacute;rique</h2>
-            <h3>Un outil :</h3>
                 <ul>
-                    <li><a href="https://ugictcgt.fr/" target="_ugict">UGICT-CGT</a></li>
                     <li>Pour l'<a href="https://www.anact.fr/" target="_anact">ANACT</a> et le <a href="https://www.anact.fr/lanact-lance-son-1er-appel-projet-fact-sur-qualite-de-vie-au-travail-et-numerique" target="_fact">FACT</a></li>
                     <li>Dans le cadre de <a href="https://lenumeriqueautrement.fr/" target="_lna">Construire le Num&eacute;rique Autrement</a></li>                    
                     <li><a href="Methodologie-QVTNumerique-UGICT-CGT.pdf" target="_methodo">Méthodologie de Karasek-Siegrist</a></li>
                     <li><a href="Tutoriel-QVTNumerique.pdf" target="_tutoriel">Tutoriel</a></li>
                 </ul>
             <div id="menu-qvt" class="tab">                
-                <button class="subtablinks" onclick="opensubtab(event, 'individuel')">Questionnaire Individuel</button>
+                <button class="subtablinks" onclick="opensubtab(event, 'questionnaireqvt')">Questionnaire Individuel</button>
+                <button class="subtablinks" onclick="opensubtab(event, 'individuel')">Analyse Individuelle</button>
                 <button class="subtablinks" onclick="opensubtab(event, 'groupe')">Analyse d'un Groupe</button>
                 <button class="subtablinks" onclick="opensubtab(event, 'collectif')">Comparaison de Collectifs</button>
                 <button class="subtablinks" onclick="opensubtab(event, 'Messages')">Journal</button>
             </div>
-            <div id="individuel" class="subtabcontent">
-                <h2>Analyse individuelle</h2>
-                <h3>Remplir directement un nouveau questionnaire, ou charger un fichier sauvegardé :</h3>
-                <input type="file" accept=".csv" id="fileToLoad"><button class="boutoncharger" id="chargerindividu" onclick="chargeri()">Charger</button>
-                <hr/>
+            <div id="questionnaireqvt" class="subtabcontent">
                 <h2>A. Niveau des Exigences</h2>
                 <p>1. Je suis constamment press&eacute;-e par le temps &agrave; cause d’une forte charge de travail :
                 <br/>
@@ -418,6 +413,11 @@
                 <button class="boutonQ" id="sauverquestionnaire" onclick="saveTextAsFile()">Sauvegarder</button>
                 <button class="boutonQ" id="traiterquestionnaire" onclick="traiter()">Traiter</button>
                 <button class="boutonQ" id="effacerquestionnaire" onclick="effacer()">Effacer</button>
+            </div>
+            <div id="individuel" class="subtabcontent">
+                <h2>Analyse individuelle</h2>
+                <h3>Charger un fichier sauvegardé :</h3>
+                <input type="file" accept=".csv" id="fileToLoad"><button class="boutoncharger" id="chargerindividu" onclick="chargeri()">Charger</button>
             </div>
             <div id="groupe" class="subtabcontent">
                 <h2>Analyse groupée</h2>

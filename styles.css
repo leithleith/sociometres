@@ -74,10 +74,6 @@ table {
     border: none;
     border-collapse: collapse;
 }
-.cc-icon {
-    display: inline;
-    vertical-align: text-bottom;
-}
 .subtab {
     overflow: hidden;
     border: 1px solid #ccc;
