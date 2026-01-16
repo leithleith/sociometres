@@ -2831,7 +2831,7 @@ function chargerp(flag)
 						{
 							medautonomie = (numbers[middle]).toFixed(2);
 						}
-						numbers = exigences.slice(0).sort((a,b) => a - b);
+						numbers = soutien.slice(0).sort((a,b) => a - b);
   						middle = Math.floor(numbers.length / 2);
 						if (numbers.length % 2 === 0)
 						{
@@ -2841,7 +2841,7 @@ function chargerp(flag)
 						{
 							medsoutien = (numbers[middle]).toFixed(2);
 						}
-						numbers = exigences.slice(0).sort((a,b) => a - b);
+						numbers = reconnaissance.slice(0).sort((a,b) => a - b);
   						middle = Math.floor(numbers.length / 2);
 						if (numbers.length % 2 === 0)
 						{
