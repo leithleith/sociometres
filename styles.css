@@ -47,33 +47,6 @@ button {
 .tabcontent {
     display: none;
 }
-#marquepage {
-    display: none;
-}
-.vert {
-    background-color: green;
-    color: white;
-}
-.jaune {
-    background-color: yellow;
-    color:#555555;
-}
-.orange {
-    background-color: orange;
-    color: white;
-}
-.rouge {
-    background-color: red;
-    color: white;
-}
-.noir {
-    background-color: black;
-    color: white;
-}
-table {
-    border: none;
-    border-collapse: collapse;
-}
 .subtab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -100,6 +73,33 @@ table {
 }
 .subtabcontent {
     display: none;
+}
+#marquepage {
+    display: none;
+}
+.vert {
+    background-color: green;
+    color: white;
+}
+.jaune {
+    background-color: yellow;
+    color:#555555;
+}
+.orange {
+    background-color: orange;
+    color: white;
+}
+.rouge {
+    background-color: red;
+    color: white;
+}
+.noir {
+    background-color: black;
+    color: white;
+}
+table {
+    border: none;
+    border-collapse: collapse;
 }
 .matable {
     visibility: collapse;

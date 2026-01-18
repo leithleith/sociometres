@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure de Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #444;
+        }
+        header {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .menu {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 50px;
+            width: 100%;
+            z-index: 999;
+        }
+        .menu-item {
+            margin: 0 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .menu-item.active {
+            background-color: #444;
+            color: white;
+        }
+        .submenu {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 90px;
+            width: 100%;
+            z-index: 998;
+        }
+        .submenu-item {
+            margin: 0 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .submenu-item.active {
+            background-color: #444;
+            color: white;
+        }
+        .main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            padding: 20px;
+            margin-top: 130px;
+            margin-bottom: 50px;
+        }
+        .main-content {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        En-tête
+    </header>
+    <div class="menu">
+        <div class="menu-item active" data-menu="accueil">Accueil</div>
+        <div class="menu-item" data-menu="qvt">QVT</div>
+        <div class="menu-item" data-menu="rps">RPS</div>
+        <div class="menu-item" data-menu="sociometre">Sociomètre de l'encadrant</div>
+        <div class="menu-item" data-menu="violentometre">Violentomètre</div>
+    </div>
+    <div class="submenu" id="submenu">
+        <!-- Les éléments du sous-menu seront ajoutés dynamiquement via JavaScript -->
+    </div>
+    <div class="main" id="main">
+        <!-- Le contenu principal sera ajouté dynamiquement via JavaScript -->
+    </div>
+    <footer>
+        Pied de page
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            const submenu = document.getElementById('submenu');
+            const main = document.getElementById('main');
+
+            // Fonction pour mettre à jour le sous-menu en fonction de l'onglet sélectionné
+            function updateSubmenu(selectedMenu) {
+                submenu.innerHTML = '';
+                if (selectedMenu === 'accueil') {
+                    main.innerHTML = '<div class="main-content" style="grid-column: 1 / span 3; grid-row: 1 / span 2;">Contenu de l\'accueil</div>';
+                    return;
+                }
+                const submenuItems = ['Questionnaire', 'Analyse individuelle', 'Analyse d\'un groupe', 'Analyse de collectif(s)'];
+                submenuItems.forEach(item => {
+                    const submenuItem = document.createElement('div');
+                    submenuItem.classList.add('submenu-item');
+                    submenuItem.textContent = item;
+                    submenuItem.addEventListener('click', function() {
+                        document.querySelectorAll('.submenu-item').forEach(el => el.classList.remove('active'));
+                        this.classList.add('active');
+                        updateMainContent(selectedMenu, item);
+                    });
+                    submenu.appendChild(submenuItem);
+                });
+                // Sélectionner le premier élément du sous-menu par défaut
+                if (submenu.children.length > 0) {
+                    submenu.children[0].classList.add('active');
+                    updateMainContent(selectedMenu, submenuItems[0]);
+                }
+            }
+
+            // Fonction pour mettre à jour le contenu principal en fonction de l'onglet de sous-menu sélectionné
+            function updateMainContent(menu, submenuItem) {
+                main.innerHTML = '';
+                // Première ligne
+                const questionnaire = document.createElement('div');
+                questionnaire.classList.add('main-content');
+                questionnaire.style.gridColumn = '1';
+                questionnaire.style.gridRow = '1';
+                questionnaire.textContent = `Questionnaire pour ${menu} - ${submenuItem}`;
+                main.appendChild(questionnaire);
+
+                const messages = document.createElement('div');
+                messages.classList.add('main-content');
+                messages.style.gridColumn = '2';
+                messages.style.gridRow = '1';
+                messages.textContent = `Messages pour ${menu} - ${submenuItem}`;
+                main.appendChild(messages);
+
+                // Deuxième ligne
+                const references = document.createElement('div');
+                references.classList.add('main-content');
+                references.style.gridColumn = '1';
+                references.style.gridRow = '2';
+                references.textContent = `Références pour ${menu} - ${submenuItem}`;
+                main.appendChild(references);
+
+                const statistiques = document.createElement('div');
+                statistiques.classList.add('main-content');
+                statistiques.style.gridColumn = '2';
+                statistiques.style.gridRow = '2';
+                statistiques.textContent = `Statistiques pour ${menu} - ${submenuItem}`;
+                main.appendChild(statistiques);
+
+                const graphique1 = document.createElement('div');
+                graphique1.classList.add('main-content');
+                graphique1.style.gridColumn = '3';
+                graphique1.style.gridRow = '1';
+                graphique1.textContent = `Graphique 1 pour ${menu} - ${submenuItem}`;
+                main.appendChild(graphique1);
+
+                const graphique2 = document.createElement('div');
+                graphique2.classList.add('main-content');
+                graphique2.style.gridColumn = '3';
+                graphique2.style.gridRow = '2';
+                graphique2.textContent = `Graphique 2 pour ${menu} - ${submenuItem}`;
+                main.appendChild(graphique2);
+            }
+
+            // Gérer les clics sur les onglets du menu
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(el => el.classList.remove('active'));
+                    this.classList.add('active');
+                    const selectedMenu = this.getAttribute('data-menu');
+                    updateSubmenu(selectedMenu);
+                });
+            });
+
+            // Initialiser avec l'onglet "Accueil" sélectionné par défaut
+            updateSubmenu('accueil');
+        });
+    </script>
+</body>
+</html>
