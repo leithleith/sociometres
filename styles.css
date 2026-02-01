@@ -17,8 +17,39 @@ button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
     background-color: #8b0000;
-    color: #cdcccc;
-    border: 1 solid #cdcccc;
+    color: #cdcccc;    
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #cdcccc;
+    color: #8b0000;
+}
+input[type="file"] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    background-color: #8b0000;
+    color: #cdcccc;    
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+input[type=file]::file-selector-button {
+  margin-right: 10px;
+  border: none;
+  background: #cdcccc;
+  padding: 5px;
+  border-radius: 5px;
+  color: #8b0000;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+input[type=file]::file-selector-button:hover {
+  background: #ffffff;
 }
 .tab {
     overflow: hidden;
