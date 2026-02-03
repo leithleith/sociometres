@@ -14,6 +14,7 @@ header {
     border: 2px solid #8b0000;
     border-radius: 0px 100px 0px 0px;
     width: 100%;
+    z-index: 100;
 }
 footer {
     background-color: #8b0000;
@@ -26,8 +27,9 @@ footer {
     border-radius: 0px 0px 100px 0px;
 }
 main {
-    position: fixed;
-    top: 125px;
+    position: absolute;
+    top: 145px;
+    padding: 5px;
 }
 a {
     color: #cdcccc;
@@ -77,6 +79,7 @@ input[type=file]::file-selector-button:hover {
     position: fixed;
     top: 85px;
     width: 100%;
+    z-index: 100;
  }
 .tab button {
     background-color: inherit;
@@ -106,6 +109,9 @@ input[type=file]::file-selector-button:hover {
     border: 1px solid #ccc;
     background-color: #555555;    
     width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 126px;
  }
 .subtab button {
     background-color: inherit;
@@ -127,9 +133,7 @@ input[type=file]::file-selector-button:hover {
     color: #1e1e1e;
 }
 .subtabcontent {
-    display: none;
-    position: fixed;
-    top: 166px;    
+    display: none; 
 }
 #marquepage {
     display: none;
