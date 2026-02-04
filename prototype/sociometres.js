@@ -1,41 +1,411 @@
-
 const sousmenuaccueil = ``;
-const sousmenuqvt = `<button class="sousmenu" onclick="sousmenu('infoqvt')">A propos</button><button class="sousmenu" onclick="sousmenu('questionnaireqvt')">Questionnaire Individuel</button><button class="sousmenu" onclick="sousmenu('individuel')">Analyse Individuelle</button><button class="sousmenu" onclick="sousmenu('groupe')">Analyse d'un Groupe</button><button class="sousmenu" onclick="sousmenu('collectif')">Comparaison de Collectifs</button>`;
-const sousmenuviolentometre = `<button class="sousmenu" onclick="sousmenu('infoviolentometre')">A propos</button><button class="sousmenu" onclick="sousmenu('ref-violentometre')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('form-violentometre'); melanger(1)">Questionnaire</button>`;
-const sousmenurps = `<button class="sousmenu" onclick="sousmenu('inforps')">A propos</button><button class="sousmenu" onclick="sousmenu('ref-rps')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('form-rps'); melanger(2)">Questionnaire</button>`;
-const sousmenuencadrant = `<button class="sousmenu" onclick="sousmenu('infoencadrant')">A propos</button><button class="sousmenu" onclick="sousmenu('ref-encadrant')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('form-encadrant'); melanger(0)">Questionnaire</button>`;
+const sousmenuqvt = `<button class="sousmenu" onclick="sousmenu('questionnaireqvt')">Questionnaire Individuel</button><button class="sousmenu" onclick="sousmenu('questionnaireindividuel')">Analyse Individuelle</button><button class="sousmenu" onclick="sousmenu('questionnairegroupe')">Analyse d'un Groupe</button><button class="sousmenu" onclick="sousmenu('questionnairecollectif')">Comparaison de Collectifs</button>`;
+const sousmenuviolentometre = `<button class="sousmenu" onclick="sousmenu('referentielviolentometre')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('questionnaireviolentometre'); melanger(1)">Questionnaire</button>`;
+const sousmenurps = `<button class="sousmenu" onclick="sousmenu('referentielrps')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('questionnairerps'); melanger(2)">Questionnaire</button>`;
+const sousmenuencadrant = `<button class="sousmenu" onclick="sousmenu('referentielencadrant')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('questionnaireencadrant'); melanger(0)">Questionnaire</button>`;
+const sousmenuapropos = ``;
 
-const infoaccueil = `<h2>Des outils UGICT CGT :</h2><ul><li>Respectueux de la vie privée et de l'anonymat</li><li>Bas&eacute;s sur :</li><ul><li>Sociom&egrave;tre de l'encadrant : <a href="https://www.cgtservicespublics.fr/la-federation/ufict/elections-professionnelles-2022/article/ufict-marque-pages-sociometres-de-l-encadrant-et-des-risques-psycho-sociaux" target="_sociometre">le marque-page "le Sociom&egrave;tre de l'encadrant" de l'UFICT F&eacute;d&eacute;ration des Services Publics</a></li><li>Violentom&egrave;tre : <a href="https://www.egalite-professionnelle.cgt.fr/sexisme/" target="_violentometre">le marque-page "le Violentom&egrave;tre" CGT</a></li><li>Sociom&egrave;tre RPS : <a href="https://www.cgtservicespublics.fr/la-federation/ufict/elections-professionnelles-2022/article/ufict-marque-pages-sociometres-de-l-encadrant-et-des-risques-psycho-sociaux" target="_rps">le marque-page "le Sociom&egrave;tre RPS" de l'UFICT F&eacute;d&eacute;ration des Services Publics</a></li><li>QVT & Num&eacute;rique : <a href="https://lenumeriqueautrement.fr/" target="_qvt">campagne "Construire le Num&eacute;rique Autrement" UGICT CGT</a></li></ul><li>Mis à disposition selon les termes de la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a></li><li><a href="https://github.com/leithleith/sociometres" target="github">Code</a> sous licence MIT dont bibliothèque graphique <a href="https://github.com/plotly/plotly.js" target="plotly">Plotly.js</a> modifi&eacute;e</li><li>Pour toute demande ou remarque : <a href="mailto:contact@ugictcgt.fr?subject=sociometres">contacter l'UGICT CGT</a></li></ul>`;
+const apropos = `<h2>Des outils UGICT CGT :</h2><ul><li>Respectueux de la vie privée et de l'anonymat</li><li>Bas&eacute;s sur :</li><ul><li>Sociom&egrave;tre de l'encadrant : <a href="https://www.cgtservicespublics.fr/la-federation/ufict/elections-professionnelles-2022/article/ufict-marque-pages-sociometres-de-l-encadrant-et-des-risques-psycho-sociaux" target="_sociometre">le marque-page "le Sociom&egrave;tre de l'encadrant" de l'UFICT F&eacute;d&eacute;ration des Services Publics</a></li><li>Violentom&egrave;tre : <a href="https://www.egalite-professionnelle.cgt.fr/sexisme/" target="_violentometre">le marque-page "le Violentom&egrave;tre" CGT</a></li><li>Sociom&egrave;tre RPS : <a href="https://www.cgtservicespublics.fr/la-federation/ufict/elections-professionnelles-2022/article/ufict-marque-pages-sociometres-de-l-encadrant-et-des-risques-psycho-sociaux" target="_rps">le marque-page "le Sociom&egrave;tre RPS" de l'UFICT F&eacute;d&eacute;ration des Services Publics</a></li><li>QVT & Num&eacute;rique : <a href="https://lenumeriqueautrement.fr/" target="_qvt">campagne "Construire le Num&eacute;rique Autrement" UGICT CGT</a></li><li>Pour l'<a href="https://www.anact.fr/" target="_anact">ANACT</a> et le <a href="https://www.anact.fr/lanact-lance-son-1er-appel-projet-fact-sur-qualite-de-vie-au-travail-et-numerique" target="_fact">FACT</a></li><li><a href="Methodologie-QVTNumerique-UGICT-CGT.pdf" target="_methodo">Méthodologie de Karasek-Siegrist</a></li><li><a href="Tutoriel-QVTNumerique.pdf" target="_tutoriel">Tutoriel</a></li></ul><li>Mis à disposition selon les termes de la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a></li><li><a href="https://github.com/leithleith/sociometres" target="github">Code</a> sous licence MIT dont bibliothèque graphique <a href="https://github.com/plotly/plotly.js" target="plotly">Plotly.js</a> modifi&eacute;e</li><li>Pour toute demande ou remarque : <a href="mailto:contact@ugictcgt.fr?subject=sociometres">contacter l'UGICT CGT</a></li></ul>`;
 
+const questionnaireqvt = `<h2>A. Niveau des Exigences</h2>
+                <p>1. Je suis constamment press&eacute;-e par le temps &agrave; cause d’une forte charge de travail :
+                <br/>
+                <input type="radio" name="A1" value="0" id="A10"/> pas d'accord
+                <input type="radio" name="A1" value="1" id="A11"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A1" value="2" id="A12"/> plut&ocirc;t d'accord
+                <input type="radio" name="A1" value="3" id="A13"/> d'accord
+                </p>
+                <p>2. J’effectue des t&acirc;ches r&eacute;p&eacute;titives dans mon travail :
+                <br/>
+                <input type="radio" name="A2" value="0" id="A20"/> pas d'accord
+                <input type="radio" name="A2" value="1" id="A21"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A2" value="2" id="A22"/> plut&ocirc;t d'accord
+                <input type="radio" name="A2" value="3" id="A23"/> d'accord
+                </p>
+                <p>3. Je trouve le volume des sollicitations raisonnable (nombre de courriels, demandes clients externes ou internes, coll&egrave;gues ou hi&eacute;rarchiques, etc.) :
+                <br/>
+                <input type="radio" name="A3" value="3" id="A30"/> pas d'accord
+                <input type="radio" name="A3" value="2" id="A31"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A3" value="1" id="A32"/> plut&ocirc;t d'accord
+                <input type="radio" name="A3" value="0" id="A33"/> d'accord
+                </p>
+                <p>4. Je suis fr&eacute;quemment interrompu-e et d&eacute;rang&eacute;-e dans mon travail :
+                <br/>
+                <input type="radio" name="A4" value="0" id="A40"/> pas d'accord
+                <input type="radio" name="A4" value="1" id="A41"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A4" value="2" id="A42"/> plut&ocirc;t d'accord
+                <input type="radio" name="A4" value="3" id="A43"/> d'accord
+                </p>
+                <p>5. Je suis souvent contraint-e &agrave; faire des heures suppl&eacute;mentaires :
+                <br/>
+                <input type="radio" name="A5" value="0" id="A50"/> pas d'accord
+                <input type="radio" name="A5" value="1" id="A51"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A5" value="2" id="A52"/> plut&ocirc;t d'accord
+                <input type="radio" name="A5" value="3" id="A53"/> d'accord
+                </p>
+                <p>6. Je suis souvent sollicit&eacute;-e en dehors de mes heures normales de travail :
+                <br/>
+                <input type="radio" name="A6" value="0" id="A60"/> pas d'accord
+                <input type="radio" name="A6" value="1" id="A61"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A6" value="2" id="A62"/> plut&ocirc;t d'accord
+                <input type="radio" name="A6" value="3" id="A63"/> d'accord
+                </p>
+                <p>7. Je traite souvent ma messagerie apr&egrave;s le travail, le soir ou le week end :
+                <br/>
+                <input type="radio" name="A7" value="0" id="A70"/> pas d'accord
+                <input type="radio" name="A7" value="1" id="A71"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A7" value="2" id="A72"/> plut&ocirc;t d'accord
+                <input type="radio" name="A7" value="3" id="A73"/> d'accord
+                </p>
+                <p>8. Je suis soumis &agrave; des al&eacute;as, je reçois des sollicitations et des demandes de plusieurs personnes :
+                <br/>
+                <input type="radio" name="A8" value="0" id="A80"/> pas d'accord
+                <input type="radio" name="A8" value="1" id="A81"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A8" value="2" id="A82"/> plut&ocirc;t d'accord
+                <input type="radio" name="A8" value="3" id="A83"/> d'accord
+                </p>
+                <p>9. J’ai des objectifs atteignables :
+                <br/>
+                <input type="radio" name="A9" value="3" id="A90"/> pas d'accord
+                <input type="radio" name="A9" value="2" id="A91"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A9" value="1" id="A92"/> plut&ocirc;t d'accord
+                <input type="radio" name="A9" value="0" id="A93"/> d'accord
+                </p>
+                <p>10. Je dispose de suffisamment de moyens et de temps pour bien faire mon travail :
+                <br/>
+                <input type="radio" name="A10" value="3" id="A100"/> pas d'accord
+                <input type="radio" name="A10" value="2" id="A101"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A10" value="1" id="A102"/> plut&ocirc;t d'accord
+                <input type="radio" name="A10" value="0" id="A103"/> d'accord
+                </p>
+                <p>11. Avez-vous le sentiment que depuis l’ann&eacute;e derni&egrave;re votre charge de travail a augment&eacute; ?
+                <br/>
+                <input type="radio" name="A11" value="0" id="A110"/> pas d'accord
+                <input type="radio" name="A11" value="1" id="A111"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A11" value="2" id="A112"/> plut&ocirc;t d'accord
+                <input type="radio" name="A11" value="3" id="A113"/> d'accord
+                </p>
+                <p>12. Avez-vous le sentiment que depuis l’ann&eacute;e derni&egrave;re votre temps de travail hebdomadaire a augment&eacute; (en incluant le temps de travail dans les transports, au domicile, etc.) :
+                <br/>
+                <input type="radio" name="A12" value="0" id="A120"/> pas d'accord
+                <input type="radio" name="A12" value="1" id="A121"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="A12" value="2" id="A122"/> plut&ocirc;t d'accord
+                <input type="radio" name="A12" value="3" id="A123"/> d'accord
+                </p>
+                <h3>Commentaires sur le niveau des Exigences :</h3>
+                <textarea name="commentairesExigences" id="commentairesExigences" rows="3" cols="50" maxlength="512"></textarea>
+                <hr/>
+                <h2>B. Degr&eacute; d’Autonomie et &eacute;quilibre vie priv&eacute;e / vie professionnelle</h2>
+                <p>1. J’ai la possibilit&eacute; de discuter, de proposer des alternatives &agrave; ce que l’on me demande sans me mettre en difficult&eacute; :
+                <br/>
+                <input type="radio" name="B1" value="0" id="B10"/> pas d'accord
+                <input type="radio" name="B1" value="1" id="B11"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B1" value="2" id="B12"/> plut&ocirc;t d'accord
+                <input type="radio" name="B1" value="3" id="B13"/> d'accord
+                </p>
+                <p>2. J’ai la possibilit&eacute; de d&eacute;cider l’organisation de mon temps de travail :
+                <br/>
+                <input type="radio" name="B2" value="0" id="B20"/> pas d'accord
+                <input type="radio" name="B2" value="1" id="B21"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B2" value="2" id="B22"/> plut&ocirc;t d'accord
+                <input type="radio" name="B2" value="3" id="B23"/> d'accord
+                </p>
+                <p>3. Je reçois rarement une demande n&eacute;cessitant une r&eacute;ponse imm&eacute;diate :
+                <br/>
+                <input type="radio" name="B3" value="0" id="B30"/> pas d'accord
+                <input type="radio" name="B3" value="1" id="B31"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B3" value="2" id="B32"/> plut&ocirc;t d'accord
+                <input type="radio" name="B3" value="3" id="B33"/> d'accord
+                </p>
+                <p>4. Je passe peu de temps sur le reporting :
+                <br/>
+                <input type="radio" name="B4" value="0" id="B40"/> pas d'accord
+                <input type="radio" name="B4" value="1" id="B41"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B4" value="2" id="B42"/> plut&ocirc;t d'accord
+                <input type="radio" name="B4" value="3" id="B43"/> d'accord
+                </p>
+                <p>5. Les proc&eacute;dures sont complexes :
+                <br/>
+                <input type="radio" name="B5" value="3" id="B50"/> pas d'accord
+                <input type="radio" name="B5" value="2" id="B51"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B5" value="1" id="B52"/> plut&ocirc;t d'accord
+                <input type="radio" name="B5" value="0" id="B53"/> d'accord
+                </p>
+                <p>6. Je dispose de marge de manœuvre pour r&eacute;aliser mon travail :
+                <br/>
+                <input type="radio" name="B6" value="0" id="B60"/> pas d'accord
+                <input type="radio" name="B6" value="1" id="B61"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B6" value="2" id="B62"/> plut&ocirc;t d'accord
+                <input type="radio" name="B6" value="3" id="B63"/> d'accord
+                </p>
+                <p>7. Le SI (Syst&egrave;me d’Information) et les applications professionnelles sont fiables et op&eacute;rationnelles pour mon travail :
+                <br/>
+                <input type="radio" name="B7" value="0" id="B70"/> pas d'accord
+                <input type="radio" name="B7" value="1" id="B71"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B7" value="2" id="B72"/> plut&ocirc;t d'accord
+                <input type="radio" name="B7" value="3" id="B73"/> d'accord
+                </p>
+                <p>8. Les outils num&eacute;riques facilitent mon travail :
+                <br/>
+                <input type="radio" name="B8" value="0" id="B80"/> pas d'accord
+                <input type="radio" name="B8" value="1" id="B81"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B8" value="2" id="B82"/> plut&ocirc;t d'accord
+                <input type="radio" name="B8" value="3" id="B83"/> d'accord
+                </p>
+                <p>9. Je peux facilement suivre les formations utiles &agrave; mon travail :
+                <br/>
+                <input type="radio" name="B9" value="0" id="B90"/> pas d'accord
+                <input type="radio" name="B9" value="1" id="B91"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B9" value="2" id="B92"/> plut&ocirc;t d'accord
+                <input type="radio" name="B9" value="3" id="B93"/> d'accord
+                </p>
+                <p>10 Je me forme sur des sujets professionnels sur mon temps personnel :
+                <br/>
+                <input type="radio" name="B10" value="3" id="B100"/> pas d'accord
+                <input type="radio" name="B10" value="2" id="B101"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B10" value="1" id="B102"/> plut&ocirc;t d'accord
+                <input type="radio" name="B10" value="0" id="B103"/> d'accord
+                </p>
+                <p>11 Je maîtrise les moments et les lieux où je juge n&eacute;cessaire de me d&eacute;connecter ou me connecter afin de pr&eacute;server mon &eacute;quilibre vie priv&eacute;e / vie professionnelle :
+                <br/>
+                <input type="radio" name="B11" value="0" id="B110"/> pas d'accord
+                <input type="radio" name="B11" value="1" id="B111"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B11" value="2" id="B112"/> plut&ocirc;t d'accord
+                <input type="radio" name="B11" value="3" id="B113"/> d'accord
+                </p>
+                <p>12 J’utilise ma messagerie et les autres outils num&eacute;riques pour des raisons professionnelles sur mon temps personnel :
+                <br/>
+                <input type="radio" name="B12" value="3" id="B120"/> pas d'accord
+                <input type="radio" name="B12" value="2" id="B121"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="B12" value="1" id="B122"/> plut&ocirc;t d'accord
+                <input type="radio" name="B12" value="0" id="B123"/> d'accord
+                </p>
+                <h3>Commentaires sur le degr&eacute; d’Autonomie et &eacute;quilibre vie priv&eacute;e / vie professionnelle :</h3>
+                <textarea name="commentairesAutonomie" id="commentairesAutonomie" rows="3" cols="50" maxlength="512"></textarea>
+                <hr/>
+                <h2>C. Niveau de Soutien (coll&egrave;gues et manager)</h2>
+                <p>1. J’ai le sentiment d’&ecirc;tre int&eacute;gr&eacute; au collectif :
+                <br/>
+                <input type="radio" name="C1" value="0" id="C10"/> pas d'accord
+                <input type="radio" name="C1" value="1" id="C11"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C1" value="2" id="C12"/> plut&ocirc;t d'accord
+                <input type="radio" name="C1" value="3" id="C13"/> d'accord
+                </p>
+                <p>2. Les coll&egrave;gues avec qui je travaille sont des gens professionnellement comp&eacute;tents :
+                <br/>
+                <input type="radio" name="C2" value="0" id="C20"/> pas d'accord
+                <input type="radio" name="C2" value="1" id="C21"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C2" value="2" id="C22"/> plut&ocirc;t d'accord
+                <input type="radio" name="C2" value="3" id="C23"/> d'accord
+                </p>
+                <p>3. Je suis en accord avec ce que mon manager me demande de faire :
+                <br/>
+                <input type="radio" name="C3" value="0" id="C30"/> pas d'accord
+                <input type="radio" name="C3" value="1" id="C31"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C3" value="2" id="C32"/> plut&ocirc;t d'accord
+                <input type="radio" name="C3" value="3" id="C33"/> d'accord
+                </p>
+                <p>4. Mes avis et mes propositions sont pris en compte :
+                <br/>
+                <input type="radio" name="C4" value="0" id="C40"/> pas d'accord
+                <input type="radio" name="C4" value="1" id="C41"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C4" value="2" id="C42"/> plut&ocirc;t d'accord
+                <input type="radio" name="C4" value="3" id="C43"/> d'accord
+                </p>
+                <p>5. En cas de difficult&eacute;s, je peux compter sur le soutien de mes coll&egrave;gues :
+                <br/>
+                <input type="radio" name="C5" value="0" id="C50"/> pas d'accord
+                <input type="radio" name="C5" value="1" id="C51"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C5" value="2" id="C52"/> plut&ocirc;t d'accord
+                <input type="radio" name="C5" value="3" id="C53"/> d'accord
+                </p>
+                <p>6. Je sais identifier le bon interlocuteur hi&eacute;rarchique en cas de difficult&eacute; :
+                <br/>
+                <input type="radio" name="C6" value="0" id="C60"/> pas d'accord
+                <input type="radio" name="C6" value="1" id="C61"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C6" value="2" id="C62"/> plut&ocirc;t d'accord
+                <input type="radio" name="C6" value="3" id="C63"/> d'accord
+                </p>
+                <p>7. Mon manager de proximit&eacute; est accessible, disponible, et pr&ecirc;te attention &agrave; ce que je dis :
+                <br/>
+                <input type="radio" name="C7" value="0" id="C70"/> pas d'accord
+                <input type="radio" name="C7" value="1" id="C71"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C7" value="2" id="C72"/> plut&ocirc;t d'accord
+                <input type="radio" name="C7" value="3" id="C73"/> d'accord
+                </p>
+                <p>8. Mon environnement de travail est satisfaisant (bruit, espace, ergonomie, etc.) sur mes diff&eacute;rents lieux de travail :
+                <br/>
+                <input type="radio" name="C8" value="0" id="C80"/> pas d'accord
+                <input type="radio" name="C8" value="1" id="C81"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C8" value="2" id="C82"/> plut&ocirc;t d'accord
+                <input type="radio" name="C8" value="3" id="C83"/> d'accord
+                </p>
+                <p>9. Des espaces et du temps d&eacute;di&eacute;s aux &eacute;changes professionnels existent :
+                <br/>
+                <input type="radio" name="C9" value="0" id="C90"/> pas d'accord
+                <input type="radio" name="C9" value="1" id="C91"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C9" value="2" id="C92"/> plut&ocirc;t d'accord
+                <input type="radio" name="C9" value="3" id="C93"/> d'accord
+                </p>
+                <p>10 L’organisation du travail prend en compte les contraintes personnelles :
+                <br/>
+                <input type="radio" name="C10" value="0" id="C100"/> pas d'accord
+                <input type="radio" name="C10" value="1" id="C101"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C10" value="2" id="C102"/> plut&ocirc;t d'accord
+                <input type="radio" name="C10" value="3" id="C103"/> d'accord
+                </p>
+                <p>11 L’organisation du travail et la r&eacute;partition des responsabilit&eacute;s sont claires :
+                <br/>
+                <input type="radio" name="C11" value="0" id="C110"/> pas d'accord
+                <input type="radio" name="C11" value="1" id="C111"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C11" value="2" id="C112"/> plut&ocirc;t d'accord
+                <input type="radio" name="C11" value="3" id="C113"/> d'accord
+                </p>
+                <p>12 J’ai confiance dans la strat&eacute;gie de l’entreprise :
+                <br/>
+                <input type="radio" name="C12" value="0" id="C120"/> pas d'accord
+                <input type="radio" name="C12" value="1" id="C121"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="C12" value="2" id="C122"/> plut&ocirc;t d'accord
+                <input type="radio" name="C12" value="3" id="C123"/> d'accord
+                </p>
+                <h3>Commentaires sur le niveau de Soutien (coll&egrave;gues et manager) :</h3>
+                <textarea name="commentairesSoutien" id="commentairesSoutien" rows="3" cols="50" maxlength="512"></textarea>
+                <hr/>
+                <h2>D. Reconnaissance au travail</h2>
+                <p>1. Ma position professionnelle correspond &agrave; ma qualification et &agrave; mes comp&eacute;tences :
+                <br/>
+                <input type="radio" name="D1" value="0" id="D10"/> pas d'accord
+                <input type="radio" name="D1" value="1" id="D11"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D1" value="2" id="D12"/> plut&ocirc;t d'accord
+                <input type="radio" name="D1" value="3" id="D13"/> d'accord
+                </p>
+                <p>2. Ma r&eacute;mun&eacute;ration est coh&eacute;rente avec mon exp&eacute;rience professionnelle et  mes efforts d’adaptation :
+                <br/>
+                <input type="radio" name="D2" value="0" id="D20"/> pas d'accord
+                <input type="radio" name="D2" value="1" id="D21"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D2" value="2" id="D22"/> plut&ocirc;t d'accord
+                <input type="radio" name="D2" value="3" id="D23"/> d'accord
+                </p>
+                <p>3. Mon travail a du sens :
+                <br/>
+                <input type="radio" name="D3" value="0" id="D30"/> pas d'accord
+                <input type="radio" name="D3" value="1" id="D31"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D3" value="2" id="D32"/> plut&ocirc;t d'accord
+                <input type="radio" name="D3" value="3" id="D33"/> d'accord
+                </p>
+                <p>4. J’ai des informations claires sur l’&eacute;volution de mon emploi actuel, et mes besoins en formation :
+                <br/>
+                <input type="radio" name="D4" value="0" id="D40"/> pas d'accord
+                <input type="radio" name="D4" value="1" id="D41"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D4" value="2" id="D42"/> plut&ocirc;t d'accord
+                <input type="radio" name="D4" value="3" id="D43"/> d'accord
+                </p>
+                <p>5. Je suis inquiet par rapport &agrave; l’&eacute;volution de mon m&eacute;tier :
+                <br/>
+                <input type="radio" name="D5" value="3" id="D50"/> pas d'accord
+                <input type="radio" name="D5" value="2" id="D51"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D5" value="1" id="D52"/> plut&ocirc;t d'accord
+                <input type="radio" name="D5" value="0" id="D53"/> d'accord
+                </p>
+                <p>6. La qualit&eacute; de mon travail est reconnue par mes coll&egrave;gues :
+                <br/>
+                <input type="radio" name="D6" value="0" id="D60"/> pas d'accord
+                <input type="radio" name="D6" value="1" id="D61"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D6" value="2" id="D62"/> plut&ocirc;t d'accord
+                <input type="radio" name="D6" value="3" id="D63"/> d'accord
+                </p>
+                <p>7. Mon &eacute;valuation professionnelle est transparente et fond&eacute;e sur les bons crit&egrave;res :
+                <br/>
+                <input type="radio" name="D7" value="0" id="D70"/> pas d'accord
+                <input type="radio" name="D7" value="1" id="D71"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D7" value="2" id="D72"/> plut&ocirc;t d'accord
+                <input type="radio" name="D7" value="3" id="D73"/> d'accord
+                </p>
+                <p>8. Mon manager connaît bien mon travail et je peux &eacute;changer avec lui pour construire des solutions :
+                <br/>
+                <input type="radio" name="D8" value="0" id="D80"/> pas d'accord
+                <input type="radio" name="D8" value="1" id="D81"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D8" value="2" id="D82"/> plut&ocirc;t d'accord
+                <input type="radio" name="D8" value="3" id="D83"/> d'accord
+                </p>
+                <p>9. Mon travail est appr&eacute;ci&eacute; &agrave; sa juste valeur par des tiers (clients, etc.) :
+                <br/>
+                <input type="radio" name="D9" value="0" id="D90"/> pas d'accord
+                <input type="radio" name="D9" value="1" id="D91"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D9" value="2" id="D92"/> plut&ocirc;t d'accord
+                <input type="radio" name="D9" value="3" id="D93"/> d'accord
+                </p>
+                <p>10 Les organisations de travail favorisent la construction et les &eacute;changes de savoir faire :
+                <br/>
+                <input type="radio" name="D10" value="0" id="D100"/> pas d'accord
+                <input type="radio" name="D10" value="1" id="D101"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D10" value="2" id="D102"/> plut&ocirc;t d'accord
+                <input type="radio" name="D10" value="3" id="D103"/> d'accord
+                </p>
+                <p>11 Mon activit&eacute; professionnelle est en accord avec mon &eacute;thique :
+                <br/>
+                <input type="radio" name="D11" value="0" id="D110"/> pas d'accord
+                <input type="radio" name="D11" value="1" id="D111"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D11" value="2" id="D112"/> plut&ocirc;t d'accord
+                <input type="radio" name="D11" value="3" id="D113"/> d'accord
+                </p>
+                <p>12 Mes souhaits d’&eacute;volution professionnelle sont pris en compte :
+                <br/>
+                <input type="radio" name="D12" value="0" id="D120"/> pas d'accord
+                <input type="radio" name="D12" value="1" id="D121"/> plut&ocirc;t pas d'accord
+                <input type="radio" name="D12" value="2" id="D122"/> plut&ocirc;t d'accord
+                <input type="radio" name="D12" value="3" id="D123"/> d'accord
+                </p>
+                <h3>Commentaires sur le niveau de Reconnaissance au travail :</h3>
+                <textarea name="commentairesReconnaissance" id="commentairesReconnaissance" rows="3" cols="50" maxlength="512"></textarea>
+                <hr/>
+                <button class="boutonQ" id="sauverquestionnaire" onclick="saveTextAsFile()">Sauvegarder</button>
+                <button class="boutonQ" id="traiterquestionnaire" onclick="traiter()">Traiter</button>
+                <button class="boutonQ" id="effacerquestionnaire" onclick="effacer()">Effacer</button>`;
+
+const questionnaireindividuel = `<h2>Analyse individuelle</h2><h3>Charger un fichier sauvegardé :</h3><input type="file" accept=".csv" id="fileToLoad"><button class="boutoncharger" id="chargerindividu" onclick="chargeri()">Charger</button>`;
+const questionnairegroupe = `<h2>Analyse groupée</h2>
+                <h3>Charger les fichiers sauvegardés d'un groupe :</h3>
+                <input type="file" multiple="multiple" accept=".csv" id="filesToLoad"><button class="boutoncharger" id="chargergroupe" onclick="chargerp(false)">Charger</button>`;
+const questionnairecollectif = `<h2>Analyse collective</h2>
+                <h3>Charger les fichiers sauvegardés d'un collectif :</h3>
+                <input type="file" multiple="multiple" accept=".csv" id="filesToLoadc"><button class="boutoncharger" id="chargercollectif" onclick="chargerp(true)">Charger</button>`;
+
+const questionnaireviolentometre = `` + melanger(1);
+const questionnaireencadrant = `` + melanger(0);
+const questionnairerps = `` + melanger(2);
+
+const referentielviolentometre = ``;
+const referentielencadrant = ``;
+const referentielrps = ``;
 
 function menu(menuname)
 {	
-	document.getElementById("sousmenu").innerHTML = eval("sousmenu"+menuname);
-	menuname?"accueil":document.getElementById("info").innerHTML = eval("info"+menuname);
+	document.getElementById("sousmenu").innerHTML = eval("sousmenu" + menuname);
 }
-function opensubtab(evt, subtabname)
+function sousmenu(sousmenuname)
 {
-	var i, subtabcontent, subtablinks;
-	subtabcontent = document.getElementsByClassName("subtabcontent");
-	for (i = 0; i < subtabcontent.length; i++) {
-	  subtabcontent[i].style.display = "none";
+	if (sousmenuname.charAt(0) == "q")
+	{
+		document.getElementById("questionnaire").innerHTML = eval(sousmenuname);
 	}
-	subtablinks = document.getElementsByClassName("subtablinks");
-	for (i = 0; i < subtablinks.length; i++) {
-	  subtablinks[i].className = subtablinks[i].className.replace(" active", "");
+	else if (sousmenuname.charAt(0) == "i")
+	{
+		document.getElementById("info").innerHTML = eval(sousmenuname);
 	}
-	document.getElementById(subtabname).style.display = "block";
-	evt.currentTarget.className += " active";
+	else if (sousmenuname.charAt(0) == "r")
+	{
+		document.getElementById("recos").innerHTML = eval(sousmenuname);
+	}
 }
 function melanger(numero)
 {
     var tableau = [];
-    var suffixe = "";
     switch (numero)
     {
         case 0:
             // Tableau de l'encadrant
-			if (document.getElementById("form-encadrant").innerHTML == "<h2>Questionnaire</h2>")
+			if (document.getElementById("questionnaire").innerHTML == "")
 			{
 				tableau = ['<input type="checkbox" id="E1" name="A1" value="1"><label id="labelE1" for="1">Adéquation entre moyens et objectifs du service</label><br/>',
 							'<input type="checkbox" id="E2" name="A2" value="1"><label id="labelE2" for="2">Respect du rôle contributif en comité de direction</label><br/>',
@@ -61,12 +431,11 @@ function melanger(numero)
 							'<input type="checkbox" id="E22" name="C6" value="1"><label id="labelE22" for="22">Convocations récurrentes par la hiérarchie, sanctions</label><br/>',
 							'<input type="checkbox" id="E23" name="C7" value="1"><label id="labelE23" for="23">Injonction à la mobilité, déroulement de carrière bloqué</label><br/>',
 							'<input type="checkbox" id="E24" name="C8" value="1"><label id="labelE24" for="24">Exclusion, mise au placard</label><br/>'];
-				suffixe = "-encadrant";
 			}
 			break;
         case 1:
             // Tableau du violentomètre
-			if (document.getElementById("form-violentometre").innerHTML == "<h2>Questionnaire</h2>")
+			if (document.getElementById("questionnaire").innerHTML == "")
 			{
 				tableau = ['<input type="checkbox" id="V1" name="A1" value="1"><label id="labelV1" for="1">Remarques et critiques acceptées</label><br>',
 							'<input type="checkbox" id="V2" name="A2" value="1"><label id="labelV2" for="2">Promotions pour les femmes comme pour les hommes</label><br>',
@@ -90,12 +459,11 @@ function melanger(numero)
 							'<input type="checkbox" id="V20" name="D2" value="1"><label id="labelV20" for="20">Baiser forcé ou par surprise</label><br>',
 							'<input type="checkbox" id="V21" name="D3" value="1"><label id="labelV21" for="21">Toucher les seins, fesses ou cuisses sans consentement</label><br>',
 							'<input type="checkbox" id="V22" name="E1" value="1"><label id="labelV22" for="22">Fellation ou pénétration forcée</label><br>'];
-				suffixe = "-violentometre";
 			}
 			break;
         case 2:
             // Tableau du sociomètre RPS
-			if (document.getElementById("form-rps").innerHTML == "<h2>Questionnaire</h2>")
+			if (document.getElementById("questionnaire").innerHTML == "")
 			{
 				tableau = ['<input type="checkbox" id="R1" name="A1" value="1"><label id="labelR1" for="1">Sens du travail</label><br/>',
 							'<input type="checkbox" id="R2" name="A2" value="1"><label id="labelR2" for="2">Autonomie</label><br/>',
@@ -121,7 +489,6 @@ function melanger(numero)
 							'<input type="checkbox" id="R22" name="C6" value="1"><label id="labelR22" for="22">Reproches incessants, humiliations, isolement</label><br/>',
 							'<input type="checkbox" id="R23" name="C7" value="1"><label id="labelR23" for="23">Impossibilité à se déconnecter</label><br/>',
 							'<input type="checkbox" id="R24" name="C8" value="1"><label id="labelR24" for="24">Télétravail subi en mode très dégradé</label><br/>'];
-				suffixe = "-rps";
 			}
 			break;
         default:
@@ -135,9 +502,9 @@ function melanger(numero)
     }
     for (n=0;n<tableau.length;n++)
     {
-        document.getElementById("form" + suffixe).innerHTML += tableau[n];
+        document.getElementById("questionnaire").innerHTML += tableau[n];
     }
-    document.getElementById("form" + suffixe).innerHTML += '<hr/><button onclick="calcul(' + numero + ')">Calculer</button>';
+    document.getElementById("questionnaire").innerHTML += '<hr/><button onclick="calcul(' + numero + ')">Calculer</button>';
 }
 function calcul(numero)
 {
