@@ -1,7 +1,7 @@
-const sousmenuqvt = `<button class="sousmenu" onclick="sousmenu('questionnaireqvt')">Questionnaire Individuel</button><button class="sousmenu" onclick="sousmenu('questionnaireqvtindividuel')">Analyse Individuelle</button><button class="sousmenu" onclick="sousmenu('questionnaireqvtgroupe')">Analyse d'un Groupe</button><button class="sousmenu" onclick="sousmenu('questionnaireqvtcollectif')">Comparaison de Collectifs</button>`;
-const sousmenuviolentometre = `<button class="sousmenu" onclick="sousmenu('referentielviolentometre')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('questionnaireviolentometre'); melanger(1)">Questionnaire</button>`;
-const sousmenurps = `<button class="sousmenu" onclick="sousmenu('referentielrps')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('questionnairerps'); melanger(2)">Questionnaire</button>`;
-const sousmenuencadrant = `<button class="sousmenu" onclick="sousmenu('referentielencadrant')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenu('questionnaireencadrant'); melanger(0)">Questionnaire</button>`;
+const sousmenuqvt = `<button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('questionnaireqvt')">Questionnaire Individuel</button><button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('questionnaireqvtindividuel')">Analyse Individuelle</button><button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('questionnaireqvtgroupe')">Analyse d'un Groupe</button><button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('questionnaireqvtcollectif')">Comparaison de Collectifs</button>`;
+const sousmenuviolentometre = `<button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('referentielviolentometre')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('questionnaireviolentometre'); melanger(1)">Questionnaire</button>`;
+const sousmenurps = `<button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('referentielrps')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('questionnairerps'); melanger(2)">Questionnaire</button>`;
+const sousmenuencadrant = `<button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('referentielencadrant')">R&eacute;f&eacute;rentiel</button><button class="sousmenu" onclick="sousmenuButtonClick(event); sousmenu('questionnaireencadrant'); melanger(0)">Questionnaire</button>`;
 const sousmenuapropos = ``;
 
 const apropos = `<h2>Des outils UGICT CGT :</h2><ul><li>Respectueux de la vie privée et de l'anonymat</li><li>Bas&eacute;s sur :</li><ul><li>Sociom&egrave;tre de l'encadrant : <a href="https://www.cgtservicespublics.fr/la-federation/ufict/elections-professionnelles-2022/article/ufict-marque-pages-sociometres-de-l-encadrant-et-des-risques-psycho-sociaux" target="_sociometre">le marque-page "le Sociom&egrave;tre de l'encadrant" de l'UFICT F&eacute;d&eacute;ration des Services Publics</a></li><li>Violentom&egrave;tre : <a href="https://www.egalite-professionnelle.cgt.fr/sexisme/" target="_violentometre">le marque-page "le Violentom&egrave;tre" CGT</a></li><li>Sociom&egrave;tre RPS : <a href="https://www.cgtservicespublics.fr/la-federation/ufict/elections-professionnelles-2022/article/ufict-marque-pages-sociometres-de-l-encadrant-et-des-risques-psycho-sociaux" target="_rps">le marque-page "le Sociom&egrave;tre RPS" de l'UFICT F&eacute;d&eacute;ration des Services Publics</a></li><li>QVT & Num&eacute;rique : <a href="https://lenumeriqueautrement.fr/" target="_qvt">campagne "Construire le Num&eacute;rique Autrement" UGICT CGT</a></li><li>Pour l'<a href="https://www.anact.fr/" target="_anact">ANACT</a> et le <a href="https://www.anact.fr/lanact-lance-son-1er-appel-projet-fact-sur-qualite-de-vie-au-travail-et-numerique" target="_fact">FACT</a></li><li><a href="Methodologie-QVTNumerique-UGICT-CGT.pdf" target="_methodo">Méthodologie de Karasek-Siegrist</a></li><li><a href="Tutoriel-QVTNumerique.pdf" target="_tutoriel">Tutoriel</a></li></ul><li>Mis à disposition selon les termes de la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="cc">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a></li><li><a href="https://github.com/leithleith/sociometres" target="github">Code</a> sous licence MIT dont bibliothèque graphique <a href="https://github.com/plotly/plotly.js" target="plotly">Plotly.js</a> modifi&eacute;e</li><li>Pour toute demande ou remarque : <a href="mailto:contact@ugictcgt.fr?subject=sociometres">contacter l'UGICT CGT</a></li></ul>`;
@@ -396,8 +396,28 @@ const referentielviolentometre = ``;
 const referentielencadrant = ``;
 const referentielrps = ``;
 
+function menuButtonClick(event) {
+	var buttons = document.getElementsByClassName("menu");
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].style.backgroundColor = "";
+		buttons[i].style.color = "";
+	}
+	event.target.style.backgroundColor = "#cdcccc";
+	event.target.style.color = "#8b0000";
+}
+
+function sousmenuButtonClick(event) {
+	var buttons = document.getElementsByClassName("sousmenu");
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].style.backgroundColor = "";
+		buttons[i].style.color = "";
+	}
+	event.target.style.backgroundColor = "#cdcccc";
+	event.target.style.color = "#8b0000";
+}
+
 function menu(menuname)
-{	
+{		
 	document.getElementById("sousmenu").innerHTML = eval("sousmenu" + menuname);
 	if (menuname == "apropos")
 	{
@@ -622,7 +642,7 @@ function calcul(sujet)
                 rC[2] = (C>0) ? C+13 : 0;
                 rD[3] = (D>0) ? D+18 : 0;
                 rE[4] = (E>0) ? E+21 : 0;
-                var vtheta = ["EPS", "EPSH", "HS", "AS", "V"];
+                var vtheta = ["Environnement Pro Sain", "Environnement Pro Sexiste & Hostile", "Harcèlement Sexuel", "Agression Sexuelle", "Viol"];
                 var data = [{
 					r: rA,
 					theta: vtheta,
