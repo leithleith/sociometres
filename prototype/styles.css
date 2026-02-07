@@ -1,10 +1,11 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: medium;    
-    background-color: #1e1e1e;
+    font-size: medium;
+    background-color: #000000;
     color: #cdcccc;
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;
+	height: 100vh;
 }
 button {
 	cursor: pointer;
@@ -23,53 +24,63 @@ button.clicked {
 	background-color: #cdcccc;
 	color: #8b0000;
 }
-#grid {
-	display: grid;
-	grid-template-rows: auto auto auto;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 0;
-	height: 100vh;
+#logo {
+	position: fixed;
+	top: 0px;
+	right: 0px;
 }
 #header {
-	grid-area: 1 / 1 / span 1 / span 1;
-  	padding-left: 5px;
-  	margin: 0px;
+	display: flex;
 }
-#footer {
-	grid-area: 4 / 1 / span 1 / span 3;
+#titre {	
+  	padding-left: 5px;
+	padding-right: 10px;
+  	margin: 0px;
+	height: fit-content;
+	width: fit-content;
+	background-color: #8b0000;
+	border-radius: 0 0 50px 0;
+}
+#menu {
+  	padding: 5px;
+	height: fit-content;
+	width: fit-content;
+}
+#sousmenu {
+  	padding: 5px;
+	height: fit-content;
+	width: fit-content;
+}
+#contenu {
+	display: flex;
+}
+#footer {	
   	padding-left: 5px;
   	margin: 0px;
 	padding: 5px;
-	background-color: #8b0000;
-	height: fit-content;
-}
-#menus {
-	grid-area: 1 / 2 / span 1 / span 1;
-  	padding: 5px;	
-}
-#messages {
-	grid-area: 1 / 3 / span 1 / span 1;
-  	padding: 5px;
-  	overflow-y:auto;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	text-align: right;	
 }
 #questionnaire {
-	grid-area: 2 / 1 / span 2 / span 1;
-  	padding: 5px;
-  	overflow-y: auto;
+  	padding: 10px;
+  	overflow-y:auto;
+	width: fit-content;
 }
 #graphiquek {
-	grid-area: 2 / 2 / span 1 / span 1;
+	width:fit-content;
 }
 #graphiques {
-	grid-area: 2 / 3 / span 1 / span 1;
+	width:fit-content;
 }
 #stats {
-	grid-area: 3 / 2 / span 1 / span 1;
   	padding: 5px;
+	overflow-y:auto;
 }
 #recos {
-	grid-area: 3 / 3 / span 1 / span 1;
   	padding: 5px;
+	overflow-y:auto;
 }
 .aproposdiv {
 	position: fixed;
@@ -104,5 +115,7 @@ button.clicked {
 }
 .noir {
     background-color: black;
+	border: 1px solid white;
     color: white;
+	padding: 5px;
 }
