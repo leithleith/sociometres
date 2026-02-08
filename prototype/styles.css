@@ -7,6 +7,10 @@ body {
     padding: 0px;
 	height: 100vh;
 }
+h1 {
+	padding: 0px;
+	margin: 0px;
+}
 button {
 	cursor: pointer;
 	background-color: #8b0000;
@@ -24,17 +28,17 @@ button.clicked {
 	background-color: #cdcccc;
 	color: #8b0000;
 }
-#logo {
-	position: fixed;
-	top: 0px;
-	right: 0px;
-}
 #header {
 	display: flex;
 }
-#titre {	
-  	padding-left: 5px;
-	padding-right: 10px;
+#logo {
+	background-color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+}
+#titre {
+	padding-right: 30px;
+	padding-bottom: 10px;
   	margin: 0px;
 	height: fit-content;
 	width: fit-content;
@@ -64,23 +68,27 @@ button.clicked {
 	text-align: right;	
 }
 #questionnaire {
-  	padding: 10px;
+  	padding: 30px;
   	overflow-y:auto;
 	width: fit-content;
+	max-width: 33%;
 }
-#graphiquek {
+#graphique {
 	width:fit-content;
-}
-#graphiques {
-	width:fit-content;
+	padding: 30px;
 }
 #stats {
   	padding: 5px;
 	overflow-y:auto;
 }
 #recos {
-  	padding: 5px;
+  	padding: 30px;
 	overflow-y:auto;
+	max-width: 33%;
+}
+#recos a {
+	color: #cdcccc;
+	text-decoration: underline;
 }
 .aproposdiv {
 	position: fixed;
