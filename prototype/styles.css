@@ -28,6 +28,11 @@ button.clicked {
 	background-color: #cdcccc;
 	color: #8b0000;
 }
+button:disabled {
+	background-color: #565656;
+	color: #606060;
+	cursor: default;
+}
 #header {
 	display: flex;
 }
