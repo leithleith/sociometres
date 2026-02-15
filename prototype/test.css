@@ -1,0 +1,107 @@
+body {
+  margin: 10px auto;
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: medium;
+}
+a {
+  color: white;
+  text-decoration: underline;
+}
+button {
+  background-color: darkred;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.top-tabs-container label.active, .sub-tabs-container label.active {
+  background-color: white;
+  color: darkred;
+}
+.top-tabs-container label {
+  background-color: darkred;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
+}
+.top-tabs-container label:hover {
+  background-color: white;
+  color: darkred;
+}
+.tab-radio {
+  display: none;
+}
+.sub-tab-content, .tab-content {
+  display: none;
+}
+.tab-radio:checked + .tab-content {
+  display: block;
+}
+.tab-radio:checked + .sub-tab-content {
+  display: flex;
+}
+.sub-tabs-container label {
+  background-color: darkred;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
+}
+.sub-tabs-container label:hover {
+  background-color: white;
+  color: darkred;
+}
+.tab-content {
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.vert {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.jaune {
+  background-color: yellow;
+  color:#555555;
+  border-radius: 5px;
+  padding: 5px;
+}
+.orange {
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.rouge {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.noir {
+  background-color: black;
+	border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  padding: 5px;
+}
