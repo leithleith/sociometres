@@ -1,134 +1,128 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: medium;
-    background-color: #000000;
-    color: #cdcccc;
-    margin: 0px;
-    padding: 0px;
-	height: 100vh;
+  margin: 10px auto;
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+  color: WhiteSmoke;
+  font-size: medium;
 }
-h1 {
-	padding: 0px;
-	margin: 0px;
+a {
+  color: WhiteSmoke;
+  text-decoration: underline;
 }
 button {
-	cursor: pointer;
-	background-color: #8b0000;
-	color: #cdcccc;
-	border: 2px solid #cdcccc;
-	border-radius: 10px;
-	padding: 5px 10px;
-	font-size: medium;
+  background-color: darkred;
+  color: WhiteSmoke;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
 }
-button:hover {
-    background-color: #cdcccc;
-    color: #8b0000;
+.top-tabs-container label.active, .sub-tabs-container label.active {
+  background-color: WhiteSmoke;
+  color: darkred;
 }
-button.clicked {
-	background-color: #cdcccc;
-	color: #8b0000;
+.top-tabs-container label {
+  background-color: darkred;
+  color: WhiteSmoke;
+  display: inline-block;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
 }
-button:disabled {
-	background-color: #565656;
-	color: #606060;
-	cursor: default;
+.top-tabs-container label:hover {
+  background-color: WhiteSmoke;
+  color: darkred;
 }
-#header {
-	display: flex;
+.tab-radio {
+  display: none;
 }
-#logo {
-	background-color: #ffffff;
-	margin: 0px;
-	padding: 0px;
+.sub-tab-content, .tab-content {
+  display: none;
 }
-#titre {
-	padding-right: 30px;
-	padding-bottom: 10px;
-  	margin: 0px;
-	height: fit-content;
-	width: fit-content;
-	background-color: #8b0000;
-	border-radius: 0 0 50px 0;
+.tab-radio:checked + .tab-content {
+  display: block;
 }
-#menu {
-  	padding: 5px;
-	height: fit-content;
-	width: fit-content;
+.tab-radio:checked + .sub-tab-content {
+  display: flex;
 }
-#sousmenu {
-  	padding: 5px;
-	height: fit-content;
-	width: fit-content;
+.sub-tabs-container label {
+  background-color: darkred;
+  color: WhiteSmoke;
+  display: inline-block;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
 }
-#contenu {
-	display: flex;
+.sub-tabs-container label:hover {
+  background-color: WhiteSmoke;
+  color: darkred;
 }
-#footer {	
-  	padding-left: 5px;
-  	margin: 0px;
-	padding: 5px;
-	position: fixed;
-	bottom: 0px;
-	right: 0px;
-	text-align: right;	
-}
-#questionnaire {
-  	padding: 30px;
-  	overflow-y:auto;
-	width: fit-content;
-	max-width: 33%;
-}
-#graphique {
-	width:fit-content;
-	padding: 30px;
-}
-#stats {
-  	padding: 5px;
-	overflow-y:auto;
-}
-#recos {
-  	padding: 30px;
-	overflow-y:auto;
-	max-width: 33%;
-}
-#recos a {
-	color: #cdcccc;
-	text-decoration: underline;
-}
-.aproposdiv {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #1e1e1e;
-	color: #cdcccc;
-	padding: 10px;
-	border-radius: 10px;
-	z-index: 1000;
-}
-.aproposdiv a {
-	color: #cdcccc;
-	text-decoration: underline;
+.tab-content {
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+  color: WhiteSmoke;
 }
 .vert {
-    background-color: green;
-    color: white;
+  background-color: green;
+  color: WhiteSmoke;
+  border-radius: 5px;
+  padding: 5px;
 }
 .jaune {
-    background-color: yellow;
-    color:#555555;
+  background-color: yellow;
+  color:#555555;
+  border-radius: 5px;
+  padding: 5px;
 }
 .orange {
-    background-color: orange;
-    color: white;
+  background-color: orange;
+  color: WhiteSmoke;
+  border-radius: 5px;
+  padding: 5px;
 }
 .rouge {
-    background-color: red;
-    color: white;
+  background-color: red;
+  color: WhiteSmoke;
+  border-radius: 5px;
+  padding: 5px;
 }
 .noir {
-    background-color: black;
-	border: 1px solid white;
-    color: white;
-	padding: 5px;
+  background-color: black;
+	border: 1px solid WhiteSmoke;
+  color: WhiteSmoke;
+  border-radius: 5px;
+  padding: 5px;
+}
+.matable {
+  border-collapse: collapse;
+  border: 1px solid WhiteSmoke;
+  color: WhiteSmoke;
+}
+.matable td {
+  border-collapse: collapse;
+  border: 1px solid WhiteSmoke;    
+  word-wrap: break-word;
+  padding: 10px;
+}
+.matable th {
+  border-collapse: collapse;
+  border: 1px solid WhiteSmoke;    
+  word-wrap: break-word;
+  font-size: large;
+  text-align: center;
+  padding: 10px;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  padding: 5px;
 }

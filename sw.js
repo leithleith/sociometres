@@ -3,9 +3,13 @@ const ASSETS = [
   './',
   './index.html',
   './styles.css',
-  './app.js',
+  './sociometres.js',
+  './sw.js',
+  './plotly.min.js',
+  './plotly-locale-fr.js',
   './manifest.json',
-  './icons/icon.svg'
+  './coquelicotpetit.png',
+  './favicon.ico'
 ];
 
 self.addEventListener('install', event=>{
