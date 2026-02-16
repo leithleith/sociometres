@@ -2,27 +2,29 @@ body {
   margin: 10px auto;
   background-color: black;
   font-family: 'Open Sans', sans-serif;
-  color: white;
+  color: WhiteSmoke;
   font-size: medium;
 }
 a {
-  color: white;
+  color: WhiteSmoke;
   text-decoration: underline;
 }
 button {
   background-color: darkred;
-  color: white;
+  color: WhiteSmoke;
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
 }
 .top-tabs-container label.active, .sub-tabs-container label.active {
-  background-color: white;
+  background-color: WhiteSmoke;
   color: darkred;
 }
 .top-tabs-container label {
   background-color: darkred;
-  color: white;
+  color: WhiteSmoke;
   display: inline-block;
   cursor: pointer;
   min-width: 100px;
@@ -32,7 +34,7 @@ button {
   text-align: center;
 }
 .top-tabs-container label:hover {
-  background-color: white;
+  background-color: WhiteSmoke;
   color: darkred;
 }
 .tab-radio {
@@ -49,7 +51,7 @@ button {
 }
 .sub-tabs-container label {
   background-color: darkred;
-  color: white;
+  color: WhiteSmoke;
   display: inline-block;
   cursor: pointer;
   min-width: 100px;
@@ -59,18 +61,18 @@ button {
   text-align: center;
 }
 .sub-tabs-container label:hover {
-  background-color: white;
+  background-color: WhiteSmoke;
   color: darkred;
 }
 .tab-content {
   margin: 10px;
   padding: 10px;
   background-color: black;
-  color: white;
+  color: WhiteSmoke;
 }
 .vert {
   background-color: green;
-  color: white;
+  color: WhiteSmoke;
   border-radius: 5px;
   padding: 5px;
 }
@@ -82,22 +84,41 @@ button {
 }
 .orange {
   background-color: orange;
-  color: white;
+  color: WhiteSmoke;
   border-radius: 5px;
   padding: 5px;
 }
 .rouge {
   background-color: red;
-  color: white;
+  color: WhiteSmoke;
   border-radius: 5px;
   padding: 5px;
 }
 .noir {
   background-color: black;
-	border: 1px solid white;
-  color: white;
+	border: 1px solid WhiteSmoke;
+  color: WhiteSmoke;
   border-radius: 5px;
   padding: 5px;
+}
+.matable {
+  border-collapse: collapse;
+  border: 1px solid WhiteSmoke;
+  color: WhiteSmoke;
+}
+.matable td {
+  border-collapse: collapse;
+  border: 1px solid WhiteSmoke;    
+  word-wrap: break-word;
+  padding: 10px;
+}
+.matable th {
+  border-collapse: collapse;
+  border: 1px solid WhiteSmoke;    
+  word-wrap: break-word;
+  font-size: large;
+  text-align: center;
+  padding: 10px;
 }
 footer {
   position: fixed;

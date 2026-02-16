@@ -243,10 +243,10 @@ const questionnaireqvtindividuel = `<h3>A. Niveau des Exigences</h3>
 <p>12 Mes souhaits d’&eacute;volution professionnelle sont pris en compte :<br/>
 <input type="radio" name="iD12" value="0" id="iD120"/> pas d'accord<input type="radio" name="iD12" value="1" id="iD121"/> plut&ocirc;t pas d'accord<input type="radio" name="iD12" value="2" id="iD122"/> plut&ocirc;t d'accord<input type="radio" name="iD12" value="3" id="iD123"/> d'accord</p>
 <h3>Commentaires sur le niveau de Reconnaissance au travail :</h3><textarea name="icommentairesReconnaissance" id="icommentairesReconnaissance" rows="3" cols="50" maxlength="512"></textarea><hr/>`;
-const recosqvtquestionnaire = `<table id="qrecosqvt" class="matable"><tr><td id="qrexigences">Exigences</td><td id="qrautonomie">Autonomie</td><td id="qrsoutien">Soutien</td><td id="qrreconnaissance">Reconnaissance</td></tr><tr><td id="qcexigences"></td><td id="qcautonomie"></td><td id="qcsoutien"></td><td id="qcreconnaissance"></td></tr></table>`;
-const recosqvtindividuel = `<table id="irecosqvt" class="matable"><tr><td id="irexigences">Exigences</td><td id="irautonomie">Autonomie</td><td id="irsoutien">Soutien</td><td id="irreconnaissance">Reconnaissance</td></tr><tr><td id="icexigences"></td><td id="icautonomie"></td><td id="icsoutien"></td><td id="icreconnaissance"></td></tr></table>`;
-const statsqvtgroupe = `<table id="qvtstatsgroupe" class="matable"><tr><td></td><td id="gsexigences">Exigences</td><td id="gsautonomie">Autonomie</td><td id="gssoutien">Soutien</td><td id="gsreconnaissance">Reconnaissance</td></tr><tr><td>Moyenne</td><td id="gaexigences"></td><td id="gaautonomie"></td><td id="gasoutien"></td><td id="gareconnaissance"></td></tr><tr><td>Médiane</td><td id="gmexigences"></td><td id="gmautonomie"></td><td id="gmsoutien"></td><td id="gmreconnaissance"></td></tr><tr><td></td><td id="gdverte">Zone verte</td><td id="gdjaune">Zone jaune</td><td id="gdorange">Zone orange</td><td id="gdrouge">Zone rouge</td></tr><tr><td>Soutien</td><td id="gsvert"></td><td id="gsjaune"></td><td id="gsorange"></td><td id="gsrouge"></td></tr><tr><td>Reconnaissance</td><td id="grvert"></td><td id="grjaune"></td><td id="grorange"></td><td id="grrouge"></td></tr></table>`;
-const statsqvtcollectif = `<table id="qvtstatscollectif" class="matable"><tr><td></td><td id="csexigences">Exigences</td><td id="csautonomie">Autonomie</td><td id="cssoutien">Soutien</td><td id="csreconnaissance">Reconnaissance</td></tr><tr><td>Moyenne</td><td id="caexigences"></td><td id="caautonomie"></td><td id="casoutien"></td><td id="careconnaissance"></td></tr><tr><td>Médiane</td><td id="cmexigences"></td><td id="cmautonomie"></td><td id="cmsoutien"></td><td id="cmreconnaissance"></td></tr><tr><td></td><td id="cdverte">Zone verte</td><td id="cdjaune">Zone jaune</td><td id="cdorange">Zone orange</td><td id="cdrouge">Zone rouge</td></tr><tr><td>Soutien</td><td id="csvert"></td><td id="csjaune"></td><td id="csorange"></td><td id="csrouge"></td></tr><tr><td>Reconnaissance</td><td id="crvert"></td><td id="crjaune"></td><td id="crorange"></td><td id="crrouge"></td></tr></table>`;
+const recosqvtquestionnaire = `<table id="qrecosqvt" class="matable"><tr><th id="qrexigences">Exigences</th><th id="qrautonomie">Autonomie</th><th id="qrsoutien">Soutien</th><th id="qrreconnaissance">Reconnaissance</th></tr><tr><td id="qcexigences"></td><td id="qcautonomie"></td><td id="qcsoutien"></td><td id="qcreconnaissance"></td></tr></table>`;
+const recosqvtindividuel = `<table id="irecosqvt" class="matable"><tr><th id="irexigences">Exigences</th><th id="irautonomie">Autonomie</th><th id="irsoutien">Soutien</th><th id="irreconnaissance">Reconnaissance</th></tr><tr><td id="icexigences"></td><td id="icautonomie"></td><td id="icsoutien"></td><td id="icreconnaissance"></td></tr></table>`;
+const statsqvtgroupe = `<table id="qvtstatsgroupe" class="matable"><tr><th></th><th id="gsexigences">Exigences</th><th id="gsautonomie">Autonomie</th><th id="gssoutien">Soutien</th><th id="gsreconnaissance">Reconnaissance</th></tr><tr><td>Moyenne</td><td id="gaexigences"></td><td id="gaautonomie"></td><td id="gasoutien"></td><td id="gareconnaissance"></td></tr><tr><td>Médiane</td><td id="gmexigences"></td><td id="gmautonomie"></td><td id="gmsoutien"></td><td id="gmreconnaissance"></td></tr><tr><th></th><th id="gdverte">Zone verte</th><th id="gdjaune">Zone jaune</th><th id="gdorange">Zone orange</th><th id="gdrouge">Zone rouge</th></tr><tr><td>Soutien</td><td id="gsvert"></td><td id="gsjaune"></td><td id="gsorange"></td><td id="gsrouge"></td></tr><tr><td>Reconnaissance</td><td id="grvert"></td><td id="grjaune"></td><td id="grorange"></td><td id="grrouge"></td></tr></table>`;
+const statsqvtcollectif = `<table id="qvtstatscollectif" class="matable"><tr><th></th><th id="csexigences">Exigences</th><th id="csautonomie">Autonomie</th><th id="cssoutien">Soutien</th><th id="csreconnaissance">Reconnaissance</th></tr><tr><td>Moyenne</td><td id="caexigences"></td><td id="caautonomie"></td><td id="casoutien"></td><td id="careconnaissance"></td></tr><tr><td>Médiane</td><td id="cmexigences"></td><td id="cmautonomie"></td><td id="cmsoutien"></td><td id="cmreconnaissance"></td></tr><tr><th></th><th id="cdverte">Zone verte</th><th id="cdjaune">Zone jaune</th><th id="cdorange">Zone orange</th><th id="cdrouge">Zone rouge</th></tr><tr><td>Soutien</td><td id="csvert"></td><td id="csjaune"></td><td id="csorange"></td><td id="csrouge"></td></tr><tr><td>Reconnaissance</td><td id="crvert"></td><td id="crjaune"></td><td id="crorange"></td><td id="crrouge"></td></tr></table>`;
 const cexigences = `<ul><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/organisation-du-travail-son-environnement-et-ses-espaces/teletravail-co-working-nomadisme-mobilite/\" target=\"_fiche\">T&eacute;l&eacute;travail, CoWorking, Nomadisme, Mobilit&eacute;</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/organisation-du-travail-son-environnement-et-ses-espaces/charge-de-travail-et-intensification-du-travail/\" target=\"_fiche\">Charge de travail et intensification du travail</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/temps-de-travail-et-deconnexion/forfait-jours-et-sante-au-travail/\" target=\"_fiche\">Forfait jours et sant&eacute; au travail</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/management-et-formation/accompagnement-et-formation-a-lutilisation-des-outils-numeriques/\" target=\"_fiche\">Accompagnement et formation à l'utilisation des outils num&eacute;riques</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/temps-de-travail-et-deconnexion/disponibilite-et-deconnexion/\" target=\"_fiche\">Disponibilit&eacute; et d&eacute;connexion</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/organisation-du-travail-son-environnement-et-ses-espaces/reconfiguration-et-instabilite-des-organisations-de-travail/\" target=\"_fiche\">Reconfiguration et instabilit&eacute; des organisations de travail</a></li></ul>`;
 const cautonomie = `<ul><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/management-et-formation/tracabilite-autonomie-et-reconnaissance/\" target=\"_fiche\">Tra&ccedil;abilit&eacute;, autonomie et reconnaissance</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/temps-de-travail-et-deconnexion/equilibre-vie-professionnelle-vie-personnelle/\" target=\"_fiche\">Equilibre vie professionnelle, vie personnelle</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/temps-de-travail-et-deconnexion/outils-numeriques-et-temps-de-travail-masque/\" target=\"_fiche\">Outils num&eacute;riques et temps de travail masqu&eacute;</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/temps-de-travail-et-deconnexion/forfait-jours-et-sante-au-travail/\" target=\"_fiche\">Forfait jours et sant&eacute; au travail</a></li><li><a href=\"https://lenumeriqueautrement.fr/blog/quelle-est-la-realite-du-temps-de-travail-des-cadres/\" target=\"_fiche\">R&eacute;alit&eacute; du temps de travail des cadres</a></li><li><a href=\"https://lenumeriqueautrement.fr/les-outils/le-guide-du-droit-a-la-deconnexion/\" target=\"_fiche\">Guide du droit à la d&eacute;connexion</a></li><li><a href=\"https://qvtnumerique.azureedge.net/GuideManagement-Fiche2-UGICT-CGT.pdf\" target=\"_fiche\">Fiche 2 du Guide du Management &agrave; l'&egrave;re du num&eacute;rique</a></li></ul>`;
 const csoutien = `<ul><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/management-et-formation/management-et-soutien/\" target=\"_fiche\">Management et soutien</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/droit-dexpression/droit-dexpression-latitude-decisionnelle-et-conduite-du-changement/\" target=\"_fiche\">Droit d'expression, latitude d&eacute;cisionnelle et conduite du changement</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/management-et-formation/accompagnement-et-formation-a-lutilisation-des-outils-numeriques/\" target=\"_fiche\">Accompagnement et formation &agrave; l'utilisation des outils num&eacute;riques</a></li><li><a href=\"https://lenumeriqueautrement.fr/fiches-qvt/organisation-du-travail-son-environnement-et-ses-espaces/securite-des-donnees-et-des-utilisateurs/\" target=\"_fiche\">S&eacute;curit&eacute; des donn&eacute;es et des utilisateurs</a></li><li><a href=\"https://qvtnumerique.azureedge.net/GuideManagement-Fiche1-UGICT-CGT.pdf\" target=\"_fiche\">Fiche 1 du Guide du Management &agrave; l'&egrave;re du num&eacute;rique</a></li><li><a href=\"https://qvtnumerique.azureedge.net/GuideManagement-Fiche3-UGICT-CGT.pdf\" target=\"_fiche\">Fiche 3 du Guide du Management &agrave; l'&egrave;re du num&eacute;rique</a></li></ul>`;
@@ -561,7 +561,7 @@ function calcul(sujet)
             break;
     }
 }
-function traiter(flag)
+function traiter(flag,nomfichier)
 {
     var prefixe;
     var suffixe;
@@ -733,6 +733,10 @@ function traiter(flag)
 			scoreD[i].disabled = true;
 		}
 	}
+    document.getElementById(prefixe + "commentairesExigences").innerText = document.getElementById(prefixe + "commentairesExigences").value;
+	document.getElementById(prefixe + "commentairesAutonomie").innerText = document.getElementById(prefixe + "commentairesAutonomie").value;
+	document.getElementById(prefixe + "commentairesSoutien").innerText = document.getElementById(prefixe + "commentairesSoutien").value;
+	document.getElementById(prefixe + "commentairesReconnaissance").innerText = document.getElementById(prefixe + "commentairesReconnaissance").value;
 	document.getElementById(prefixe + "commentairesExigences").disabled = true;
 	document.getElementById(prefixe + "commentairesAutonomie").disabled = true;
 	document.getElementById(prefixe + "commentairesSoutien").disabled = true;
@@ -767,7 +771,7 @@ function traiter(flag)
 			couleurpointK = "red";
 			break;
 		default:
-			textepointK = "";
+			textepointK = "Erreur : position non identifée.";
 			couleurpointK = "darkgrey";
 	}
 	switch (positionS)
@@ -789,7 +793,7 @@ function traiter(flag)
 			couleurpointS = "red";
 			break;
 		default:
-			textepointS = "";
+			textepointS = "Erreur : position non identifée.";
 			couleurpointS = "darkgrey";
 	}
 	var fexigences = false;
@@ -830,9 +834,9 @@ function traiter(flag)
 		document.getElementById(prefixe + "cexigences").innerHTML = cexigences;
 	}
 	else if ((exigences < 10) && (autonomie > 27))
-		{
-			document.getElementById(prefixe + "cexigences").innerHTML = "<p>NB : &ecirc;tre attentif au bore-out lorsque les exigences sont faibles et l'autonomie &eacute;lev&eacute;e.</p>";
-		}
+    {
+        document.getElementById(prefixe + "cexigences").innerHTML = "<p>NB : &ecirc;tre attentif au bore-out lorsque les exigences sont faibles et l'autonomie &eacute;lev&eacute;e.</p>";
+    }
 	if (fautonomie === true)
 	{
 		document.getElementById(prefixe + "cautonomie").innerHTML = cautonomie;
@@ -850,67 +854,76 @@ function traiter(flag)
 		document.getElementById(prefixe + 'rexigences').style.backgroundColor = 'green';
 	}
 	else if (exigences < 19)
-		{
-			document.getElementById(prefixe + 'rexigences').style.backgroundColor = 'yellow';
-		}
-		else if (exigences < 28)
-		{
-			document.getElementById(prefixe + 'rexigences').style.backgroundColor = 'orange';
-		}
-		else
-		{
-			document.getElementById(prefixe + 'rexigences').style.backgroundColor = 'red';
-		}
+    {
+        document.getElementById(prefixe + 'rexigences').style.backgroundColor = 'yellow';
+        document.getElementById(prefixe + 'rexigences').style.color = 'black';
+    }
+    else if (exigences < 28)
+    {
+        document.getElementById(prefixe + 'rexigences').style.backgroundColor = 'orange';
+    }
+    else
+    {
+        document.getElementById(prefixe + 'rexigences').style.backgroundColor = 'red';
+    }
 	if (autonomie < 10)
 	{
 		document.getElementById(prefixe + 'rautonomie').style.backgroundColor = 'red';
 	}
 	else if (autonomie < 19)
-		{
-			document.getElementById(prefixe + 'rautonomie').style.backgroundColor = 'orange';
-		}
-		else if (autonomie < 28)
-		{
-			document.getElementById(prefixe + 'rautonomie').style.backgroundColor = 'yellow';
-		}
-		else
-		{
-			document.getElementById(prefixe + 'rautonomie').style.backgroundColor = 'green';
-		}
+    {
+        document.getElementById(prefixe + 'rautonomie').style.backgroundColor = 'orange';
+    }
+    else if (autonomie < 28)
+    {
+        document.getElementById(prefixe + 'rautonomie').style.backgroundColor = 'yellow';
+        document.getElementById(prefixe + 'rautonomie').style.color = 'black';
+    }
+    else
+    {
+        document.getElementById(prefixe + 'rautonomie').style.backgroundColor = 'green';
+    }
 	if (soutien < 10)
 	{
 		document.getElementById(prefixe + 'rsoutien').style.backgroundColor = 'red';
 	}
 	else if (soutien < 19)
-		{
-			document.getElementById(prefixe + 'rsoutien').style.backgroundColor = 'orange';
-		}
-		else if (soutien < 28)
-		{
-			document.getElementById(prefixe + 'rsoutien').style.backgroundColor = 'yellow';
-		}
-		else
-		{
-			document.getElementById(prefixe + 'rsoutien').style.backgroundColor = 'green';
-		}
+    {
+        document.getElementById(prefixe + 'rsoutien').style.backgroundColor = 'orange';
+    }
+    else if (soutien < 28)
+    {
+        document.getElementById(prefixe + 'rsoutien').style.backgroundColor = 'yellow';
+        document.getElementById(prefixe + 'rsoutien').style.color = 'black';
+    }
+    else
+    {
+        document.getElementById(prefixe + 'rsoutien').style.backgroundColor = 'green';
+    }
 	if (reconnaissance < 10)
 	{
 		document.getElementById(prefixe + 'rreconnaissance').style.backgroundColor = 'red';
 	}
 	else if (reconnaissance < 19)
-		{
-			document.getElementById(prefixe + 'rreconnaissance').style.backgroundColor = 'orange';
-		}
-		else if (reconnaissance < 28)
-		{
-			document.getElementById(prefixe + 'rreconnaissance').style.backgroundColor = 'yellow';
-		}
-		else
-		{
-			document.getElementById(prefixe + 'rreconnaissance').style.backgroundColor = 'green';
-		}
-	var updateK = { x:[soutien], y:[exigences], z:[autonomie], type:'scatter3d', hoverinfo:'x+y+z', hoverlabel:{bgcolor: couleurpointK}, marker:{color: couleurpointK}};
-	var updateS = { x:[reconnaissance], y:[exigences], z:[autonomie], type:'scatter3d', hoverinfo:'x+y+z', hoverlabel:{bgcolor: couleurpointS}, marker:{color: couleurpointS}};
+    {
+        document.getElementById(prefixe + 'rreconnaissance').style.backgroundColor = 'orange';
+    }
+    else if (reconnaissance < 28)
+    {
+        document.getElementById(prefixe + 'rreconnaissance').style.backgroundColor = 'yellow';
+        document.getElementById(prefixe + 'rreconnaissance').style.color = 'black';
+    }
+    else
+    {
+        document.getElementById(prefixe + 'rreconnaissance').style.backgroundColor = 'green';
+    }
+    if (flag === true)
+    {
+        textepointK += '<br>' + nomfichier;
+        textepointS += '<br>' + nomfichier;
+    }
+	var updateK = { x:[soutien], y:[exigences], z:[autonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointK}, text: textepointK, marker:{color: couleurpointK}};
+	var updateS = { x:[reconnaissance], y:[exigences], z:[autonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointS}, text: textepointS, marker:{color: couleurpointS}};
 	var layout = {showlegend: false};
 	var style = {showlegend: true};
 	Plotly.addTraces(document.getElementById("karasek"+suffixe), updateK);
@@ -925,26 +938,19 @@ function traiter(flag)
         document.getElementById("questionnaireqvt").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => Traitement direct du questionnaire.";
 	}
 	document.getElementById("siegrist"+suffixe).on('plotly_afterplot', function(){});
-	//document.getElementById("Recommandations").style.visibility = 'visible';	
-	//document.getElementById("Recommandations").scrollIntoView(true);
 }
-function sauveimages()
-{
-	if (d == undefined)
-	{
-		d = new Date();
-	}
-    var timestamp = String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0');
+function sauveimages(lebongraphique)
+{    
+    var timestamp = Date.now();
     var filenameK = "graphiqueQVT-K_" + timestamp;
     var filenameS = "graphiqueQVT-S_" + timestamp;
-    Plotly.downloadImage(document.getElementById('karasek'), {format: 'png', width: 800, height: 800, filename: filenameK});
-    Plotly.downloadImage(document.getElementById('siegrist'), {format: 'png', width: 800, height: 800, filename: filenameS});
+    Plotly.downloadImage(document.getElementById('karasek'+lebongraphique), {format: 'png', width: 800, height: 800, filename: filenameK});
+    Plotly.downloadImage(document.getElementById('siegrist'+lebongraphique), {format: 'png', width: 800, height: 800, filename: filenameS});
 }
 function positionpoint(pointx, exigences, autonomie)
 {
 	var couleurexigences;
 	var couleurautonomie;
-	var couleurpointx;
 	if ((exigences >= 0) && (exigences <= 9))
 	{
 		couleurexigences = 1;
@@ -1039,14 +1045,13 @@ function positionpoint(pointx, exigences, autonomie)
 function saveTextAsFile()
 {
     var textToSave = "";
-	var commentairesExigences = document.getElementById("commentairesExigences").innerText;
-	var commentairesAutonomie = document.getElementById("commentairesAutonomie").innerText;
-	var commentairesSoutien = document.getElementById("commentairesSoutien").innerText;
-	var commentairesReconnaissance = document.getElementById("commentairesReconnaissance").innerText;
-	var commentaire = "";
+	var commentairesExigences = document.getElementById("qcommentairesExigences").innerText;
+	var commentairesAutonomie = document.getElementById("qcommentairesAutonomie").innerText;
+	var commentairesSoutien = document.getElementById("qcommentairesSoutien").innerText;
+	var commentairesReconnaissance = document.getElementById("qcommentairesReconnaissance").innerText;
 	for (var x = 1; x < 13; x++)
 	{
-		var questionA = document.getElementsByName("A" + x);
+		var questionA = document.getElementsByName("qA" + x);
 		for (var i = 0; i < 4; i++)
 		{
 			if (questionA[i].checked)
@@ -1077,7 +1082,7 @@ function saveTextAsFile()
 	textToSave += "\n";
 	for (var x = 1; x < 13; x++)
 	{
-		var questionB = document.getElementsByName("B" + x);
+		var questionB = document.getElementsByName("qB" + x);
 		for (var i = 0; i < 4; i++)
 		{
 			if (questionB[i].checked)
@@ -1108,7 +1113,7 @@ function saveTextAsFile()
 	textToSave += "\n";
 	for (var x = 1; x < 13; x++)
 	{
-		var questionC = document.getElementsByName("C" + x);
+		var questionC = document.getElementsByName("qC" + x);
 		for (var i = 0; i < 4; i++)
 		{
 			if (questionC[i].checked)
@@ -1139,7 +1144,7 @@ function saveTextAsFile()
 	textToSave += "\n";
 	for (var x = 1; x < 13; x++)
 	{
-		var questionD = document.getElementsByName("D" + x);
+		var questionD = document.getElementsByName("qD" + x);
 		for (var i = 0; i < 4; i++)
 		{
 			if (questionD[i].checked)
@@ -1169,8 +1174,7 @@ function saveTextAsFile()
 	textToSave += commentairesReconnaissance.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
     var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
     var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-    const d = new Date();
-	var fileNameToSaveAs = "questionnaireQVT_" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + ".csv";
+	var fileNameToSaveAs = "questionnaireQVT_" + Date.now() + ".csv";
 	var downloadLink = document.createElement("a");
     downloadLink.download = fileNameToSaveAs;
     downloadLink.innerHTML = "T&eacute;l&eacute;charger le fichier " + fileNameToSaveAs;
@@ -1331,7 +1335,7 @@ function chargeri()
 				}
 				if (found === -1)
 				{
-					traiter(true);
+					traiter(true,fileToLoad[0].name);
 					document.getElementById("fileToLoad").value = "";
 				}
 				else
@@ -1389,10 +1393,10 @@ function effacer()
 {
     for (var x = 1; x < 13; x++)
 	{
-		var resetA = document.getElementsByName("A" + x);
-		var resetB = document.getElementsByName("B" + x);
-		var resetC = document.getElementsByName("C" + x);
-		var resetD = document.getElementsByName("D" + x);
+		var resetA = document.getElementsByName("qA" + x);
+		var resetB = document.getElementsByName("qB" + x);
+		var resetC = document.getElementsByName("qC" + x);
+		var resetD = document.getElementsByName("qD" + x);
 		for (var i = 0; i < 4; i++)
 		{
 			resetA[i].checked = false;
@@ -1401,10 +1405,14 @@ function effacer()
 			resetD[i].checked = false;
 		}	
 	};
-	document.getElementById("commentairesExigences").innerText = "";
-	document.getElementById("commentairesAutonomie").innerText = "";
-	document.getElementById("commentairesSoutien").innerText = "";
-	document.getElementById("commentairesReconnaissance").innerText = "";
+	document.getElementById("qcommentairesExigences").innerText = "";
+	document.getElementById("qcommentairesAutonomie").innerText = "";
+	document.getElementById("qcommentairesSoutien").innerText = "";
+	document.getElementById("qcommentairesReconnaissance").innerText = "";
+    document.getElementById("qcommentairesExigences").value = "";
+	document.getElementById("qcommentairesAutonomie").value = "";
+	document.getElementById("qcommentairesSoutien").value = "";
+	document.getElementById("qcommentairesReconnaissance").value = "";
 	window.scrollTo(0,0);
 }
 function prechargement(lebongraphique)
@@ -1414,34 +1422,49 @@ function prechargement(lebongraphique)
 	var dataS = [{ x: [28, 19, 19, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 28, 28, 36, 28, 28, 28, 28, 28, 28, 36, 28, 28, 36, 28, 28, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 28, 28, 36, 28, 28, 19, 28, 28, 28, 28, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 28], y: [0, 0, 0, 0, 0, 9, 9, 18, 18, 27, 27, 0, 0, 0, 9, 9, 9, 0, 9, 9, 0, 9, 9, 9, 18, 18, 18, 9, 9, 0, 9, 9, 18, 18, 0, 18, 18, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 0, 0], z: [19, 19, 36, 36, 10, 10, 19, 19, 28, 28, 36, 36, 10, 10, 10, 10, 10, 10, 10, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 10, 10, 19], type:'scatter3d', mode:'lines', line: {color: 'green', width:2}, hoverinfo:"none", name: 'Travail Protecteur' }, { x: [9, 9, 9, 9, 9, 9, 9, 18, 18, 9, 18, 18, 9, 18, 18, 18, 18, 0, 18, 18, 9, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9, 9, 9, 0, 9, 9, 9, 9, 9, 9, 18, 18, 9, 9, 9, 18, 18], y: [36, 19, 28, 28, 28, 19, 28, 28, 28, 28, 28, 36, 36, 36, 36, 19, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 19, 19, 19, 19, 19, 10, 10, 10, 10, 0, 10, 10, 0, 10, 10, 19, 19, 28, 28, 36, 36, 36, 36, 0, 0, 0, 0, 0, 0, 0, 19, 19, 10, 19, 19, 19, 19, 19, 19, 19, 19, 28], z: [18, 18, 18, 27, 9, 9, 9, 9, 18, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 18, 18, 36, 36, 36, 36, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 18, 18, 27, 27, 36, 36, 36, 36, 0, 0, 9, 9, 0, 0, 0, 0, 0, 9, 9, 9, 0, 0, 9, 9, 18, 9, 9, 9], type:'scatter3d', mode:'lines', line: {color: 'red', width:2}, hoverinfo:"none", name: 'Risque pour la Sant\u00e9'}];
 	var layoutkarasek = {modebar: {orientation: "v", color: "black", activecolor: "red"}, dragmode: 'turntable', showlegend: true, legend:{x: 0, y: 0}, scene: {xaxis:{range: [0, 36], title: {text:'Soutien'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, yaxis:{range: [0, 36], title: {text:'Exigences'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, zaxis:{range: [0, 36], title: {text:'Autonomie'},  tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, camera: {up: {y: 0, x: 0, z: 1}, center: {y: 0, x: 0, z: -0.5}, eye: {y: 2.5, x: 1.5, z: 1}}}, margin:{l: 0, r: 0, b: 0, t: 0, pad: 1}};
 	var layoutsiegrist = {modebar: {orientation: "v", color: "black", activecolor: "red"}, dragmode: 'turntable', showlegend: true, legend:{x: 0, y: 0}, scene: {xaxis:{range: [0, 36], title: {text:'Reconnaissance'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, yaxis:{range: [0, 36], title: {text:'Exigences'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, zaxis: {range: [0, 36], title: {text:'Autonomie'},  tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, camera: {up: {y: 0, x: 0, z: 1}, center: {y: 0, x: 0, z: -0.5}, eye: {y: 2.5, x: 1.5, z: 1}}}, margin:{l: 0, r: 0, b: 0, t: 0, pad: 1}};	
-	Plotly.newPlot(document.getElementById('karasek'+lebongraphique), dataK, layoutkarasek, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages();}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {document.getElementById("cubes").requestFullscreen();}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
-	Plotly.newPlot(document.getElementById('siegrist'+lebongraphique), dataS, layoutsiegrist, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages();}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {document.getElementById("cubes").requestFullscreen();}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
+	Plotly.newPlot(document.getElementById('karasek'+lebongraphique), dataK, layoutkarasek, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false,lebongraphique);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true,lebongraphique);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages(lebongraphique);}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {document.getElementById("karasek"+lebongraphique).requestFullscreen();}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
+	Plotly.newPlot(document.getElementById('siegrist'+lebongraphique), dataS, layoutsiegrist, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false,lebongraphique);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true,lebongraphique);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages(lebongraphique);}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {document.getElementById("siegrist"+lebongraphique).requestFullscreen();}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
 }
-function purge(flag)
+function purge(flag,lebongraphique)
 {
-    if ((document.getElementById("karasek").data != undefined) && (document.getElementById("siegrist").data != undefined))
+    if ((document.getElementById("karasek"+lebongraphique).data != undefined) && (document.getElementById("siegrist"+lebongraphique).data != undefined))
 	{
-        if(document.getElementById('karasek').data.length > 2 && document.getElementById('siegrist').data.length > 2)
+        if(document.getElementById('karasek'+lebongraphique).data.length > 2 && document.getElementById('siegrist'+lebongraphique).data.length > 2)
         {
+            var zonelog;
+            switch (lebongraphique)
+            {
+                case "questionnaire":
+                    zonelog = "questionnaireqvt";
+                    break;
+                case "individuel":
+                    zonelog = "chargementqvtindividuel";
+                    break;
+                case "groupe":
+                    zonelog = "chargementqvtgroupe";
+                    break;
+                case "collectif":
+                    zonelog = "chargementqvtcollectif";
+                    break;
+                default:
+                    zonelog = "statsqvt" + lebongraphique;
+                    break;
+            }
 			if (flag === true)
 			{
-				Plotly.purge(document.getElementById('karasek'));
-				Plotly.purge(document.getElementById('siegrist'));
-				prechargement();
+				Plotly.purge(document.getElementById('karasek'+lebongraphique));
+				Plotly.purge(document.getElementById('siegrist'+lebongraphique));
+				prechargement(lebongraphique);
 				const d = new Date();
-				document.getElementById("questionnaire").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + "Effacement complet des cubes.";
-				//document.getElementById("Recommandations").style.visibility = 'collapse';
-				//document.getElementById("Statistiques").style.visibility = 'collapse';
-				document.getElementById('siegrist').on('plotly_afterplot', function(){});
+				document.getElementById(zonelog).innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + "Effacement complet des cubes.";
+				document.getElementById('siegrist'+lebongraphique).on('plotly_afterplot', function(){});
 			}
 			else
 			{
-				Plotly.deleteTraces(document.getElementById('karasek'), -1);
-            	Plotly.deleteTraces(document.getElementById('siegrist'), -1);
+				Plotly.deleteTraces(document.getElementById('karasek'+lebongraphique), -1);
+            	Plotly.deleteTraces(document.getElementById('siegrist'+lebongraphique), -1);
 				const d = new Date();
-				document.getElementById("questionnaire").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + "Effacement du dernier ajout dans les cubes.";
-				//document.getElementById("Recommandations").style.visibility = 'collapse';
-				//document.getElementById("Statistiques").style.visibility = 'collapse';
+				document.getElementById(zonelog).innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + "Effacement du dernier ajout dans les cubes.";
 			}
         }
     }
