@@ -18,6 +18,9 @@ button {
   font-family: 'Open Sans', sans-serif;
   font-size: medium;
 }
+.qradio:disabled, .iradio:disabled, .qtextarea:disabled, .itextarea:disabled {
+  color: lightblue;
+}
 .top-tabs-container label.active, .sub-tabs-container label.active {
   background-color: WhiteSmoke;
   color: darkred;
