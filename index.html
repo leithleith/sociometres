@@ -31,7 +31,7 @@
           <label for="sub-tab-qvt-3">Analyse de groupe</label>
           <label for="sub-tab-qvt-4">Analyse de collectifs</label>
         </div>    
-        <input class="tab-radio" id="sub-tab-qvt-1" name="sub-group-qvt" type="radio" onclick="document.getElementById('questionnaireqvt').innerHTML+= questionnaireqvt + `<p><button id='sauverquestionnaire' onclick='saveTextAsFile()'>Sauvegarder</button><button id='traiterquestionnaire' onclick='traiter()'>Traiter</button><button id='effacerquestionnaire' onclick='effacer()'>Effacer</button></p><hr/>`;">
+        <input class="tab-radio" id="sub-tab-qvt-1" name="sub-group-qvt" type="radio" onclick="peuplerquestionnaireqvt()">
         <div class="sub-tab-content" id="qvtquestionnaire">
           <div id="questionnaireqvt"><h2>Questionnaire Individuel QVT Numérique</h2></div>
           <div id="graphiquesqvtquestionnaire">
@@ -60,7 +60,7 @@
           <div id="chargementqvtgroupe">
             <h2>Analyse QVT de groupe</h2>
             <h3>Charger les fichiers sauvegardés d'un groupe :</h3>
-            <input type="file" multiple="multiple" accept=".csv" id="filesToLoad"><button class="boutoncharger" id="chargergroupe" onclick="chargerp(false)">Charger</button>
+            <input type="file" multiple="multiple" accept=".csv" id="filesToLoad"><button class="boutoncharger" id="chargergroupe" onclick="chargergroupe()">Charger</button>
             <hr/>
           </div>
           <div id="graphiquesqvtgroupe">
@@ -74,7 +74,7 @@
           <div id="chargementqvtcollectif">
             <h2>Analyse QVT de collectifs</h2>
             <h3>Charger les fichiers sauvegardés d'un collectif :</h3>
-            <input type="file" multiple="multiple" accept=".csv" id="filesToLoadc"><button class="boutoncharger" id="chargercollectif" onclick="chargerp(true)">Charger</button>
+            <input type="file" multiple="multiple" accept=".csv" id="filesToLoadc"><button class="boutoncharger" id="chargercollectif" onclick="chargercollectif()">Charger</button>
             <hr/>
           </div>
           <div id="graphiquesqvtcollectif">
