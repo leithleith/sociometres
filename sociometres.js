@@ -1322,6 +1322,9 @@ function chargeri()
 								break;
 						}
 					}
+					var newparagraph = document.createElement('p');
+					newparagraph.innerHTML =  `<button id='recupquestionnaire' onclick='recupTextAsFile("` + fileToLoad[0].name + `")'>Sauvegarder</button>`;
+					document.getElementById('questionnaireqvtindividuel').append(newparagraph);
 				}
             }
 		}
@@ -1973,4 +1976,275 @@ function chargercollectif()
 			}
         }
     }
+}
+function recupTextAsFile(nomrecup)
+{
+	var cocheA = false;
+	var cocheB = false;
+	var cocheC = false;
+	var cocheD = false;
+	var manqueA = [];
+	var manqueB = [];
+	var manqueC = [];
+	var manqueD = [];
+	var exigences = 0;
+	var autonomie = 0;
+	var soutien = 0;
+	var reconnaissance = 0;
+	for (var x = 1; x < 13; x++)
+	{
+		var scoreA = document.getElementsByName("iA" + x);
+		var scoreB = document.getElementsByName("iB" + x);
+		var scoreC = document.getElementsByName("iC" + x);
+		var scoreD = document.getElementsByName("iD" + x);
+		for (var i = 0; i < 4; i++)
+		{
+			if (scoreA[i].checked)
+			{
+				exigences += parseInt(scoreA[i].value);
+				cocheA = true;
+			}
+			if (scoreB[i].checked)
+			{			
+				autonomie += parseInt(scoreB[i].value);
+				cocheB = true;
+			}
+			if (scoreC[i].checked)
+			{	
+				soutien += parseInt(scoreC[i].value);
+				cocheC = true;
+			}
+			if (scoreD[i].checked)
+			{
+				reconnaissance += parseInt(scoreD[i].value);
+				cocheD = true;
+			}
+		}
+		if (cocheA === false)
+		{
+			manqueA[(x-1)] = "iA" + x;
+			break;
+		}
+		if (cocheB === false)
+		{
+			manqueB[(x-1)] = "iB" + x;
+			break;
+		}
+		if (cocheC === false)
+		{
+			manqueC[(x-1)] = "iC" + x;
+			break;
+		}		
+		if (cocheD === false)
+		{
+			manqueD[(x-1)] = "iD" + x;
+			break;
+		}
+		cocheA = false;
+		cocheB = false;
+		cocheC = false;
+		cocheD = false;
+	}
+	if (manqueA.length > 0)
+	{
+		var indexpremier = manqueA.findIndex(function(element){return element != null;});
+		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Exigences");		
+		if (indexpremier === 0)
+		{
+			window.scrollTo(0,0);
+		}
+		else
+		{
+			document.getElementById("iA" + (indexpremier) + "3").scrollIntoView(true);			
+		}
+		return;
+	}
+	if (manqueB.length > 0)
+	{
+		var indexpremier = manqueB.findIndex(function(element){return element != null;});
+		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Autonomie");		
+		if (indexpremier === 0)
+		{
+			document.getElementById("iB123").scrollIntoView(true);
+			document.getElementById("iA123").scrollIntoView(true);			
+		}
+		else
+		{
+			document.getElementById("iB123").scrollIntoView(true);
+			document.getElementById("iB" + (indexpremier) + "3").scrollIntoView(true);			
+		}
+		return;
+	}
+	if (manqueC.length > 0)
+	{
+		var indexpremier = manqueC.findIndex(function(element){return element != null;});
+		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Soutien");		
+		if (indexpremier === 0)
+		{
+			document.getElementById("iC123").scrollIntoView(true);
+			document.getElementById("iB123").scrollIntoView(true);			
+		}
+		else
+		{
+			document.getElementById("iC123").scrollIntoView(true);
+			document.getElementById("iC" + (indexpremier) + "3").scrollIntoView(true);			
+		}
+		return;
+	}
+	if (manqueD.length > 0)
+	{
+		var indexpremier = manqueD.findIndex(function(element){return element != null;});
+		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Reconnaissance");		
+		if (indexpremier === 0)
+		{
+			document.getElementById("iD123").scrollIntoView(true);
+			document.getElementById("iC123").scrollIntoView(true);			
+		}
+		else
+		{
+			document.getElementById("iD123").scrollIntoView(true);
+			document.getElementById("iD" + (indexpremier) + "3").scrollIntoView(true);			
+		}
+		return;
+	}
+    var textToSave = "";
+	var commentairesExigences = document.getElementById("icommentairesExigences").value;
+	var commentairesAutonomie = document.getElementById("icommentairesAutonomie").value;
+	var commentairesSoutien = document.getElementById("icommentairesSoutien").value;
+	var commentairesReconnaissance = document.getElementById("icommentairesReconnaissance").value;
+	for (var x = 1; x < 13; x++)
+	{
+		var questionA = document.getElementsByName("iA" + x);
+		for (var i = 0; i < 4; i++)
+		{
+			if (questionA[i].checked)
+			{
+				switch(i)
+				{
+					case 0:
+						textToSave += "pas d\'accord";
+						break;
+					case 1:
+						textToSave += "plut\u00f4t pas d\'accord";
+						break;
+					case 2:
+						textToSave += "plut\u00f4t d\'accord";
+						break;
+					case 3:
+						textToSave += "d\'accord";
+						break;
+    				default:
+						textToSave += "";
+						break;
+				}
+			}
+		}
+		textToSave += ",";
+	}
+	textToSave += commentairesExigences.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
+	textToSave += "\n";
+	for (var x = 1; x < 13; x++)
+	{
+		var questionB = document.getElementsByName("iB" + x);
+		for (var i = 0; i < 4; i++)
+		{
+			if (questionB[i].checked)
+			{
+				switch(i)
+				{
+					case 0:
+						textToSave += "pas d\'accord";
+						break;
+					case 1:
+						textToSave += "plut\u00f4t pas d\'accord";
+						break;
+					case 2:
+						textToSave += "plut\u00f4t d\'accord";
+						break;
+					case 3:
+						textToSave += "d\'accord";
+						break;
+    				default:
+						textToSave += "";
+						break;
+				}
+			}
+		}	
+		textToSave += ",";
+	}
+	textToSave += commentairesAutonomie.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
+	textToSave += "\n";
+	for (var x = 1; x < 13; x++)
+	{
+		var questionC = document.getElementsByName("iC" + x);
+		for (var i = 0; i < 4; i++)
+		{
+			if (questionC[i].checked)
+			{
+				switch(i)
+				{
+					case 0:
+						textToSave += "pas d\'accord";
+						break;
+					case 1:
+						textToSave += "plut\u00f4t pas d\'accord";
+						break;
+					case 2:
+						textToSave += "plut\u00f4t d\'accord";
+						break;
+					case 3:
+						textToSave += "d\'accord";
+						break;
+					default:
+						textToSave += "";
+						break;
+				}
+			}
+		}	
+		textToSave += ",";
+	}
+	textToSave += commentairesSoutien.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
+	textToSave += "\n";
+	for (var x = 1; x < 13; x++)
+	{
+		var questionD = document.getElementsByName("iD" + x);
+		for (var i = 0; i < 4; i++)
+		{
+			if (questionD[i].checked)
+			{
+				switch(i)
+				{
+					case 0:
+						textToSave += "pas d\'accord";
+						break;
+					case 1:
+						textToSave += "plut\u00f4t pas d\'accord";
+						break;
+					case 2:
+						textToSave += "plut\u00f4t d\'accord";
+						break;
+					case 3:
+						textToSave += "d\'accord";
+						break;
+					default:
+						textToSave += "";
+						break;
+				}
+			}
+		}	
+		textToSave += ",";
+	}
+	textToSave += commentairesReconnaissance.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+	var fileNameToSaveAs = nomrecup;
+	var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "T&eacute;l&eacute;charger le fichier " + fileNameToSaveAs;
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+	//document.getElementById("questionnaireqvtindividuel").innerHTML = "";
 }
