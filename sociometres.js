@@ -1363,8 +1363,21 @@ function prechargement(lebongraphique)
 	var dataS = [{ x: [28, 19, 19, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 28, 28, 36, 28, 28, 28, 28, 28, 28, 36, 28, 28, 36, 28, 28, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 28, 28, 36, 28, 28, 19, 28, 28, 28, 28, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 28], y: [0, 0, 0, 0, 0, 9, 9, 18, 18, 27, 27, 0, 0, 0, 9, 9, 9, 0, 9, 9, 0, 9, 9, 9, 18, 18, 18, 9, 9, 0, 9, 9, 18, 18, 0, 18, 18, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 0, 0], z: [19, 19, 36, 36, 10, 10, 19, 19, 28, 28, 36, 36, 10, 10, 10, 10, 10, 10, 10, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 10, 10, 19], type:'scatter3d', mode:'lines', line: {color: 'green', width:2}, hoverinfo:"none", name: 'Travail Protecteur' }, { x: [9, 9, 9, 9, 9, 9, 9, 18, 18, 9, 18, 18, 9, 18, 18, 18, 18, 0, 18, 18, 9, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9, 9, 9, 0, 9, 9, 9, 9, 9, 9, 18, 18, 9, 9, 9, 18, 18], y: [36, 19, 28, 28, 28, 19, 28, 28, 28, 28, 28, 36, 36, 36, 36, 19, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 19, 19, 19, 19, 19, 10, 10, 10, 10, 0, 10, 10, 0, 10, 10, 19, 19, 28, 28, 36, 36, 36, 36, 0, 0, 0, 0, 0, 0, 0, 19, 19, 10, 19, 19, 19, 19, 19, 19, 19, 19, 28], z: [18, 18, 18, 27, 9, 9, 9, 9, 18, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 18, 18, 36, 36, 36, 36, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 18, 18, 27, 27, 36, 36, 36, 36, 0, 0, 9, 9, 0, 0, 0, 0, 0, 9, 9, 9, 0, 0, 9, 9, 18, 9, 9, 9], type:'scatter3d', mode:'lines', line: {color: 'red', width:2}, hoverinfo:"none", name: 'Risque pour la Sant\u00e9'}];
 	var layoutkarasek = {modebar: {orientation: "v", color: "black", activecolor: "red"}, dragmode: 'turntable', showlegend: true, legend:{x: 0, y: 0}, scene: {xaxis:{range: [0, 36], title: {text:'Soutien'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, yaxis:{range: [0, 36], title: {text:'Exigences'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, zaxis:{range: [0, 36], title: {text:'Autonomie'},  tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, camera: {up: {y: 0, x: 0, z: 1}, center: {y: 0, x: 0, z: -0.5}, eye: {y: 2.5, x: 1.5, z: 1}}}, margin:{l: 0, r: 0, b: 0, t: 0, pad: 1}};
 	var layoutsiegrist = {modebar: {orientation: "v", color: "black", activecolor: "red"}, dragmode: 'turntable', showlegend: true, legend:{x: 0, y: 0}, scene: {xaxis:{range: [0, 36], title: {text:'Reconnaissance'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, yaxis:{range: [0, 36], title: {text:'Exigences'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, zaxis: {range: [0, 36], title: {text:'Autonomie'},  tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, camera: {up: {y: 0, x: 0, z: 1}, center: {y: 0, x: 0, z: -0.5}, eye: {y: 2.5, x: 1.5, z: 1}}}, margin:{l: 0, r: 0, b: 0, t: 0, pad: 1}};	
-	Plotly.newPlot(document.getElementById('karasek'+lebongraphique), dataK, layoutkarasek, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false,lebongraphique);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true,lebongraphique);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages(lebongraphique);}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {document.getElementById("karasek"+lebongraphique).requestFullscreen();}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
-	Plotly.newPlot(document.getElementById('siegrist'+lebongraphique), dataS, layoutsiegrist, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false,lebongraphique);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true,lebongraphique);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages(lebongraphique);}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {document.getElementById("siegrist"+lebongraphique).requestFullscreen();}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
+	Plotly.newPlot(document.getElementById('karasek'+lebongraphique), dataK, layoutkarasek, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false,lebongraphique);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true,lebongraphique);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages(lebongraphique);}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {pleinecran("karasek"+lebongraphique);}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
+	Plotly.newPlot(document.getElementById('siegrist'+lebongraphique), dataS, layoutsiegrist, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false,lebongraphique);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true,lebongraphique);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages(lebongraphique);}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {pleinecran("siegrist"+lebongraphique);}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
+}
+function pleinecran(labonnediv)
+{
+	document.getElementById(labonnediv).requestFullscreen();
+	document.addEventListener('fullscreenchange', () => {
+  		if (!document.fullscreenElement)
+		{
+			var plotContainer = document.getElementById(labonnediv);
+    		plotContainer.style.width = '700px';
+    		plotContainer.style.height = '450px';
+    		Plotly.Plots.resize(plotContainer);
+  		}
+	});
 }
 function purge(flag,lebongraphique)
 {
@@ -1412,18 +1425,18 @@ function purge(flag,lebongraphique)
 }
 function chargergroupe()
 {
-	filesToLoad = document.getElementById("filesToLoad").files;
-	if (filesToLoad.length > 0)
+	filesToLoadg = document.getElementById("filesToLoad").files;
+	if (filesToLoadg.length > 0)
 	{
 		const d = new Date();		
-		document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => Chargement de " + filesToLoad.length + " fichiers en tant que groupe.";
-		compteur = 0;
-		for (var n = 0; n < filesToLoad.length; n++)
+		document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => Chargement de " + filesToLoadg.length + " fichiers en tant que groupe.";
+		compteurg = 0;
+		for (var n = 0; n < filesToLoadg.length; n++)
 		{
-			if (!(filesToLoad[n].size > 0 && filesToLoad[n].name.slice(0,17) === "questionnaireQVT_" && filesToLoad[n].name.slice(-4) === ".csv"))
+			if (!(filesToLoadg[n].size > 0 && filesToLoadg[n].name.slice(0,17) === "questionnaireQVT_" && filesToLoadg[n].name.slice(-4) === ".csv"))
 			{
 				const d = new Date();
-				document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[n].name + " : fichier invalide !";
+				document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadg[n].name + " : fichier invalide !";
 			}
 			else
 			{
@@ -1449,8 +1462,8 @@ function chargergroupe()
 			oranges = 0;
 			rouges = 0;
 			var fileReader = new FileReader();
-			fileReader.readAsText(filesToLoad[n], "UTF-8");
-			fileReader.onload = function(fileLoadedEvent) 
+			fileReader.readAsText(filesToLoadg[n], "UTF-8");
+			fileReader.onload = function(fileLoadedEvent)
 			{
 				var textFromFileLoaded = fileLoadedEvent.target.result;
 				var lignes = textFromFileLoaded.split("\n");
@@ -1484,8 +1497,8 @@ function chargergroupe()
 							break;
 						default:
 							const d = new Date();
-							document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[compteur].name + " : incomplet";
-							compteur++;
+							document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadg[compteurg].name + " : incomplet";
+							compteurg++;
 							break;
 					}
 					switch (ligneB[i])
@@ -1504,8 +1517,8 @@ function chargergroupe()
 							break;
 						default:
 							const d = new Date();
-							document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[compteur].name + " : incomplet";
-							compteur++;
+							document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadg[compteurg].name + " : incomplet";
+							compteurg++;
 							break;
 					}
 					switch (ligneC[i])
@@ -1524,8 +1537,8 @@ function chargergroupe()
 							break;
 						default:
 							const d = new Date();
-							document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[compteur].name + " : incomplet";
-							compteur++;
+							document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadg[compteurg].name + " : incomplet";
+							compteurg++;
 							break;
 					}
 					switch (ligneD[i])
@@ -1544,15 +1557,15 @@ function chargergroupe()
 							break;
 						default:
 							const d = new Date();
-							document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[compteur].name + " : incomplet";
-							compteur++;
+							document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadg[compteurg].name + " : incomplet";
+							compteurg++;
 							break;
 					}
 				}
-				soutien[compteur] = scoresoutien;
-				reconnaissance[compteur] = scorereconnaissance;
-				exigences[compteur] = scoreexigences;
-				autonomie[compteur] = scoreautonomie;
+				soutien[compteurg] = scoresoutien;
+				reconnaissance[compteurg] = scorereconnaissance;
+				exigences[compteurg] = scoreexigences;
+				autonomie[compteurg] = scoreautonomie;
 				var positionK = positionpoint(scoresoutien,scoreexigences,scoreautonomie);
 				var positionS = positionpoint(scorereconnaissance,scoreexigences,scoreautonomie);
 				var textepointK;
@@ -1609,8 +1622,8 @@ function chargergroupe()
 						textepointS = "";
 						couleurpointS = "darkgrey";
 				}
-				textepointK += '<br>' + filesToLoad[compteur].name;
-				textepointS += '<br>' + filesToLoad[compteur].name;
+				textepointK += '<br>' + filesToLoadg[compteurg].name;
+				textepointS += '<br>' + filesToLoadg[compteurg].name;
 				var updateK = { x:[scoresoutien], y:[scoreexigences], z:[scoreautonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointK}, text: textepointK, marker:{color: couleurpointK}};
 				var updateS = { x:[scorereconnaissance], y:[scoreexigences], z:[scoreautonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointS}, text: textepointS, marker:{color: couleurpointS}};
 				var layout = {showlegend: false};
@@ -1621,7 +1634,7 @@ function chargergroupe()
 				Plotly.restyle(document.getElementById('karasekgroupe'),style,[0,1]);
 				Plotly.restyle(document.getElementById('siegristgroupe'),layout);
 				Plotly.restyle(document.getElementById('siegristgroupe'),style,[0,1]);
-				if (compteur === (filesToLoad.length - 1))
+				if (compteurg === (filesToLoadg.length - 1))
 				{
 					var moyexigences, moyautonomie, moysoutien, moyreconnaissance, medexigences, medautonomie, medsoutien, medreconnaissance;
 					moyexigences = (exigences.reduce(function(a, b) { return a + b; }) / exigences.length).toFixed(2);
@@ -1685,27 +1698,27 @@ function chargergroupe()
 					document.getElementById("grjaune").innerHTML = jaunes;
 					document.getElementById("grorange").innerHTML = oranges;
 					document.getElementById("grrouge").innerHTML = rouges;
-					document.getElementById('siegristgroupe').on('plotly_afterplot', function(){document.getElementById("filesToLoad").value = ""; });
+					document.getElementById('siegristgroupe').on('plotly_afterplot', function(){document.getElementById("filesToLoadg").value = ""; });
 				}
-				compteur++;
+				compteurg++;
 			};				
 		}
 	}
 }
 function chargercollectif()
 {
-	filesToLoad = document.getElementById("filesToLoadc").files;
-	if (filesToLoad.length > 0)
+	filesToLoadc = document.getElementById("filesToLoadc").files;
+	if (filesToLoadc.length > 0)
 	{
 		const d = new Date();		
-		document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => Chargement de " + filesToLoad.length + " fichiers en tant que collectif.";
-		compteur = 0;
-		for (var n = 0; n < filesToLoad.length; n++)
+		document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => Chargement de " + filesToLoadc.length + " fichiers en tant que collectif.";
+		compteurc = 0;
+		for (var n = 0; n < filesToLoadc.length; n++)
 		{
-			if (!(filesToLoad[n].size > 0 && filesToLoad[n].name.slice(0,17) === "questionnaireQVT_" && filesToLoad[n].name.slice(-4) === ".csv"))
+			if (!(filesToLoadc[n].size > 0 && filesToLoadc[n].name.slice(0,17) === "questionnaireQVT_" && filesToLoadc[n].name.slice(-4) === ".csv"))
 			{
 				const d = new Date();
-				document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[n].name + " : fichier invalide !";
+				document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadc[n].name + " : fichier invalide !";
 			}
 			else
 			{
@@ -1726,8 +1739,8 @@ function chargercollectif()
 				oranges = 0;
 				rouges = 0;
 				var fileReader = new FileReader();
-				fileReader.readAsText(filesToLoad[n], "UTF-8");
-				fileReader.onload = function(fileLoadedEvent) 
+				fileReader.readAsText(filesToLoadc[n], "UTF-8");
+				fileReader.onload = function(fileLoadedEvent)
 				{
                     var textFromFileLoaded = fileLoadedEvent.target.result;
 					var lignes = textFromFileLoaded.split("\n");
@@ -1761,8 +1774,8 @@ function chargercollectif()
 								break;
 							default:
 								const d = new Date();
-								document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[compteur].name + " : incomplet";
-                                compteur++;
+								document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadc[compteurc].name + " : incomplet";
+                                compteurc++;
 								break;
 						}
 						switch (ligneB[i])
@@ -1781,8 +1794,8 @@ function chargercollectif()
 								break;
 							default:
 								const d = new Date();
-								document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[compteur].name + " : incomplet";
-								compteur++;
+								document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadc[compteurc].name + " : incomplet";
+								compteurc++;
 								break;
 						}
 						switch (ligneC[i])
@@ -1801,8 +1814,8 @@ function chargercollectif()
 								break;
 							default:
 								const d = new Date();
-								document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[compteur].name + " : incomplet";
-								compteur++;
+								document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadc[compteurc].name + " : incomplet";
+								compteurc++;
 								break;
 						}
 						switch (ligneD[i])
@@ -1821,15 +1834,15 @@ function chargercollectif()
 								break;
 							default:
 								const d = new Date();
-								document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoad[compteur].name + " : incomplet";
-								compteur++;
+								document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => " + filesToLoadc[compteurc].name + " : incomplet";
+								compteurc++;
 								break;
 						}
 					}
-                    soutien[compteur] = scoresoutien;
-                    reconnaissance[compteur] = scorereconnaissance;
-                    exigences[compteur] = scoreexigences;
-                    autonomie[compteur] = scoreautonomie;
+                    soutien[compteurc] = scoresoutien;
+                    reconnaissance[compteurc] = scorereconnaissance;
+                    exigences[compteurc] = scoreexigences;
+                    autonomie[compteurc] = scoreautonomie;
 					var positionK = positionpoint(scoresoutien,scoreexigences,scoreautonomie);
 					var positionS = positionpoint(scorereconnaissance,scoreexigences,scoreautonomie);
 					var textepointK;
@@ -1857,7 +1870,7 @@ function chargercollectif()
 							rougek++;
 							break;
 						default:
-							textepointK = "";
+								textepointK = "";
 							couleurpointK = "darkgrey";
 					}
 					switch (positionS)
@@ -1886,13 +1899,13 @@ function chargercollectif()
 							textepointS = "";
 							couleurpointS = "darkgrey";
 					}
-					textepointK += '<br>' + filesToLoad[compteur].name;
-					textepointS += '<br>' + filesToLoad[compteur].name;
-					texteK[compteur] = textepointK;
-					texteS[compteur] = textepointS;
-					couleurK[compteur] = couleurpointK;
-					couleurS[compteur] = couleurpointS;
-                    if (compteur === (filesToLoad.length - 1))
+					textepointK += '<br>' + filesToLoadc[compteurc].name;
+					textepointS += '<br>' + filesToLoadc[compteurc].name;
+					texteK[compteurc] = textepointK;
+					texteS[compteurc] = textepointS;
+					couleurK[compteurc] = couleurpointK;
+					couleurS[compteurc] = couleurpointS;
+                    if (compteurc === (filesToLoadc.length - 1))
 					{
 						var moyexigences, moyautonomie, moysoutien, moyreconnaissance, medexigences, medautonomie, medsoutien, medreconnaissance;
 						moyexigences = (exigences.reduce(function(a, b) { return a + b; }) / exigences.length).toFixed(2);
@@ -1971,7 +1984,7 @@ function chargercollectif()
 						Plotly.restyle(document.getElementById('siegristcollectif'),layout);
 						Plotly.restyle(document.getElementById('siegristcollectif'),style,[0,1]);
                     }
-                    compteur++;
+                    compteurc++;
 				};				
 			}
         }
