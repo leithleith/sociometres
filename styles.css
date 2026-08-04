@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 10px auto;
   background-color: black;
   font-family: 'Open Sans', sans-serif;
   color: WhiteSmoke;
   font-size: medium;
+  line-height: 1.4;
+  padding-bottom: 56px;
 }
 #questionnaireqvt, #chargementqvtindividuel, #chargementqvtgroupe, #chargementqvtcollectif {
   padding: 5px;
@@ -27,6 +33,12 @@ button {
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   font-size: medium;
+}
+button:focus-visible,
+a:focus-visible,
+label:focus-visible {
+  outline: 2px solid lightblue;
+  outline-offset: 2px;
 }
 .qradio:disabled, .iradio:disabled, .qtextarea:disabled, .itextarea:disabled {
   color: lightblue;
@@ -141,4 +153,18 @@ footer {
   bottom: 0px;
   right: 0px;
   padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .tab-radio:checked + .sub-tab-content {
+    display: block;
+  }
+
+  #questionnaireqvt,
+  #chargementqvtindividuel,
+  #chargementqvtgroupe,
+  #chargementqvtcollectif,
+  #questionnaireqvtindividuel {
+    max-width: 100%;
+  }
 }

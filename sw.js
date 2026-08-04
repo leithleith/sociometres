@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sociometres-pwa-v1';
+const CACHE_NAME = 'sociometres-pwa-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -18,11 +18,18 @@ self.addEventListener('install', event=>{
 });
 
 self.addEventListener('activate', event=>{
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then(cacheNames =>
+      Promise.all(cacheNames.filter(name => name !== CACHE_NAME).map(name => caches.delete(name)))
+    ).then(() => self.clients.claim())
+  );
 });
 
 self.addEventListener('fetch', event=>{
   const request = event.request;
+  if (request.method !== 'GET') {
+    return;
+  }
   // For navigation requests, try network first, fallback to cache
   if(request.mode === 'navigate'){
     event.respondWith(
