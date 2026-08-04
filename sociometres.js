@@ -36,11 +36,143 @@ document.querySelectorAll('input[type="radio"][name^="sub-group-"]').forEach(rad
     });
 });
 const questionnaireqvt = `<h3>A. Niveau des Exigences</h3><p>1. Je suis constamment press&eacute;-e par le temps &agrave; cause d’une forte charge de travail :<br/><input type="radio" class="qradio" name="qA1" value="0" id="qA10"/> pas d'accord<input type="radio" class="qradio" name="qA1" value="1" id="qA11"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA1" value="2" id="qA12"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA1" value="3" id="qA13"/> d'accord</p><p>2. J’effectue des t&acirc;ches r&eacute;p&eacute;titives dans mon travail :<br/><input type="radio" class="qradio" name="qA2" value="0" id="qA20"/> pas d'accord<input type="radio" class="qradio" name="qA2" value="1" id="qA21"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA2" value="2" id="qA22"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA2" value="3" id="qA23"/> d'accord</p><p>3. Je trouve le volume des sollicitations raisonnable (nombre de courriels, demandes clients externes ou internes, coll&egrave;gues ou hi&eacute;rarchiques, etc.) :<br/><input type="radio" class="qradio" name="qA3" value="3" id="qA30"/> pas d'accord<input type="radio" class="qradio" name="qA3" value="2" id="qA31"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA3" value="1" id="qA32"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA3" value="0" id="qA33"/> d'accord</p><p>4. Je suis fr&eacute;quemment interrompu-e et d&eacute;rang&eacute;-e dans mon travail :<br/><input type="radio" class="qradio" name="qA4" value="0" id="qA40"/> pas d'accord<input type="radio" class="qradio" name="qA4" value="1" id="qA41"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA4" value="2" id="qA42"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA4" value="3" id="qA43"/> d'accord</p><p>5. Je suis souvent contraint-e &agrave; faire des heures suppl&eacute;mentaires :<br/><input type="radio" class="qradio" name="qA5" value="0" id="qA50"/> pas d'accord<input type="radio" class="qradio" name="qA5" value="1" id="qA51"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA5" value="2" id="qA52"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA5" value="3" id="qA53"/> d'accord</p><p>6. Je suis souvent sollicit&eacute;-e en dehors de mes heures normales de travail :<br/><input type="radio" class="qradio" name="qA6" value="0" id="qA60"/> pas d'accord<input type="radio" class="qradio" name="qA6" value="1" id="qA61"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA6" value="2" id="qA62"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA6" value="3" id="qA63"/> d'accord</p><p>7. Je traite souvent ma messagerie apr&egrave;s le travail, le soir ou le week end :<br/><input type="radio" class="qradio" name="qA7" value="0" id="qA70"/> pas d'accord<input type="radio" class="qradio" name="qA7" value="1" id="qA71"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA7" value="2" id="qA72"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA7" value="3" id="qA73"/> d'accord</p><p>8. Je suis soumis &agrave; des al&eacute;as, je reçois des sollicitations et des demandes de plusieurs personnes :<br/><input type="radio" class="qradio" name="qA8" value="0" id="qA80"/> pas d'accord<input type="radio" class="qradio" name="qA8" value="1" id="qA81"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA8" value="2" id="qA82"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA8" value="3" id="qA83"/> d'accord</p><p>9. J’ai des objectifs atteignables :<br/><input type="radio" class="qradio" name="qA9" value="3" id="qA90"/> pas d'accord<input type="radio" class="qradio" name="qA9" value="2" id="qA91"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA9" value="1" id="qA92"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA9" value="0" id="qA93"/> d'accord</p><p>10. Je dispose de suffisamment de moyens et de temps pour bien faire mon travail :<br/><input type="radio" class="qradio" name="qA10" value="3" id="qA100"/> pas d'accord<input type="radio" class="qradio" name="qA10" value="2" id="qA101"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA10" value="1" id="qA102"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA10" value="0" id="qA103"/> d'accord</p><p>11. Avez-vous le sentiment que depuis l’ann&eacute;e derni&egrave;re votre charge de travail a augment&eacute; ?<br/><input type="radio" class="qradio" name="qA11" value="0" id="qA110"/> pas d'accord<input type="radio" class="qradio" name="qA11" value="1" id="qA111"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA11" value="2" id="qA112"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA11" value="3" id="qA113"/> d'accord</p><p>12. Avez-vous le sentiment que depuis l’ann&eacute;e derni&egrave;re votre temps de travail hebdomadaire a augment&eacute; (en incluant le temps de travail dans les transports, au domicile, etc.) :<br/><input type="radio" class="qradio" name="qA12" value="0" id="qA120"/> pas d'accord<input type="radio" class="qradio" name="qA12" value="1" id="qA121"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qA12" value="2" id="qA122"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qA12" value="3" id="qA123"/> d'accord</p><h3>Commentaires sur le niveau des Exigences :</h3><textarea class="qtextarea" name="qcommentairesExigences" id="qcommentairesExigences" rows="3" cols="50" maxlength="512"></textarea><h3>B. Degr&eacute; d’Autonomie et &eacute;quilibre vie priv&eacute;e / vie professionnelle</h3><p>1. J’ai la possibilit&eacute; de discuter, de proposer des alternatives &agrave; ce que l’on me demande sans me mettre en difficult&eacute; :<br/><input type="radio" class="qradio" name="qB1" value="0" id="qB10"/> pas d'accord<input type="radio" class="qradio" name="qB1" value="1" id="qB11"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB1" value="2" id="qB12"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB1" value="3" id="qB13"/> d'accord</p><p>2. J’ai la possibilit&eacute; de d&eacute;cider l’organisation de mon temps de travail :<br/><input type="radio" class="qradio" name="qB2" value="0" id="qB20"/> pas d'accord<input type="radio" class="qradio" name="qB2" value="1" id="qB21"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB2" value="2" id="qB22"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB2" value="3" id="qB23"/> d'accord</p><p>3. Je reçois rarement une demande n&eacute;cessitant une r&eacute;ponse imm&eacute;diate :<br/><input type="radio" class="qradio" name="qB3" value="0" id="qB30"/> pas d'accord<input type="radio" class="qradio" name="qB3" value="1" id="qB31"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB3" value="2" id="qB32"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB3" value="3" id="qB33"/> d'accord</p><p>4. Je passe peu de temps sur le reporting :<br/><input type="radio" class="qradio" name="qB4" value="0" id="qB40"/> pas d'accord<input type="radio" class="qradio" name="qB4" value="1" id="qB41"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB4" value="2" id="qB42"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB4" value="3" id="qB43"/> d'accord</p><p>5. Les proc&eacute;dures sont complexes :<br/><input type="radio" class="qradio" name="qB5" value="3" id="qB50"/> pas d'accord<input type="radio" class="qradio" name="qB5" value="2" id="qB51"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB5" value="1" id="qB52"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB5" value="0" id="qB53"/> d'accord</p><p>6. Je dispose de marge de manœuvre pour r&eacute;aliser mon travail :<br/><input type="radio" class="qradio" name="qB6" value="0" id="qB60"/> pas d'accord<input type="radio" class="qradio" name="qB6" value="1" id="qB61"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB6" value="2" id="qB62"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB6" value="3" id="qB63"/> d'accord</p><p>7. Le SI (Syst&egrave;me d’Information) et les applications professionnelles sont fiables et op&eacute;rationnelles pour mon travail :<br/><input type="radio" class="qradio" name="qB7" value="0" id="qB70"/> pas d'accord<input type="radio" class="qradio" name="qB7" value="1" id="qB71"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB7" value="2" id="qB72"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB7" value="3" id="qB73"/> d'accord</p><p>8. Les outils num&eacute;riques facilitent mon travail :<br/><input type="radio" class="qradio" name="qB8" value="0" id="qB80"/> pas d'accord<input type="radio" class="qradio" name="qB8" value="1" id="qB81"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB8" value="2" id="qB82"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB8" value="3" id="qB83"/> d'accord</p><p>9. Je peux facilement suivre les formations utiles &agrave; mon travail :<br/><input type="radio" class="qradio" name="qB9" value="0" id="qB90"/> pas d'accord<input type="radio" class="qradio" name="qB9" value="1" id="qB91"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB9" value="2" id="qB92"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB9" value="3" id="qB93"/> d'accord</p><p>10 Je me forme sur des sujets professionnels sur mon temps personnel :<br/><input type="radio" class="qradio" name="qB10" value="3" id="qB100"/> pas d'accord<input type="radio" class="qradio" name="qB10" value="2" id="qB101"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB10" value="1" id="qB102"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB10" value="0" id="qB103"/> d'accord</p><p>11 Je maîtrise les moments et les lieux où je juge n&eacute;cessaire de me d&eacute;connecter ou me connecter afin de pr&eacute;server mon &eacute;quilibre vie priv&eacute;e / vie professionnelle :<br/><input type="radio" class="qradio" name="qB11" value="0" id="qB110"/> pas d'accord<input type="radio" class="qradio" name="qB11" value="1" id="qB111"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB11" value="2" id="qB112"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB11" value="3" id="qB113"/> d'accord</p><p>12 J’utilise ma messagerie et les autres outils num&eacute;riques pour des raisons professionnelles sur mon temps personnel :<br/><input type="radio" class="qradio" name="qB12" value="3" id="qB120"/> pas d'accord<input type="radio" class="qradio" name="qB12" value="2" id="qB121"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qB12" value="1" id="qB122"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qB12" value="0" id="qB123"/> d'accord</p><h3>Commentaires sur le degr&eacute; d’Autonomie et &eacute;quilibre vie priv&eacute;e / vie professionnelle :</h3><textarea class="qtextarea" name="qcommentairesAutonomie" id="qcommentairesAutonomie" rows="3" cols="50" maxlength="512"></textarea><h3>C. Niveau de Soutien (coll&egrave;gues et manager)</h3><p>1. J’ai le sentiment d’&ecirc;tre int&eacute;gr&eacute; au collectif :<br/><input type="radio" class="qradio" name="qC1" value="0" id="qC10"/> pas d'accord<input type="radio" class="qradio" name="qC1" value="1" id="qC11"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC1" value="2" id="qC12"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC1" value="3" id="qC13"/> d'accord</p><p>2. Les coll&egrave;gues avec qui je travaille sont des gens professionnellement comp&eacute;tents :<br/><input type="radio" class="qradio" name="qC2" value="0" id="qC20"/> pas d'accord<input type="radio" class="qradio" name="qC2" value="1" id="qC21"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC2" value="2" id="qC22"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC2" value="3" id="qC23"/> d'accord</p><p>3. Je suis en accord avec ce que mon manager me demande de faire :<br/><input type="radio" class="qradio" name="qC3" value="0" id="qC30"/> pas d'accord<input type="radio" class="qradio" name="qC3" value="1" id="qC31"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC3" value="2" id="qC32"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC3" value="3" id="qC33"/> d'accord</p><p>4. Mes avis et mes propositions sont pris en compte :<br/><input type="radio" class="qradio" name="qC4" value="0" id="qC40"/> pas d'accord<input type="radio" class="qradio" name="qC4" value="1" id="qC41"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC4" value="2" id="qC42"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC4" value="3" id="qC43"/> d'accord</p><p>5. En cas de difficult&eacute;s, je peux compter sur le soutien de mes coll&egrave;gues :<br/><input type="radio" class="qradio" name="qC5" value="0" id="qC50"/> pas d'accord<input type="radio" class="qradio" name="qC5" value="1" id="qC51"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC5" value="2" id="qC52"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC5" value="3" id="qC53"/> d'accord</p><p>6. Je sais identifier le bon interlocuteur hi&eacute;rarchique en cas de difficult&eacute; :<br/><input type="radio" class="qradio" name="qC6" value="0" id="qC60"/> pas d'accord<input type="radio" class="qradio" name="qC6" value="1" id="qC61"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC6" value="2" id="qC62"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC6" value="3" id="qC63"/> d'accord</p><p>7. Mon manager de proximit&eacute; est accessible, disponible, et pr&ecirc;te attention &agrave; ce que je dis :<br/><input type="radio" class="qradio" name="qC7" value="0" id="qC70"/> pas d'accord<input type="radio" class="qradio" name="qC7" value="1" id="qC71"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC7" value="2" id="qC72"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC7" value="3" id="qC73"/> d'accord</p><p>8. Mon environnement de travail est satisfaisant (bruit, espace, ergonomie, etc.) sur mes diff&eacute;rents lieux de travail :<br/><input type="radio" class="qradio" name="qC8" value="0" id="qC80"/> pas d'accord<input type="radio" class="qradio" name="qC8" value="1" id="qC81"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC8" value="2" id="qC82"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC8" value="3" id="qC83"/> d'accord</p><p>9. Des espaces et du temps d&eacute;di&eacute;s aux &eacute;changes professionnels existent :<br/><input type="radio" class="qradio" name="qC9" value="0" id="qC90"/> pas d'accord<input type="radio" class="qradio" name="qC9" value="1" id="qC91"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC9" value="2" id="qC92"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC9" value="3" id="qC93"/> d'accord</p><p>10 L’organisation du travail prend en compte les contraintes personnelles :<br/><input type="radio" class="qradio" name="qC10" value="0" id="qC100"/> pas d'accord<input type="radio" class="qradio" name="qC10" value="1" id="qC101"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC10" value="2" id="qC102"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC10" value="3" id="qC103"/> d'accord</p><p>11 L’organisation du travail et la r&eacute;partition des responsabilit&eacute;s sont claires :<br/><input type="radio" class="qradio" name="qC11" value="0" id="qC110"/> pas d'accord<input type="radio" class="qradio" name="qC11" value="1" id="qC111"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC11" value="2" id="qC112"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC11" value="3" id="qC113"/> d'accord</p><p>12 J’ai confiance dans la strat&eacute;gie de l’entreprise :<br/><input type="radio" class="qradio" name="qC12" value="0" id="qC120"/> pas d'accord<input type="radio" class="qradio" name="qC12" value="1" id="qC121"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qC12" value="2" id="qC122"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qC12" value="3" id="qC123"/> d'accord</p><h3>Commentaires sur le niveau de Soutien (coll&egrave;gues et manager) :</h3><textarea class="qtextarea" name="qcommentairesSoutien" id="qcommentairesSoutien" rows="3" cols="50" maxlength="512"></textarea><h3>D. Reconnaissance au travail</h3><p>1. Ma position professionnelle correspond &agrave; ma qualification et &agrave; mes comp&eacute;tences :<br/><input type="radio" class="qradio" name="qD1" value="0" id="qD10"/> pas d'accord<input type="radio" class="qradio" name="qD1" value="1" id="qD11"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD1" value="2" id="qD12"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD1" value="3" id="qD13"/> d'accord</p><p>2. Ma r&eacute;mun&eacute;ration est coh&eacute;rente avec mon exp&eacute;rience professionnelle et  mes efforts d’adaptation :<br/><input type="radio" class="qradio" name="qD2" value="0" id="qD20"/> pas d'accord<input type="radio" class="qradio" name="qD2" value="1" id="qD21"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD2" value="2" id="qD22"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD2" value="3" id="qD23"/> d'accord</p><p>3. Mon travail a du sens :<br/><input type="radio" class="qradio" name="qD3" value="0" id="qD30"/> pas d'accord<input type="radio" class="qradio" name="qD3" value="1" id="qD31"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD3" value="2" id="qD32"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD3" value="3" id="qD33"/> d'accord</p><p>4. J’ai des informations claires sur l’&eacute;volution de mon emploi actuel, et mes besoins en formation :<br/><input type="radio" class="qradio" name="qD4" value="0" id="qD40"/> pas d'accord<input type="radio" class="qradio" name="qD4" value="1" id="qD41"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD4" value="2" id="qD42"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD4" value="3" id="qD43"/> d'accord</p><p>5. Je suis inquiet par rapport &agrave; l’&eacute;volution de mon m&eacute;tier :<br/><input type="radio" class="qradio" name="qD5" value="3" id="qD50"/> pas d'accord<input type="radio" class="qradio" name="qD5" value="2" id="qD51"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD5" value="1" id="qD52"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD5" value="0" id="qD53"/> d'accord</p><p>6. La qualit&eacute; de mon travail est reconnue par mes coll&egrave;gues :<br/><input type="radio" class="qradio" name="qD6" value="0" id="qD60"/> pas d'accord<input type="radio" class="qradio" name="qD6" value="1" id="qD61"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD6" value="2" id="qD62"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD6" value="3" id="qD63"/> d'accord</p><p>7. Mon &eacute;valuation professionnelle est transparente et fond&eacute;e sur les bons crit&egrave;res :<br/><input type="radio" class="qradio" name="qD7" value="0" id="qD70"/> pas d'accord<input type="radio" class="qradio" name="qD7" value="1" id="qD71"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD7" value="2" id="qD72"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD7" value="3" id="qD73"/> d'accord</p><p>8. Mon manager connaît bien mon travail et je peux &eacute;changer avec lui pour construire des solutions :<br/><input type="radio" class="qradio" name="qD8" value="0" id="qD80"/> pas d'accord<input type="radio" class="qradio" name="qD8" value="1" id="qD81"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD8" value="2" id="qD82"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD8" value="3" id="qD83"/> d'accord</p><p>9. Mon travail est appr&eacute;ci&eacute; &agrave; sa juste valeur par des tiers (clients, etc.) :<br/><input type="radio" class="qradio" name="qD9" value="0" id="qD90"/> pas d'accord<input type="radio" class="qradio" name="qD9" value="1" id="qD91"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD9" value="2" id="qD92"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD9" value="3" id="qD93"/> d'accord</p><p>10 Les organisations de travail favorisent la construction et les &eacute;changes de savoir faire :<br/><input type="radio" class="qradio" name="qD10" value="0" id="qD100"/> pas d'accord<input type="radio" class="qradio" name="qD10" value="1" id="qD101"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD10" value="2" id="qD102"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD10" value="3" id="qD103"/> d'accord</p><p>11 Mon activit&eacute; professionnelle est en accord avec mon &eacute;thique :<br/><input type="radio" class="qradio" name="qD11" value="0" id="qD110"/> pas d'accord<input type="radio" class="qradio" name="qD11" value="1" id="qD111"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD11" value="2" id="qD112"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD11" value="3" id="qD113"/> d'accord</p><p>12 Mes souhaits d’&eacute;volution professionnelle sont pris en compte :<br/><input type="radio" class="qradio" name="qD12" value="0" id="qD120"/> pas d'accord<input type="radio" class="qradio" name="qD12" value="1" id="qD121"/> plut&ocirc;t pas d'accord<input type="radio" class="qradio" name="qD12" value="2" id="qD122"/> plut&ocirc;t d'accord<input type="radio" class="qradio" name="qD12" value="3" id="qD123"/> d'accord</p><h3>Commentaires sur le niveau de Reconnaissance au travail :</h3><textarea class="qtextarea" name="qcommentairesReconnaissance" id="qcommentairesReconnaissance" rows="3" cols="50" maxlength="512"></textarea><hr/>`;
+const QVT_TITLE = '<h2>Questionnaire Individuel QVT Numérique</h2>';
+const QVT_ACTIONS = `<p><button id='sauverquestionnaire' onclick='saveTextAsFile()'>Sauvegarder</button><button id='traiterquestionnaire' onclick='traiter()'>Traiter</button><button id='effacerquestionnaire' onclick='effacer()'>Effacer</button></p><hr/>`;
+
+function shuffleDirectQvtQuestions()
+{
+	const container = byId("questionnaireqvt");
+	if (!container)
+	{
+		return;
+	}
+	const questions = Array.from(container.querySelectorAll("p")).filter(paragraph => paragraph.querySelector('input.qradio'));
+	if (questions.length === 0)
+	{
+		return;
+	}
+	const shuffled = shuffleCopy(questions);
+	const host = document.createElement("div");
+	host.id = "qvtQuestionsAleatoires";
+	host.setAttribute("aria-live", "polite");
+	shuffled.forEach(question => host.appendChild(question));
+	const existingHost = byId("qvtQuestionsAleatoires");
+	if (existingHost)
+	{
+		existingHost.replaceWith(host);
+		return;
+	}
+	const title = container.querySelector("h2");
+	if (title)
+	{
+		title.insertAdjacentElement("afterend", host);
+	}
+	else
+	{
+		container.prepend(host);
+	}
+}
+
+function restructureDirectQvtLayout()
+{
+	const container = byId("questionnaireqvt");
+	if (!container)
+	{
+		return;
+	}
+
+	const commentFields = [
+		{id: "qcommentairesExigences", label: "Commentaires - Exigences"},
+		{id: "qcommentairesAutonomie", label: "Commentaires - Autonomie"},
+		{id: "qcommentairesSoutien", label: "Commentaires - Soutien"},
+		{id: "qcommentairesReconnaissance", label: "Commentaires - Reconnaissance"}
+	];
+
+	const commentsSection = document.createElement("section");
+	commentsSection.id = "qvtCommentairesDirect";
+	commentsSection.innerHTML = "<h3>Commentaires</h3>";
+
+	commentFields.forEach(field => {
+		const textarea = byId(field.id);
+		if (!textarea)
+		{
+			return;
+		}
+		const previousHeading = textarea.previousElementSibling;
+		if (previousHeading && previousHeading.tagName === "H3")
+		{
+			previousHeading.remove();
+		}
+		const block = document.createElement("div");
+		const title = document.createElement("h4");
+		title.textContent = field.label;
+		block.appendChild(title);
+		block.appendChild(textarea);
+		commentsSection.appendChild(block);
+	});
+
+	container.querySelectorAll("h3").forEach(heading => {
+		if (/^[ABCD]\.\s/.test(heading.textContent || ""))
+		{
+			heading.remove();
+		}
+	});
+
+	const actionBar = byId("sauverquestionnaire") ? byId("sauverquestionnaire").closest("p") : null;
+	let actionSeparator = null;
+	if (actionBar)
+	{
+		actionSeparator = actionBar.nextElementSibling && actionBar.nextElementSibling.tagName === "HR" ? actionBar.nextElementSibling : null;
+		if (actionSeparator)
+		{
+			actionSeparator.remove();
+		}
+		actionBar.remove();
+	}
+
+	const existingComments = byId("qvtCommentairesDirect");
+	if (existingComments)
+	{
+		existingComments.remove();
+	}
+
+	const questionsHost = byId("qvtQuestionsAleatoires");
+	if (questionsHost)
+	{
+		questionsHost.insertAdjacentElement("afterend", commentsSection);
+	}
+	else
+	{
+		container.appendChild(commentsSection);
+	}
+
+	if (actionBar)
+	{
+		container.appendChild(actionBar);
+		if (actionSeparator)
+		{
+			container.appendChild(actionSeparator);
+		}
+	}
+}
+
+function renderQuestionnaireQvtDirect()
+{
+	byId("questionnaireqvt").innerHTML = QVT_TITLE + questionnaireqvt + QVT_ACTIONS;
+	shuffleDirectQvtQuestions();
+	restructureDirectQvtLayout();
+}
+
+function renderQuestionnaireQvtIndividuel()
+{
+	byId("questionnaireqvtindividuel").innerHTML = questionnaireqvtindividuel;
+}
+
 function peuplerquestionnaireqvt()
 {
-	if (document.getElementById('questionnaireqvt').innerHTML == '<h2>Questionnaire Individuel QVT Numérique</h2>')
+	if (byId("questionnaireqvt").innerHTML === QVT_TITLE)
 	{
-		document.getElementById('questionnaireqvt').innerHTML = '<h2>Questionnaire Individuel QVT Numérique</h2>' + questionnaireqvt + `<p><button id='sauverquestionnaire' onclick='saveTextAsFile()'>Sauvegarder</button><button id='traiterquestionnaire' onclick='traiter()'>Traiter</button><button id='effacerquestionnaire' onclick='effacer()'>Effacer</button></p><hr/>`;
+		renderQuestionnaireQvtDirect();
 	}
 }
 const questionnaireqvtindividuel = `<h3>A. Niveau des Exigences</h3><p>1. Je suis constamment press&eacute;-e par le temps &agrave; cause d’une forte charge de travail :<br/><input type="radio" class="iradio" name="iA1" value="0" id="iA10"/> pas d'accord<input type="radio" class="iradio" name="iA1" value="1" id="iA11"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA1" value="2" id="iA12"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA1" value="3" id="iA13"/> d'accord</p><p>2. J’effectue des t&acirc;ches r&eacute;p&eacute;titives dans mon travail :<br/><input type="radio" class="iradio" name="iA2" value="0" id="iA20"/> pas d'accord<input type="radio" class="iradio" name="iA2" value="1" id="iA21"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA2" value="2" id="iA22"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA2" value="3" id="iA23"/> d'accord</p><p>3. Je trouve le volume des sollicitations raisonnable (nombre de courriels, demandes clients externes ou internes, coll&egrave;gues ou hi&eacute;rarchiques, etc.) :<br/><input type="radio" class="iradio" name="iA3" value="3" id="iA30"/> pas d'accord<input type="radio" class="iradio" name="iA3" value="2" id="iA31"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA3" value="1" id="iA32"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA3" value="0" id="iA33"/> d'accord</p><p>4. Je suis fr&eacute;quemment interrompu-e et d&eacute;rang&eacute;-e dans mon travail :<br/><input type="radio" class="iradio" name="iA4" value="0" id="iA40"/> pas d'accord<input type="radio" class="iradio" name="iA4" value="1" id="iA41"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA4" value="2" id="iA42"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA4" value="3" id="iA43"/> d'accord</p><p>5. Je suis souvent contraint-e &agrave; faire des heures suppl&eacute;mentaires :<br/><input type="radio" class="iradio" name="iA5" value="0" id="iA50"/> pas d'accord<input type="radio" class="iradio" name="iA5" value="1" id="iA51"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA5" value="2" id="iA52"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA5" value="3" id="iA53"/> d'accord</p><p>6. Je suis souvent sollicit&eacute;-e en dehors de mes heures normales de travail :<br/><input type="radio" class="iradio" name="iA6" value="0" id="iA60"/> pas d'accord<input type="radio" class="iradio" name="iA6" value="1" id="iA61"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA6" value="2" id="iA62"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA6" value="3" id="iA63"/> d'accord</p><p>7. Je traite souvent ma messagerie apr&egrave;s le travail, le soir ou le week end :<br/><input type="radio" class="iradio" name="iA7" value="0" id="iA70"/> pas d'accord<input type="radio" class="iradio" name="iA7" value="1" id="iA71"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA7" value="2" id="iA72"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA7" value="3" id="iA73"/> d'accord</p><p>8. Je suis soumis &agrave; des al&eacute;as, je reçois des sollicitations et des demandes de plusieurs personnes :<br/><input type="radio" class="iradio" name="iA8" value="0" id="iA80"/> pas d'accord<input type="radio" class="iradio" name="iA8" value="1" id="iA81"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA8" value="2" id="iA82"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA8" value="3" id="iA83"/> d'accord</p><p>9. J’ai des objectifs atteignables :<br/><input type="radio" class="iradio" name="iA9" value="3" id="iA90"/> pas d'accord<input type="radio" class="iradio" name="iA9" value="2" id="iA91"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA9" value="1" id="iA92"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA9" value="0" id="iA93"/> d'accord</p><p>10. Je dispose de suffisamment de moyens et de temps pour bien faire mon travail :<br/><input type="radio" class="iradio" name="iA10" value="3" id="iA100"/> pas d'accord<input type="radio" class="iradio" name="iA10" value="2" id="iA101"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA10" value="1" id="iA102"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA10" value="0" id="iA103"/> d'accord</p><p>11. Avez-vous le sentiment que depuis l’ann&eacute;e derni&egrave;re votre charge de travail a augment&eacute; ?<br/><input type="radio" class="iradio" name="iA11" value="0" id="iA110"/> pas d'accord<input type="radio" class="iradio" name="iA11" value="1" id="iA111"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA11" value="2" id="iA112"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA11" value="3" id="iA113"/> d'accord</p><p>12. Avez-vous le sentiment que depuis l’ann&eacute;e derni&egrave;re votre temps de travail hebdomadaire a augment&eacute; (en incluant le temps de travail dans les transports, au domicile, etc.) :<br/><input type="radio" class="iradio" name="iA12" value="0" id="iA120"/> pas d'accord<input type="radio" class="iradio" name="iA12" value="1" id="iA121"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iA12" value="2" id="iA122"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iA12" value="3" id="iA123"/> d'accord</p><h3>Commentaires sur le niveau des Exigences :</h3><textarea class="itextarea" name="icommentairesExigences" id="icommentairesExigences" rows="3" cols="50" maxlength="512"></textarea><h3>B. Degr&eacute; d’Autonomie et &eacute;quilibre vie priv&eacute;e / vie professionnelle</h3><p>1. J’ai la possibilit&eacute; de discuter, de proposer des alternatives &agrave; ce que l’on me demande sans me mettre en difficult&eacute; :<br/><input type="radio" class="iradio" name="iB1" value="0" id="iB10"/> pas d'accord<input type="radio" class="iradio" name="iB1" value="1" id="iB11"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB1" value="2" id="iB12"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB1" value="3" id="iB13"/> d'accord</p><p>2. J’ai la possibilit&eacute; de d&eacute;cider l’organisation de mon temps de travail :<br/><input type="radio" class="iradio" name="iB2" value="0" id="iB20"/> pas d'accord<input type="radio" class="iradio" name="iB2" value="1" id="iB21"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB2" value="2" id="iB22"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB2" value="3" id="iB23"/> d'accord</p><p>3. Je reçois rarement une demande n&eacute;cessitant une r&eacute;ponse imm&eacute;diate :<br/><input type="radio" class="iradio" name="iB3" value="0" id="iB30"/> pas d'accord<input type="radio" class="iradio" name="iB3" value="1" id="iB31"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB3" value="2" id="iB32"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB3" value="3" id="iB33"/> d'accord</p><p>4. Je passe peu de temps sur le reporting :<br/><input type="radio" class="iradio" name="iB4" value="0" id="iB40"/> pas d'accord<input type="radio" class="iradio" name="iB4" value="1" id="iB41"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB4" value="2" id="iB42"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB4" value="3" id="iB43"/> d'accord</p><p>5. Les proc&eacute;dures sont complexes :<br/><input type="radio" class="iradio" name="iB5" value="3" id="iB50"/> pas d'accord<input type="radio" class="iradio" name="iB5" value="2" id="iB51"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB5" value="1" id="iB52"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB5" value="0" id="iB53"/> d'accord</p><p>6. Je dispose de marge de manœuvre pour r&eacute;aliser mon travail :<br/><input type="radio" class="iradio" name="iB6" value="0" id="iB60"/> pas d'accord<input type="radio" class="iradio" name="iB6" value="1" id="iB61"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB6" value="2" id="iB62"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB6" value="3" id="iB63"/> d'accord</p><p>7. Le SI (Syst&egrave;me d’Information) et les applications professionnelles sont fiables et op&eacute;rationnelles pour mon travail :<br/><input type="radio" class="iradio" name="iB7" value="0" id="iB70"/> pas d'accord<input type="radio" class="iradio" name="iB7" value="1" id="iB71"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB7" value="2" id="iB72"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB7" value="3" id="iB73"/> d'accord</p><p>8. Les outils num&eacute;riques facilitent mon travail :<br/><input type="radio" class="iradio" name="iB8" value="0" id="iB80"/> pas d'accord<input type="radio" class="iradio" name="iB8" value="1" id="iB81"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB8" value="2" id="iB82"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB8" value="3" id="iB83"/> d'accord</p><p>9. Je peux facilement suivre les formations utiles &agrave; mon travail :<br/><input type="radio" class="iradio" name="iB9" value="0" id="iB90"/> pas d'accord<input type="radio" class="iradio" name="iB9" value="1" id="iB91"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB9" value="2" id="iB92"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB9" value="3" id="iB93"/> d'accord</p><p>10 Je me forme sur des sujets professionnels sur mon temps personnel :<br/><input type="radio" class="iradio" name="iB10" value="3" id="iB100"/> pas d'accord<input type="radio" class="iradio" name="iB10" value="2" id="iB101"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB10" value="1" id="iB102"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB10" value="0" id="iB103"/> d'accord</p><p>11 Je maîtrise les moments et les lieux où je juge n&eacute;cessaire de me d&eacute;connecter ou me connecter afin de pr&eacute;server mon &eacute;quilibre vie priv&eacute;e / vie professionnelle :<br/><input type="radio" class="iradio" name="iB11" value="0" id="iB110"/> pas d'accord<input type="radio" class="iradio" name="iB11" value="1" id="iB111"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB11" value="2" id="iB112"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB11" value="3" id="iB113"/> d'accord</p><p>12 J’utilise ma messagerie et les autres outils num&eacute;riques pour des raisons professionnelles sur mon temps personnel :<br/><input type="radio" class="iradio" name="iB12" value="3" id="iB120"/> pas d'accord<input type="radio" class="iradio" name="iB12" value="2" id="iB121"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iB12" value="1" id="iB122"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iB12" value="0" id="iB123"/> d'accord</p><h3>Commentaires sur le degr&eacute; d’Autonomie et &eacute;quilibre vie priv&eacute;e / vie professionnelle :</h3><textarea class="itextarea" name="icommentairesAutonomie" id="icommentairesAutonomie" rows="3" cols="50" maxlength="512"></textarea><h3>C. Niveau de Soutien (coll&egrave;gues et manager)</h3><p>1. J’ai le sentiment d’&ecirc;tre int&eacute;gr&eacute; au collectif :<br/><input type="radio" class="iradio" name="iC1" value="0" id="iC10"/> pas d'accord<input type="radio" class="iradio" name="iC1" value="1" id="iC11"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC1" value="2" id="iC12"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC1" value="3" id="iC13"/> d'accord</p><p>2. Les coll&egrave;gues avec qui je travaille sont des gens professionnellement comp&eacute;tents :<br/><input type="radio" class="iradio" name="iC2" value="0" id="iC20"/> pas d'accord<input type="radio" class="iradio" name="iC2" value="1" id="iC21"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC2" value="2" id="iC22"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC2" value="3" id="iC23"/> d'accord</p><p>3. Je suis en accord avec ce que mon manager me demande de faire :<br/><input type="radio" class="iradio" name="iC3" value="0" id="iC30"/> pas d'accord<input type="radio" class="iradio" name="iC3" value="1" id="iC31"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC3" value="2" id="iC32"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC3" value="3" id="iC33"/> d'accord</p><p>4. Mes avis et mes propositions sont pris en compte :<br/><input type="radio" class="iradio" name="iC4" value="0" id="iC40"/> pas d'accord<input type="radio" class="iradio" name="iC4" value="1" id="iC41"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC4" value="2" id="iC42"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC4" value="3" id="iC43"/> d'accord</p><p>5. En cas de difficult&eacute;s, je peux compter sur le soutien de mes coll&egrave;gues :<br/><input type="radio" class="iradio" name="iC5" value="0" id="iC50"/> pas d'accord<input type="radio" class="iradio" name="iC5" value="1" id="iC51"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC5" value="2" id="iC52"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC5" value="3" id="iC53"/> d'accord</p><p>6. Je sais identifier le bon interlocuteur hi&eacute;rarchique en cas de difficult&eacute; :<br/><input type="radio" class="iradio" name="iC6" value="0" id="iC60"/> pas d'accord<input type="radio" class="iradio" name="iC6" value="1" id="iC61"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC6" value="2" id="iC62"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC6" value="3" id="iC63"/> d'accord</p><p>7. Mon manager de proximit&eacute; est accessible, disponible, et pr&ecirc;te attention &agrave; ce que je dis :<br/><input type="radio" class="iradio" name="iC7" value="0" id="iC70"/> pas d'accord<input type="radio" class="iradio" name="iC7" value="1" id="iC71"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC7" value="2" id="iC72"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC7" value="3" id="iC73"/> d'accord</p><p>8. Mon environnement de travail est satisfaisant (bruit, espace, ergonomie, etc.) sur mes diff&eacute;rents lieux de travail :<br/><input type="radio" class="iradio" name="iC8" value="0" id="iC80"/> pas d'accord<input type="radio" class="iradio" name="iC8" value="1" id="iC81"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC8" value="2" id="iC82"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC8" value="3" id="iC83"/> d'accord</p><p>9. Des espaces et du temps d&eacute;di&eacute;s aux &eacute;changes professionnels existent :<br/><input type="radio" class="iradio" name="iC9" value="0" id="iC90"/> pas d'accord<input type="radio" class="iradio" name="iC9" value="1" id="iC91"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC9" value="2" id="iC92"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC9" value="3" id="iC93"/> d'accord</p><p>10 L’organisation du travail prend en compte les contraintes personnelles :<br/><input type="radio" class="iradio" name="iC10" value="0" id="iC100"/> pas d'accord<input type="radio" class="iradio" name="iC10" value="1" id="iC101"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC10" value="2" id="iC102"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC10" value="3" id="iC103"/> d'accord</p><p>11 L’organisation du travail et la r&eacute;partition des responsabilit&eacute;s sont claires :<br/><input type="radio" class="iradio" name="iC11" value="0" id="iC110"/> pas d'accord<input type="radio" class="iradio" name="iC11" value="1" id="iC111"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC11" value="2" id="iC112"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC11" value="3" id="iC113"/> d'accord</p><p>12 J’ai confiance dans la strat&eacute;gie de l’entreprise :<br/><input type="radio" class="iradio" name="iC12" value="0" id="iC120"/> pas d'accord<input type="radio" class="iradio" name="iC12" value="1" id="iC121"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iC12" value="2" id="iC122"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iC12" value="3" id="iC123"/> d'accord</p><h3>Commentaires sur le niveau de Soutien (coll&egrave;gues et manager) :</h3><textarea class="itextarea" name="icommentairesSoutien" id="icommentairesSoutien" rows="3" cols="50" maxlength="512"></textarea><h3>D. Reconnaissance au travail</h3><p>1. Ma position professionnelle correspond &agrave; ma qualification et &agrave; mes comp&eacute;tences :<br/><input type="radio" class="iradio" name="iD1" value="0" id="iD10"/> pas d'accord<input type="radio" class="iradio" name="iD1" value="1" id="iD11"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD1" value="2" id="iD12"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD1" value="3" id="iD13"/> d'accord</p><p>2. Ma r&eacute;mun&eacute;ration est coh&eacute;rente avec mon exp&eacute;rience professionnelle et  mes efforts d’adaptation :<br/><input type="radio" class="iradio" name="iD2" value="0" id="iD20"/> pas d'accord<input type="radio" class="iradio" name="iD2" value="1" id="iD21"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD2" value="2" id="iD22"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD2" value="3" id="iD23"/> d'accord</p><p>3. Mon travail a du sens :<br/><input type="radio" class="iradio" name="iD3" value="0" id="iD30"/> pas d'accord<input type="radio" class="iradio" name="iD3" value="1" id="iD31"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD3" value="2" id="iD32"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD3" value="3" id="iD33"/> d'accord</p><p>4. J’ai des informations claires sur l’&eacute;volution de mon emploi actuel, et mes besoins en formation :<br/><input type="radio" class="iradio" name="iD4" value="0" id="iD40"/> pas d'accord<input type="radio" class="iradio" name="iD4" value="1" id="iD41"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD4" value="2" id="iD42"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD4" value="3" id="iD43"/> d'accord</p><p>5. Je suis inquiet par rapport &agrave; l’&eacute;volution de mon m&eacute;tier :<br/><input type="radio" class="iradio" name="iD5" value="3" id="iD50"/> pas d'accord<input type="radio" class="iradio" name="iD5" value="2" id="iD51"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD5" value="1" id="iD52"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD5" value="0" id="iD53"/> d'accord</p><p>6. La qualit&eacute; de mon travail est reconnue par mes coll&egrave;gues :<br/><input type="radio" class="iradio" name="iD6" value="0" id="iD60"/> pas d'accord<input type="radio" class="iradio" name="iD6" value="1" id="iD61"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD6" value="2" id="iD62"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD6" value="3" id="iD63"/> d'accord</p><p>7. Mon &eacute;valuation professionnelle est transparente et fond&eacute;e sur les bons crit&egrave;res :<br/><input type="radio" class="iradio" name="iD7" value="0" id="iD70"/> pas d'accord<input type="radio" class="iradio" name="iD7" value="1" id="iD71"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD7" value="2" id="iD72"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD7" value="3" id="iD73"/> d'accord</p><p>8. Mon manager connaît bien mon travail et je peux &eacute;changer avec lui pour construire des solutions :<br/><input type="radio" class="iradio" name="iD8" value="0" id="iD80"/> pas d'accord<input type="radio" class="iradio" name="iD8" value="1" id="iD81"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD8" value="2" id="iD82"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD8" value="3" id="iD83"/> d'accord</p><p>9. Mon travail est appr&eacute;ci&eacute; &agrave; sa juste valeur par des tiers (clients, etc.) :<br/><input type="radio" class="iradio" name="iD9" value="0" id="iD90"/> pas d'accord<input type="radio" class="iradio" name="iD9" value="1" id="iD91"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD9" value="2" id="iD92"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD9" value="3" id="iD93"/> d'accord</p><p>10 Les organisations de travail favorisent la construction et les &eacute;changes de savoir faire :<br/><input type="radio" class="iradio" name="iD10" value="0" id="iD100"/> pas d'accord<input type="radio" class="iradio" name="iD10" value="1" id="iD101"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD10" value="2" id="iD102"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD10" value="3" id="iD103"/> d'accord</p><p>11 Mon activit&eacute; professionnelle est en accord avec mon &eacute;thique :<br/><input type="radio" class="iradio" name="iD11" value="0" id="iD110"/> pas d'accord<input type="radio" class="iradio" name="iD11" value="1" id="iD111"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD11" value="2" id="iD112"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD11" value="3" id="iD113"/> d'accord</p><p>12 Mes souhaits d’&eacute;volution professionnelle sont pris en compte :<br/><input type="radio" class="iradio" name="iD12" value="0" id="iD120"/> pas d'accord<input type="radio" class="iradio" name="iD12" value="1" id="iD121"/> plut&ocirc;t pas d'accord<input type="radio" class="iradio" name="iD12" value="2" id="iD122"/> plut&ocirc;t d'accord<input type="radio" class="iradio" name="iD12" value="3" id="iD123"/> d'accord</p><h3>Commentaires sur le niveau de Reconnaissance au travail :</h3><textarea class="itextarea" name="icommentairesReconnaissance" id="icommentairesReconnaissance" rows="3" cols="50" maxlength="512"></textarea><hr/>`;
@@ -122,414 +254,359 @@ const questionnairerps = ['<input type="checkbox" id="R1" name="A1" value="1"><l
 							'<input type="checkbox" id="R22" name="C6" value="1"><label id="labelR22" for="22">Reproches incessants, humiliations, isolement</label><br/>',
 							'<input type="checkbox" id="R23" name="C7" value="1"><label id="labelR23" for="23">Impossibilité à se déconnecter</label><br/>',
 							'<input type="checkbox" id="R24" name="C8" value="1"><label id="labelR24" for="24">Télétravail subi en mode très dégradé</label><br/>']
-const recos = "<h2>Recommandations :</h2><ul><li><a href='https://lenumeriqueautrement.fr/' target'numeriqueautrement'>Campagne UGICT CGT \"le numérique autrement\"</a></li><li><a href='https://ugictcgt.fr/themes/organisation-du-travail/' target='rpsugict'>Organisation du travail & RPS</a></li></ul>";
+const recos = "<h2>Recommandations :</h2><ul><li><a href='https://lenumeriqueautrement.fr/' target='numeriqueautrement'>Campagne UGICT CGT \"le numérique autrement\"</a></li><li><a href='https://ugictcgt.fr/themes/organisation-du-travail/' target='rpsugict'>Organisation du travail & RPS</a></li></ul>";
+const recosqvt = {
+	questionnaire: recosqvtquestionnaire,
+	individuel: recosqvtindividuel
+};
+const questionnaires = {
+	encadrant: questionnaireencadrant,
+	rps: questionnairerps,
+	violentometre: questionnaireviolentometre
+};
+const byId = id => document.getElementById(id);
+const byName = name => document.getElementsByName(name);
+
+function shuffleCopy(array)
+{
+	const copy = [...array];
+	for (let i = copy.length - 1; i > 0; i--)
+	{
+		let j = Math.floor(Math.random() * (i + 1));
+		[copy[i], copy[j]] = [copy[j], copy[i]];
+	}
+	return copy;
+}
+
+function countByCategory(inputPrefix, maxIndex, categories)
+{
+	const counts = Object.fromEntries(categories.map(category => [category, 0]));
+	for (let i = 1; i < maxIndex; i++)
+	{
+		const input = byId(inputPrefix + i);
+		if (!input.checked)
+		{
+			continue;
+		}
+		const category = input.name.charAt(0);
+		if (Object.prototype.hasOwnProperty.call(counts, category))
+		{
+			counts[category] += 1;
+		}
+	}
+	return counts;
+}
+
+function buildPolarData(counts, categories, offsets, theta, series)
+{
+	const vectors = categories.map(() => Array(categories.length).fill(0));
+	for (let idx = 0; idx < categories.length; idx++)
+	{
+		const value = counts[categories[idx]];
+		vectors[idx][idx] = value > 0 ? value + offsets[idx] : 0;
+	}
+	return series.map((entry, idx) => ({
+		r: vectors[idx],
+		theta,
+		name: entry.name,
+		marker: {color: entry.color},
+		type: "barpolar",
+		hoverinfo: "name"
+	}));
+}
+
+function renderRestitutionView(options)
+{
+	let restitution = "<h2>Restitution du questionnaire " + options.questionnaireLabel + "</h2><hr/><h3>" + options.sectionHeadings[0] + " :</h3>";
+	const coches = [];
+	for (let i = 0; i < options.totalQuestions; i++)
+	{
+		const inputId = options.inputPrefix + (i + 1);
+		const labelId = options.labelPrefix + (i + 1);
+		const input = byId(inputId);
+		const label = byId(labelId);
+		restitution += input.outerHTML + label.outerHTML + "<br>";
+		coches[i] = input.checked;
+		const headingIndex = options.breakIndexes.indexOf(i);
+		if (headingIndex !== -1)
+		{
+			restitution += "<h3>" + options.sectionHeadings[headingIndex + 1] + " :</h3>";
+		}
+	}
+	byId(options.containerId).innerHTML = restitution + "<hr/>";
+	for (let i = 0; i < coches.length; i++)
+	{
+		const inputId = options.inputPrefix + (i + 1);
+		const labelId = options.labelPrefix + (i + 1);
+		if (coches[i] === true)
+		{
+			byId(inputId).checked = true;
+		}
+		byId(inputId).disabled = true;
+		byId(labelId).className = options.labelClasses[i];
+	}
+}
+
 function melanger(sujet)
 {
-	if (document.getElementById("questionnaire"+sujet).innerHTML=="")
+	const questionnaireContainer = byId("questionnaire" + sujet);
+	if (questionnaireContainer.innerHTML === "")
     {
-        var tableau = eval("questionnaire"+sujet);
-        document.getElementById("questionnaire"+sujet).innerHTML = "<h2>Questionnaire " + (sujet=='violentometre'?'Violentom&egrave;tre':sujet=='rps'?'RPS':'Encadrant') + "</h2><h3>Quelles sont les situations de travail que vous avez rencontrées ?</h3>";
-        for (i = tableau.length - 1; i > 0; i--)
-        {
-            var j = Math.floor(Math.random() * (i + 1));
-            [tableau[i], tableau[j]] = [tableau[j], tableau[i]];
-        }
-        for (n=0;n<tableau.length;n++)
-        {
-            document.getElementById("questionnaire"+sujet).innerHTML += tableau[n];
-        }
-        document.getElementById("questionnaire"+sujet).innerHTML += '<hr/><button onclick="calcul(\''+sujet+'\')">Calculer</button>';
+		const tableau = questionnaires[sujet];
+		if (!tableau)
+		{
+			return;
+		}
+		const titre = sujet === 'violentometre' ? 'Violentom&egrave;tre' : sujet === 'rps' ? 'RPS' : 'Encadrant';
+		const shuffled = shuffleCopy(tableau);
+		questionnaireContainer.innerHTML = "<h2>Questionnaire " + titre + "</h2><h3>Quelles sont les situations de travail que vous avez rencontrées ?</h3>" + shuffled.join("") + '<hr/><button onclick="calcul(\'' + sujet + '\')">Calculer</button>';
     }    
 }
 function calcul(sujet)
 {
-	var layout = {paper_bgcolor: '#000000',font: {size: 14, color: '#cdcccc'},margin: {b:0,l:150,r:160,t:50},legend: {x:0.1,y:-0.1,bgcolor:'#565656'},showlegend: true,polar: {bgcolor: "#cdcccc",barmode: "overlay",bargap: 0,radialaxis: {ticks: "", showline: false, showticklabels: false},angularaxis: {direction: "clockwise",tickfont: {size: 12},tickangle: 0}},width:600,height:600};
-	var config = {staticPlot: true,responsive: true};
+	let layout = {paper_bgcolor: '#000000',font: {size: 14, color: '#cdcccc'},margin: {b:0,l:150,r:160,t:50},legend: {x:0.1,y:-0.1,bgcolor:'#565656'},showlegend: true,polar: {bgcolor: "#cdcccc",barmode: "overlay",bargap: 0,radialaxis: {ticks: "", showline: false, showticklabels: false},angularaxis: {direction: "clockwise",tickfont: {size: 12},tickangle: 0}},width:600,height:600};
+	let config = {staticPlot: true,responsive: true};
+
     switch (sujet)
     {
         case "encadrant":
-            var A = 0;
-            var B = 0;
-            var C = 0;
-            for (i=1;i<25;i++)
             {
-				if (document.getElementById("E" + i).checked)
+				const categories = ["A", "B", "C"];
+				const counts = countByCategory("E", 25, categories);
+				const total = categories.reduce((sum, category) => sum + counts[category], 0);
+				if (total === 0)
 				{
-					switch (document.getElementById("E" + i).name.charAt(0))
-					{
-					case "A":
-						A += 1;
-						break;
-					case "B":
-						B += 1;
-						break;
-					case "C":
-						C += 1;
-						break;
-					default:
-						break;
-					}
+					break;
 				}
-            }
-            if (A+B+C != 0)
-            {
-                var rA = [0,0,0];
-                var rB = [0,0,0];
-                var rC = [0,0,0];                
-                rA[0] = A;
-                rB[1] = (B>0) ? B+8 : 0;
-                rC[2] = (C>0) ? C+16 : 0;
-                var vtheta = ["Env. de travail de Qualité", "Env. de travail Dégradé", "Env. de travail de Rupture"];
-                var data = [{r: rA,theta: vtheta,name: "Environnement de travail de qualité",marker: {color: "green"},type: "barpolar",hoverinfo: "name"},
-							{r: rB,theta: vtheta,name: "Environnement de travail dégradé",marker: {color: "orange"},type: "barpolar",hoverinfo: "name"},
-							{r: rC,theta: vtheta,name: "Environnement de travail de rupture",marker: {color: "red"},type: "barpolar",hoverinfo: "name"}];
-                Plotly.newPlot("graphiqueencadrant", data, layout, config);
-                var restitution = "<h2>Restitution du questionnaire Encadrant</h2><hr/><h3>Environnement de travail de Qualité :</h3>";
-                var coches = [];
-                var couleur = ["vert","vert","vert","vert","vert","vert","vert","vert","orange","orange","orange","orange","orange","orange","orange","orange","rouge","rouge","rouge","rouge","rouge","rouge","rouge","rouge"];
-                for (var i=0;i<24;i++)
-                {
-					restitution += document.getElementById("E" + (i+1)).outerHTML + document.getElementById("labelE" + (i+1)).outerHTML + "<br>";
-					if (document.getElementById("E" + (i+1)).checked)
-					{
-						coches[i] = true;
-					}
-					else
-					{
-						coches[i] = false;
-					}
-					i==7?restitution += "<h3>Environnement de travail Dégradé :</h3>":i==15?restitution += "<h3>Environnement de travail de Rupture :</h3>":"";
-                }
-                document.getElementById("questionnaireencadrant").innerHTML = restitution + "<hr/>";
-                for (var i=0;i<coches.length;i++)
-                {      
-					if (coches[i] == true)
-					{
-						document.getElementById("E" + (i+1)).checked = true;
-					}
-					document.getElementById("E" + (i+1)).disabled = true;
-					document.getElementById("labelE" + (i+1)).className = couleur[i];
-                }
+				const data = buildPolarData(
+					counts,
+					categories,
+					[0, 8, 16],
+					["Env. de travail de Qualité", "Env. de travail Dégradé", "Env. de travail de Rupture"],
+					[
+						{name: "Environnement de travail de qualité", color: "green"},
+						{name: "Environnement de travail dégradé", color: "orange"},
+						{name: "Environnement de travail de rupture", color: "red"}
+					]
+				);
+				Plotly.newPlot("graphiqueencadrant", data, layout, config);
+				renderRestitutionView({
+					questionnaireLabel: "Encadrant",
+					containerId: "questionnaireencadrant",
+					inputPrefix: "E",
+					labelPrefix: "labelE",
+					totalQuestions: 24,
+					sectionHeadings: [
+						"Environnement de travail de Qualité",
+						"Environnement de travail Dégradé",
+						"Environnement de travail de Rupture"
+					],
+					breakIndexes: [7, 15],
+					labelClasses: ["vert","vert","vert","vert","vert","vert","vert","vert","orange","orange","orange","orange","orange","orange","orange","orange","rouge","rouge","rouge","rouge","rouge","rouge","rouge","rouge"]
+				});
 				//document.getElementById("recos").innerHTML = recos;
-            }
-			break;
+			}
+            break;
         case "violentometre":
-            var A = 0;
-            var B = 0;
-            var C = 0;
-            var D = 0;
-            var E = 0;
-            for (var i=1;i<23;i++)
             {
-                if (document.getElementById("V" + i).checked)
-                {
-					switch (document.getElementById("V" + i).name.charAt(0))
-					{
-						case "A":
-							A += 1;
-							break;
-						case "B":
-							B += 1;
-							break;
-						case "C":
-							C += 1;
-							break;
-						case "D":
-							D += 1;
-							break;
-						case "E":
-							E += 1;
-							break;
-						default:
-					}
-                }
-            }
-            if (A+B+C+D+E != 0)
-            {
-                var rE = [0,0,0,0,0];
-                var rD = [0,0,0,0,0];
-                var rC = [0,0,0,0,0];
-                var rB = [0,0,0,0,0];
-                var rA = [0,0,0,0,0];
-                rA[0] = A;
-                rB[1] = (B>0) ? B+5 : 0;
-                rC[2] = (C>0) ? C+13 : 0;
-                rD[3] = (D>0) ? D+18 : 0;
-                rE[4] = (E>0) ? E+21 : 0;
-                var vtheta = ["Env. pro Sain", "Env. pro Sexiste & Hostile", "Harcèlement Sexuel", "Agression Sexuelle", "Viol"];
-                var data = [{r: rA,theta: vtheta,name: "Environnement pro sain",marker: {color: "green"},type: "barpolar",hoverinfo: "name"},
-                			{r: rB,theta: vtheta,name: "Environnement pro sexiste et hostile",marker: {color: "yellow"},type: "barpolar",hoverinfo: "name"},
-                			{r: rC,theta: vtheta,name: "Harcèlement sexuel",marker: {color: "orange"},type: "barpolar",hoverinfo: "name"},
-                			{r: rD,theta: vtheta,name: "Agression sexuelle",marker: {color: "red"},type: "barpolar",hoverinfo: "name"},
-                			{r: rE,theta: vtheta,name: "Viol",marker: {color: "black"},type: "barpolar",hoverinfo: "name"}];
-                Plotly.newPlot("graphiqueviolentometre", data, layout, config);
-                var restitution = "<h2>Restitution du questionnaire Violentom&egrave;tre</h2><hr/><h3>Environnement de travail Sain :</h3>";
-                var coches = [];
-                var couleur = ["vert","vert","vert","vert","vert","jaune","jaune","jaune","jaune","jaune","jaune","jaune","jaune","orange","orange","orange","orange","orange","rouge","rouge","rouge","noir"];
-                for (var i=0;i<22;i++)
-                {
-					restitution += document.getElementById("V" + (i+1)).outerHTML + document.getElementById("labelV" + (i+1)).outerHTML + "<br>";
-					if (document.getElementById("V" + (i+1)).checked)
-					{
-						coches[i] = true;
-					}
-					else
-					{
-						coches[i] = false;
-					}
-					i==4?restitution += "<h3>Environnement de travail Sexiste et Hostile :</h3>":i==12?restitution += "<h3>Harcèlement Sexuel :</h3>":i==17?restitution += "<h3>Agression Sexuelle :</h3>":i==20?restitution += "<h3>Viol :</h3>":"";
-                }
-                document.getElementById("questionnaireviolentometre").innerHTML = restitution + "<hr/>";
-                for (var i=0;i<coches.length;i++)
-                {      
-					if (coches[i] == true)
-					{
-						document.getElementById("V" + (i+1)).checked = true;
-					}
-					document.getElementById("V" + (i+1)).disabled = true;
-					document.getElementById("labelV" + (i+1)).className = couleur[i];
-                }
-                //document.getElementById("recos").innerHTML = recos;
-            }
+                const categories = ["A", "B", "C", "D", "E"];
+				const counts = countByCategory("V", 23, categories);
+				const total = categories.reduce((sum, category) => sum + counts[category], 0);
+				if (total === 0)
+				{
+					break;
+				}
+				const data = buildPolarData(
+					counts,
+					categories,
+					[0, 5, 13, 18, 21],
+					["Env. pro Sain", "Env. pro Sexiste & Hostile", "Harcèlement Sexuel", "Agression Sexuelle", "Viol"],
+					[
+						{name: "Environnement pro sain", color: "green"},
+						{name: "Environnement pro sexiste et hostile", color: "yellow"},
+						{name: "Harcèlement sexuel", color: "orange"},
+						{name: "Agression sexuelle", color: "red"},
+						{name: "Viol", color: "black"}
+					]
+				);
+				Plotly.newPlot("graphiqueviolentometre", data, layout, config);
+				renderRestitutionView({
+					questionnaireLabel: "Violentom&egrave;tre",
+					containerId: "questionnaireviolentometre",
+					inputPrefix: "V",
+					labelPrefix: "labelV",
+					totalQuestions: 22,
+					sectionHeadings: [
+						"Environnement de travail Sain",
+						"Environnement de travail Sexiste et Hostile",
+						"Harcèlement Sexuel",
+						"Agression Sexuelle",
+						"Viol"
+					],
+					breakIndexes: [4, 12, 17, 20],
+					labelClasses: ["vert","vert","vert","vert","vert","jaune","jaune","jaune","jaune","jaune","jaune","jaune","jaune","orange","orange","orange","orange","orange","rouge","rouge","rouge","noir"]
+				});
+				//document.getElementById("recos").innerHTML = recos;
+			}
             break;
         case "rps":
-			var A = 0;
-            var B = 0;
-            var C = 0;
-            for (i=1;i<25;i++)
             {
-				if (document.getElementById("R" + i).checked)
+                const categories = ["A", "B", "C"];
+				const counts = countByCategory("R", 25, categories);
+				const total = categories.reduce((sum, category) => sum + counts[category], 0);
+				if (total === 0)
 				{
-					switch (document.getElementById("R" + i).name.charAt(0))
-					{
-						case "A":
-							A += 1;
-							break;
-						case "B":
-							B += 1;
-							break;
-						case "C":
-							C += 1;
-							break;
-						default:
-							break;
-					}
+					break;
 				}
-            }
-            if (A+B+C != 0)
-            {
-                var rA = [0,0,0];
-                var rB = [0,0,0];
-                var rC = [0,0,0];                
-                rA[0] = A;
-                rB[1] = (B>0) ? B+8 : 0;
-                rC[2] = (C>0) ? C+16 : 0;
-                var vtheta = ["Env. de travail de Qualité", "Env. de travail Dégradé", "Env. de travail de Rupture"];
-                var data = [{r: rA,theta: vtheta,name: "Environnement de travail de qualité",marker: {color: "green"},type: "barpolar",hoverinfo: "name"},
-							{r: rB,theta: vtheta,name: "Environnement de travail dégradé",marker: {color: "orange"},type: "barpolar",hoverinfo: "name"},
-							{r: rC,theta: vtheta,name: "Environnement de travail de rupture",marker: {color: "red"},type: "barpolar",hoverinfo: "name"}];
-                Plotly.newPlot("graphiquerps", data, layout, config);
-                var restitution = "<h2>Restitution du questionnaire RPS</h2><hr/><h3>Environnement de travail de Qualité :</h3>";
-                var coches = [];
-                var couleur = ["vert","vert","vert","vert","vert","vert","vert","vert","orange","orange","orange","orange","orange","orange","orange","orange","rouge","rouge","rouge","rouge","rouge","rouge","rouge","rouge"];
-                for (var i=0;i<24;i++)
-                {
-					restitution += document.getElementById("R" + (i+1)).outerHTML + document.getElementById("labelR" + (i+1)).outerHTML + "<br>";
-					if (document.getElementById("R" + (i+1)).checked)
-					{
-						coches[i] = true;
-					}
-					else
-					{
-						coches[i] = false;
-					}
-					i==7?restitution += "<h3>Environnement de travail Dégradé :</h3>":i==15?restitution += "<h3>Environnement de travail de Rupture :</h3>":"";
-                }
-                document.getElementById("questionnairerps").innerHTML = restitution + "<hr/>";
-                for (var i=0;i<coches.length;i++)
-                {      
-					if (coches[i] == true)
-					{
-						document.getElementById("R" + (i+1)).checked = true;
-					}
-					document.getElementById("R" + (i+1)).disabled = true;
-					document.getElementById("labelR" + (i+1)).className = couleur[i];
-                }
+				const data = buildPolarData(
+					counts,
+					categories,
+					[0, 8, 16],
+					["Env. de travail de Qualité", "Env. de travail Dégradé", "Env. de travail de Rupture"],
+					[
+						{name: "Environnement de travail de qualité", color: "green"},
+						{name: "Environnement de travail dégradé", color: "orange"},
+						{name: "Environnement de travail de rupture", color: "red"}
+					]
+				);
+				Plotly.newPlot("graphiquerps", data, layout, config);
+				renderRestitutionView({
+					questionnaireLabel: "RPS",
+					containerId: "questionnairerps",
+					inputPrefix: "R",
+					labelPrefix: "labelR",
+					totalQuestions: 24,
+					sectionHeadings: [
+						"Environnement de travail de Qualité",
+						"Environnement de travail Dégradé",
+						"Environnement de travail de Rupture"
+					],
+					breakIndexes: [7, 15],
+					labelClasses: ["vert","vert","vert","vert","vert","vert","vert","vert","orange","orange","orange","orange","orange","orange","orange","orange","rouge","rouge","rouge","rouge","rouge","rouge","rouge","rouge"]
+				});
 				//document.getElementById("recos").innerHTML = recos;
-            }
+			}
             break;
         default:
             break;
     }
 }
+
+const SECTION_LABELS = {
+	A: "Exigences",
+	B: "Autonomie",
+	C: "Soutien",
+	D: "Reconnaissance"
+};
+
+function findFirstIncompleteSection(prefixe)
+{
+	for (let x = 1; x < 13; x++)
+	{
+		for (const section of ["A", "B", "C", "D"])
+		{
+			const scores = byName(prefixe + section + x);
+			let coche = false;
+			for (let i = 0; i < 4; i++)
+			{
+				if (scores[i].checked)
+				{
+					coche = true;
+					break;
+				}
+			}
+			if (!coche)
+			{
+				return {section, indexpremier: x - 1};
+			}
+		}
+	}
+	return null;
+}
+
+function scrollToIncomplete(prefixe, section, indexpremier)
+{
+	window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie " + SECTION_LABELS[section]);
+	if (section === "A")
+	{
+		if (indexpremier === 0)
+		{
+			window.scrollTo(0, 0);
+		}
+		else
+		{
+			byId(prefixe + "A" + indexpremier + "3").scrollIntoView(true);
+		}
+		return;
+	}
+	const previousSections = {B: "A", C: "B", D: "C"};
+	if (indexpremier === 0)
+	{
+		byId(prefixe + section + "123").scrollIntoView(true);
+		byId(prefixe + previousSections[section] + "123").scrollIntoView(true);
+	}
+	else
+	{
+		byId(prefixe + section + "123").scrollIntoView(true);
+		byId(prefixe + section + indexpremier + "3").scrollIntoView(true);
+	}
+}
+
+function ensureQuestionnaireIsComplete(prefixe)
+{
+	const incomplete = findFirstIncompleteSection(prefixe);
+	if (!incomplete)
+	{
+		return true;
+	}
+	scrollToIncomplete(prefixe, incomplete.section, incomplete.indexpremier);
+	return false;
+}
+
 function traiter(flag,nomfichier)
 {
-    var prefixe;
-    var suffixe;
+    let prefixe;
+    let suffixe;
     flag?prefixe="i":prefixe="q";
     flag?suffixe="individuel":suffixe="questionnaire";
-	var cocheA = false;
-	var cocheB = false;
-	var cocheC = false;
-	var cocheD = false;
-	var manqueA = [];
-	var manqueB = [];
-	var manqueC = [];
-	var manqueD = [];
-	var exigences = 0;
-	var autonomie = 0;
-	var soutien = 0;
-	var reconnaissance = 0;
-	for (var x = 1; x < 13; x++)
+	if (!ensureQuestionnaireIsComplete(prefixe))
 	{
-        var scoreA = document.getElementsByName(prefixe + "A" + x);
-        var scoreB = document.getElementsByName(prefixe + "B" + x);
-        var scoreC = document.getElementsByName(prefixe + "C" + x);
-        var scoreD = document.getElementsByName(prefixe + "D" + x);
-		for (var i = 0; i < 4; i++)
-		{
-			if (scoreA[i].checked)
-			{
-				exigences += parseInt(scoreA[i].value);
-				cocheA = true;
-			}
-			if (scoreB[i].checked)
-			{			
-				autonomie += parseInt(scoreB[i].value);
-				cocheB = true;
-			}
-			if (scoreC[i].checked)
-			{	
-				soutien += parseInt(scoreC[i].value);
-				cocheC = true;
-			}
-			if (scoreD[i].checked)
-			{
-				reconnaissance += parseInt(scoreD[i].value);
-				cocheD = true;
-			}
-		}
-		if (cocheA === false)
-		{
-			manqueA[(x-1)] = prefixe + "A" + x;
-			break;
-		}
-		if (cocheB === false)
-		{
-			manqueB[(x-1)] = prefixe + "B" + x;
-			break;
-		}
-		if (cocheC === false)
-		{
-			manqueC[(x-1)] = prefixe + "C" + x;
-			break;
-		}		
-		if (cocheD === false)
-		{
-			manqueD[(x-1)] = prefixe + "D" + x;
-			break;
-		}
-		cocheA = false;
-		cocheB = false;
-		cocheC = false;
-		cocheD = false;
-	}
-	if (manqueA.length > 0)
-	{
-		var indexpremier = manqueA.findIndex(function(element){return element != null;});
-        window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Exigences");		
-        if (indexpremier === 0)
-        {
-            window.scrollTo(0,0);
-        }
-        else
-        {
-            document.getElementById(prefixe + "A" + (indexpremier) + "3").scrollIntoView(true);			
-        }
 		return;
 	}
-	if (manqueB.length > 0)
-	{
-		var indexpremier = manqueB.findIndex(function(element){return element != null;});
-        window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Autonomie");		
-        if (indexpremier === 0)
-        {
-            document.getElementById(prefixe + "B123").scrollIntoView(true);
-            document.getElementById(prefixe + "A123").scrollIntoView(true);			
-        }
-        else
-        {
-            document.getElementById(prefixe + "B123").scrollIntoView(true);
-            document.getElementById(prefixe + "B" + (indexpremier) + "3").scrollIntoView(true);			
-        }
-		return;
-	}
-	if (manqueC.length > 0)
-	{
-		var indexpremier = manqueC.findIndex(function(element){return element != null;});
-        window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Soutien");		
-        if (indexpremier === 0)
-        {
-            document.getElementById(prefixe + "C123").scrollIntoView(true);
-            document.getElementById(prefixe + "B123").scrollIntoView(true);			
-        }
-        else
-        {
-            document.getElementById(prefixe + "C123").scrollIntoView(true);
-            document.getElementById(prefixe + "C" + (indexpremier) + "3").scrollIntoView(true);			
-        }
-		return;
-	}
-	if (manqueD.length > 0)
-	{
-		var indexpremier = manqueD.findIndex(function(element){return element != null;});
-        window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Reconnaissance");		
-        if (indexpremier === 0)
-        {
-            document.getElementById(prefixe + "D123").scrollIntoView(true);
-            document.getElementById(prefixe + "C123").scrollIntoView(true);			
-        }
-        else
-        {
-            document.getElementById(prefixe + "D123").scrollIntoView(true);
-            document.getElementById(prefixe + "D" + (indexpremier) + "3").scrollIntoView(true);			
-        }
-		return;
-	}
-	if ((document.getElementById("karasek"+suffixe).innerHTML == "") || (document.getElementById("siegrist"+suffixe).innerHTML == ""))
+	if ((document.getElementById("karasek"+suffixe).innerHTML === "") || (document.getElementById("siegrist"+suffixe).innerHTML === ""))
 	{
 		prechargement(suffixe);
 	}
-	var exigences = 0;
-	var autonomie = 0;
-	var soutien = 0;
-	var reconnaissance = 0;
-	for (var x = 1; x < 13; x++)
+	let exigences = 0;
+	let autonomie = 0;
+	let soutien = 0;
+	let reconnaissance = 0;
+	for (let x = 1; x < 13; x++)
 	{
-		var scoreA = document.getElementsByName(prefixe + "A" + x);
-		var scoreB = document.getElementsByName(prefixe + "B" + x);
-		var scoreC = document.getElementsByName(prefixe + "C" + x);
-		var scoreD = document.getElementsByName(prefixe + "D" + x);
-		for (var i = 0; i < 4; i++)
+		let scoreA = document.getElementsByName(prefixe + "A" + x);
+		let scoreB = document.getElementsByName(prefixe + "B" + x);
+		let scoreC = document.getElementsByName(prefixe + "C" + x);
+		let scoreD = document.getElementsByName(prefixe + "D" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (scoreA[i].checked)
 			{
-				exigences += parseInt(scoreA[i].value);
+				exigences += Number.parseInt(scoreA[i].value, 10);
 				scoreA[i].style.outline = "2px solid lightblue";
 			}
 			if (scoreB[i].checked)
 			{			
-				autonomie += parseInt(scoreB[i].value);
+				autonomie += Number.parseInt(scoreB[i].value, 10);
 				scoreB[i].style.outline = "2px solid lightblue";
 			}
 			if (scoreC[i].checked)
 			{	
-				soutien += parseInt(scoreC[i].value);
+				soutien += Number.parseInt(scoreC[i].value, 10);
 				scoreC[i].style.outline = "2px solid lightblue";
 			}
 			if (scoreD[i].checked)
 			{
-				reconnaissance += parseInt(scoreD[i].value);
+				reconnaissance += Number.parseInt(scoreD[i].value, 10);
 				scoreD[i].style.outline = "2px solid lightblue";
 			}
 			scoreA[i].disabled = true;
@@ -551,12 +628,12 @@ function traiter(flag,nomfichier)
         document.getElementById("traiterquestionnaire").disabled = true;
 	    document.getElementById("effacerquestionnaire").disabled = true;
     }    
-	var positionK = positionpoint(soutien, exigences, autonomie);
-	var positionS = positionpoint(reconnaissance, exigences, autonomie);
-	var textepointK;
-	var textepointS;
-	var couleurpointK;
-	var couleurpointS;
+	let positionK = positionpoint(soutien, exigences, autonomie);
+	let positionS = positionpoint(reconnaissance, exigences, autonomie);
+	let textepointK;
+	let textepointS;
+	let couleurpointK;
+	let couleurpointS;
 	switch (positionK)
 	{
 		case 1:
@@ -601,10 +678,10 @@ function traiter(flag,nomfichier)
 			textepointS = "Erreur : position non identifée.";
 			couleurpointS = "darkgrey";
 	}
-	var fexigences = false;
-	var fautonomie = false;
-	var fsoutien = false;
-	var freconnaissance = false;
+	let fexigences = false;
+	let fautonomie = false;
+	let fsoutien = false;
+	let freconnaissance = false;
 	if (((exigences > 9) && (exigences < 19)) && ((autonomie > 18) && (autonomie < 28)) && ((soutien > 18) && (soutien < 28)))
 	{
 		fexigences = true;
@@ -633,7 +710,7 @@ function traiter(flag,nomfichier)
 	{
 		freconnaissance = true;
 	}
-    document.getElementById("recosqvt"+suffixe).innerHTML = eval("recosqvt"+suffixe);
+	byId("recosqvt" + suffixe).innerHTML = recosqvt[suffixe];
 	if (fexigences === true)
 	{
 		document.getElementById(prefixe + "cexigences").innerHTML = cexigences;
@@ -727,17 +804,17 @@ function traiter(flag,nomfichier)
         textepointK += '<br>' + nomfichier;
         textepointS += '<br>' + nomfichier;
     }
-	var updateK = { x:[soutien], y:[exigences], z:[autonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointK}, text: textepointK, marker:{color: couleurpointK}};
-	var updateS = { x:[reconnaissance], y:[exigences], z:[autonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointS}, text: textepointS, marker:{color: couleurpointS}};
-	var layout = {showlegend: false};
-	var style = {showlegend: true};
+	let updateK = { x:[soutien], y:[exigences], z:[autonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointK}, text: textepointK, marker:{color: couleurpointK}};
+	let updateS = { x:[reconnaissance], y:[exigences], z:[autonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointS}, text: textepointS, marker:{color: couleurpointS}};
+	let layout = {showlegend: false};
+	let style = {showlegend: true};
 	Plotly.addTraces(document.getElementById("karasek"+suffixe), updateK);
 	Plotly.addTraces(document.getElementById("siegrist"+suffixe), updateS);
 	Plotly.restyle(document.getElementById("karasek"+suffixe),layout);
 	Plotly.restyle(document.getElementById("karasek"+suffixe),style,[0,1]);
 	Plotly.restyle(document.getElementById("siegrist"+suffixe),layout);
 	Plotly.restyle(document.getElementById("siegrist"+suffixe),style,[0,1]);
-	if (flag != true)
+	if (flag !== true)
 	{		
 		const d = new Date();
         document.getElementById("questionnaireqvt").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => Traitement direct du questionnaire.";
@@ -747,16 +824,16 @@ function traiter(flag,nomfichier)
 }
 function sauveimages(lebongraphique)
 {    
-    var timestamp = Date.now();
-    var filenameK = "graphiqueQVT-K_" + timestamp;
-    var filenameS = "graphiqueQVT-S_" + timestamp;
+    let timestamp = Date.now();
+    let filenameK = "graphiqueQVT-K_" + timestamp;
+    let filenameS = "graphiqueQVT-S_" + timestamp;
     Plotly.downloadImage(document.getElementById('karasek'+lebongraphique), {format: 'png', width: 800, height: 800, filename: filenameK});
     Plotly.downloadImage(document.getElementById('siegrist'+lebongraphique), {format: 'png', width: 800, height: 800, filename: filenameS});
 }
 function positionpoint(pointx, exigences, autonomie)
 {
-	var couleurexigences;
-	var couleurautonomie;
+	let couleurexigences;
+	let couleurautonomie;
 	if ((exigences >= 0) && (exigences <= 9))
 	{
 		couleurexigences = 1;
@@ -789,7 +866,7 @@ function positionpoint(pointx, exigences, autonomie)
 	{
 		couleurautonomie = 1;
 	}
-	var intermediaire = couleurautonomie + couleurexigences;
+	let intermediaire = couleurautonomie + couleurexigences;
 	if ((intermediaire === 2) || (intermediaire === 11))
 	{
 		if (((pointx >= 28) && (pointx <= 36)) || ((pointx >= 19) && (pointx <= 27)))
@@ -850,143 +927,19 @@ function positionpoint(pointx, exigences, autonomie)
 }
 function saveTextAsFile()
 {
-	var cocheA = false;
-	var cocheB = false;
-	var cocheC = false;
-	var cocheD = false;
-	var manqueA = [];
-	var manqueB = [];
-	var manqueC = [];
-	var manqueD = [];
-	var exigences = 0;
-	var autonomie = 0;
-	var soutien = 0;
-	var reconnaissance = 0;
-	for (var x = 1; x < 13; x++)
+	if (!ensureQuestionnaireIsComplete("q"))
 	{
-		var scoreA = document.getElementsByName("qA" + x);
-		var scoreB = document.getElementsByName("qB" + x);
-		var scoreC = document.getElementsByName("qC" + x);
-		var scoreD = document.getElementsByName("qD" + x);
-		for (var i = 0; i < 4; i++)
-		{
-			if (scoreA[i].checked)
-			{
-				exigences += parseInt(scoreA[i].value);
-				cocheA = true;
-			}
-			if (scoreB[i].checked)
-			{			
-				autonomie += parseInt(scoreB[i].value);
-				cocheB = true;
-			}
-			if (scoreC[i].checked)
-			{	
-				soutien += parseInt(scoreC[i].value);
-				cocheC = true;
-			}
-			if (scoreD[i].checked)
-			{
-				reconnaissance += parseInt(scoreD[i].value);
-				cocheD = true;
-			}
-		}
-		if (cocheA === false)
-		{
-			manqueA[(x-1)] = "qA" + x;
-			break;
-		}
-		if (cocheB === false)
-		{
-			manqueB[(x-1)] = "qB" + x;
-			break;
-		}
-		if (cocheC === false)
-		{
-			manqueC[(x-1)] = "qC" + x;
-			break;
-		}		
-		if (cocheD === false)
-		{
-			manqueD[(x-1)] = "qD" + x;
-			break;
-		}
-		cocheA = false;
-		cocheB = false;
-		cocheC = false;
-		cocheD = false;
-	}
-	if (manqueA.length > 0)
-	{
-		var indexpremier = manqueA.findIndex(function(element){return element != null;});
-		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Exigences");		
-		if (indexpremier === 0)
-		{
-			window.scrollTo(0,0);
-		}
-		else
-		{
-			document.getElementById("qA" + (indexpremier) + "3").scrollIntoView(true);			
-		}
 		return;
 	}
-	if (manqueB.length > 0)
+    let textToSave = "";
+	let commentairesExigences = document.getElementById("qcommentairesExigences").value;
+	let commentairesAutonomie = document.getElementById("qcommentairesAutonomie").value;
+	let commentairesSoutien = document.getElementById("qcommentairesSoutien").value;
+	let commentairesReconnaissance = document.getElementById("qcommentairesReconnaissance").value;
+	for (let x = 1; x < 13; x++)
 	{
-		var indexpremier = manqueB.findIndex(function(element){return element != null;});
-		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Autonomie");		
-		if (indexpremier === 0)
-		{
-			document.getElementById("qB123").scrollIntoView(true);
-			document.getElementById("qA123").scrollIntoView(true);			
-		}
-		else
-		{
-			document.getElementById("qB123").scrollIntoView(true);
-			document.getElementById("qB" + (indexpremier) + "3").scrollIntoView(true);			
-		}
-		return;
-	}
-	if (manqueC.length > 0)
-	{
-		var indexpremier = manqueC.findIndex(function(element){return element != null;});
-		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Soutien");		
-		if (indexpremier === 0)
-		{
-			document.getElementById("qC123").scrollIntoView(true);
-			document.getElementById("qB123").scrollIntoView(true);			
-		}
-		else
-		{
-			document.getElementById("qC123").scrollIntoView(true);
-			document.getElementById("qC" + (indexpremier) + "3").scrollIntoView(true);			
-		}
-		return;
-	}
-	if (manqueD.length > 0)
-	{
-		var indexpremier = manqueD.findIndex(function(element){return element != null;});
-		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Reconnaissance");		
-		if (indexpremier === 0)
-		{
-			document.getElementById("qD123").scrollIntoView(true);
-			document.getElementById("qC123").scrollIntoView(true);			
-		}
-		else
-		{
-			document.getElementById("qD123").scrollIntoView(true);
-			document.getElementById("qD" + (indexpremier) + "3").scrollIntoView(true);			
-		}
-		return;
-	}
-    var textToSave = "";
-	var commentairesExigences = document.getElementById("qcommentairesExigences").value;
-	var commentairesAutonomie = document.getElementById("qcommentairesAutonomie").value;
-	var commentairesSoutien = document.getElementById("qcommentairesSoutien").value;
-	var commentairesReconnaissance = document.getElementById("qcommentairesReconnaissance").value;
-	for (var x = 1; x < 13; x++)
-	{
-		var questionA = document.getElementsByName("qA" + x);
-		for (var i = 0; i < 4; i++)
+		let questionA = document.getElementsByName("qA" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (questionA[i].checked)
 			{
@@ -1014,10 +967,10 @@ function saveTextAsFile()
 	}
 	textToSave += commentairesExigences.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
 	textToSave += "\n";
-	for (var x = 1; x < 13; x++)
+	for (let x = 1; x < 13; x++)
 	{
-		var questionB = document.getElementsByName("qB" + x);
-		for (var i = 0; i < 4; i++)
+		let questionB = document.getElementsByName("qB" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (questionB[i].checked)
 			{
@@ -1045,10 +998,10 @@ function saveTextAsFile()
 	}
 	textToSave += commentairesAutonomie.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
 	textToSave += "\n";
-	for (var x = 1; x < 13; x++)
+	for (let x = 1; x < 13; x++)
 	{
-		var questionC = document.getElementsByName("qC" + x);
-		for (var i = 0; i < 4; i++)
+		let questionC = document.getElementsByName("qC" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (questionC[i].checked)
 			{
@@ -1076,10 +1029,10 @@ function saveTextAsFile()
 	}
 	textToSave += commentairesSoutien.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
 	textToSave += "\n";
-	for (var x = 1; x < 13; x++)
+	for (let x = 1; x < 13; x++)
 	{
-		var questionD = document.getElementsByName("qD" + x);
-		for (var i = 0; i < 4; i++)
+		let questionD = document.getElementsByName("qD" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (questionD[i].checked)
 			{
@@ -1106,10 +1059,10 @@ function saveTextAsFile()
 		textToSave += ",";
 	}
 	textToSave += commentairesReconnaissance.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
-    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
-    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-	var fileNameToSaveAs = "questionnaireQVT_" + Date.now() + ".csv";
-	var downloadLink = document.createElement("a");
+    let textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    let textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+	let fileNameToSaveAs = "questionnaireQVT_" + Date.now() + ".csv";
+	let downloadLink = document.createElement("a");
     downloadLink.download = fileNameToSaveAs;
     downloadLink.innerHTML = "T&eacute;l&eacute;charger le fichier " + fileNameToSaveAs;
     downloadLink.href = textToSaveAsURL;
@@ -1137,18 +1090,18 @@ function chargeri()
 	}
     else
     {
-		var fileReader = new FileReader();
+		let fileReader = new FileReader();
 		fileReader.readAsText(fileToLoad[0], "UTF-8");
 		fileReader.onload = function(fileLoadedEvent) 
 		{
-			var validationfichier = [];
-			var textFromFileLoaded = fileLoadedEvent.target.result;
-			var lignes = textFromFileLoaded.split("\n");
-			var ligneA = lignes[0].split(",");
-			var ligneB = lignes[1].split(",");
-			var ligneC = lignes[2].split(",");
-			var ligneD = lignes[3].split(",");
-			for (var i = 0; i < 12; i++)
+			let validationfichier = [];
+			let textFromFileLoaded = fileLoadedEvent.target.result;
+			let lignes = textFromFileLoaded.split("\n");
+			let ligneA = lignes[0].split(",");
+			let ligneB = lignes[1].split(",");
+			let ligneC = lignes[2].split(",");
+			let ligneD = lignes[3].split(",");
+			for (let i = 0; i < 12; i++)
 			{
 				if (!(ligneA[i] === "pas d\'accord" || ligneA[i] === "plut\u00f4t pas d\'accord" || ligneA[i] === "plut\u00f4t d\'accord" || ligneA[i] === "d\'accord"))
 				{
@@ -1183,10 +1136,10 @@ function chargeri()
 					validationfichier[i] = "OK";
 				}
 			}
-			var found = validationfichier.findIndex(function(element) { return element != "OK";});
+			let found = validationfichier.findIndex(element => element !== "OK");
 			if (found === -1 || fileToLoad.length === 1)
 			{
-				document.getElementById("questionnaireqvtindividuel").innerHTML = questionnaireqvtindividuel;
+				renderQuestionnaireQvtIndividuel();
 				document.getElementById("icommentairesExigences").innerText = ligneA[12].replace(/\//g, "\n").replace(/;/g, ",");
 				document.getElementById("icommentairesExigences").value = ligneA[12].replace(/\//g, "\n").replace(/;/g, ",");
 				document.getElementById("icommentairesAutonomie").innerText = ligneB[12].replace(/\//g, "\n").replace(/;/g, ",");
@@ -1195,13 +1148,13 @@ function chargeri()
 				document.getElementById("icommentairesSoutien").value = ligneC[12].replace(/\//g, "\n").replace(/;/g, ",");
 				document.getElementById("icommentairesReconnaissance").innerText = ligneD[12].replace(/\//g, "\n").replace(/;/g, ",");
 				document.getElementById("icommentairesReconnaissance").value = ligneD[12].replace(/\//g, "\n").replace(/;/g, ",");
-				for (var i = 0; i < 12; i++)
+				for (let i = 0; i < 12; i++)
 				{
-					var x = i+1;
-					var checkA = document.getElementsByName("iA" + x);
-					var checkB = document.getElementsByName("iB" + x);
-					var checkC = document.getElementsByName("iC" + x);
-					var checkD = document.getElementsByName("iD" + x);
+					let x = i+1;
+					let checkA = document.getElementsByName("iA" + x);
+					let checkB = document.getElementsByName("iB" + x);
+					let checkC = document.getElementsByName("iC" + x);
+					let checkD = document.getElementsByName("iD" + x);
 					switch (ligneA[i])
 					{
 						case "pas d\'accord":
@@ -1279,7 +1232,8 @@ function chargeri()
 				else
 				{
 					validationfichier.sort();
-					if (parseInt(validationfichier[0].substring(1)) === 1)
+					const indexQuestion = Number.parseInt(validationfichier[0].substring(1, 10), 10);
+					if (indexQuestion === 1)
 					{
 						switch (validationfichier[0].charAt(1))
 						{
@@ -1307,22 +1261,22 @@ function chargeri()
 						switch (validationfichier[0].charAt(1))
 						{
 							case "A":
-								document.getElementById("iA" + (parseInt(validationfichier[0].substring(1))-1).toString() + "3").scrollIntoView(true);
+								document.getElementById("iA" + (indexQuestion - 1).toString() + "3").scrollIntoView(true);
 								break;
 							case "B":
-								document.getElementById("iB" + (parseInt(validationfichier[0].substring(1))-1).toString() + "3").scrollIntoView(true);
+								document.getElementById("iB" + (indexQuestion - 1).toString() + "3").scrollIntoView(true);
 								break;
 							case "C":
-								document.getElementById("iC" + (parseInt(validationfichier[0].substring(1))-1).toString() + "3").scrollIntoView(true);
+								document.getElementById("iC" + (indexQuestion - 1).toString() + "3").scrollIntoView(true);
 								break;
 							case "D":
-								document.getElementById("iD" + (parseInt(validationfichier[0].substring(1))-1).toString() + "3").scrollIntoView(true);
+								document.getElementById("iD" + (indexQuestion - 1).toString() + "3").scrollIntoView(true);
 								break;
 							default:
 								break;
 						}
 					}
-					var newparagraph = document.createElement('p');
+					let newparagraph = document.createElement('p');
 					newparagraph.innerHTML =  `<button id='recupquestionnaire' onclick='recupTextAsFile("` + fileToLoad[0].name + `")'>Sauvegarder</button>`;
 					document.getElementById('questionnaireqvtindividuel').append(newparagraph);
 				}
@@ -1332,13 +1286,13 @@ function chargeri()
 }
 function effacer()
 {
-    for (var x = 1; x < 13; x++)
+    for (let x = 1; x < 13; x++)
 	{
-		var resetA = document.getElementsByName("qA" + x);
-		var resetB = document.getElementsByName("qB" + x);
-		var resetC = document.getElementsByName("qC" + x);
-		var resetD = document.getElementsByName("qD" + x);
-		for (var i = 0; i < 4; i++)
+		let resetA = document.getElementsByName("qA" + x);
+		let resetB = document.getElementsByName("qB" + x);
+		let resetC = document.getElementsByName("qC" + x);
+		let resetD = document.getElementsByName("qD" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			resetA[i].checked = false;
 			resetB[i].checked = false;
@@ -1354,15 +1308,16 @@ function effacer()
 	document.getElementById("qcommentairesAutonomie").value = "";
 	document.getElementById("qcommentairesSoutien").value = "";
 	document.getElementById("qcommentairesReconnaissance").value = "";
+	shuffleDirectQvtQuestions();
 	window.scrollTo(0,0);
 }
 function prechargement(lebongraphique)
 {
     Plotly.setPlotConfig({locale: 'fr'});
-	var dataK = [{ x: [28, 19, 19, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 28, 28, 36, 28, 28, 28, 28, 28, 28, 36, 28, 28, 36, 28, 28, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 28, 28, 36, 28, 28, 19, 28, 28, 28, 28, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 28], y: [0, 0, 0, 0, 0, 9, 9, 18, 18, 27, 27, 0, 0, 0, 9, 9, 9, 0, 9, 9, 0, 9, 9, 9, 18, 18, 18, 9, 9, 0, 9, 9, 18, 18, 0, 18, 18, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 0, 0], z: [19, 19, 36, 36, 10, 10, 19, 19, 28, 28, 36, 36, 10, 10, 10, 10, 10, 10, 10, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 10, 10, 19], type:'scatter3d', mode:'lines', line: {color: 'green', width:2}, hoverinfo:"none", name: 'Travail Protecteur' }, { x: [9, 9, 9, 9, 9, 9, 9, 18, 18, 9, 18, 18, 9, 18, 18, 18, 18, 0, 18, 18, 9, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9, 9, 9, 0, 9, 9, 9, 9, 9, 9, 18, 18, 9, 9, 9, 18, 18], y: [36, 19, 28, 28, 28, 19, 28, 28, 28, 28, 28, 36, 36, 36, 36, 19, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 19, 19, 19, 19, 19, 10, 10, 10, 10, 0, 10, 10, 0, 10, 10, 19, 19, 28, 28, 36, 36, 36, 36, 0, 0, 0, 0, 0, 0, 0, 19, 19, 10, 19, 19, 19, 19, 19, 19, 19, 19, 28], z: [18, 18, 18, 27, 9, 9, 9, 9, 18, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 18, 18, 36, 36, 36, 36, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 18, 18, 27, 27, 36, 36, 36, 36, 0, 0, 9, 9, 0, 0, 0, 0, 0, 9, 9, 9, 0, 0, 9, 9, 18, 9, 9, 9], type:'scatter3d', mode:'lines', line: {color: 'red', width:2}, hoverinfo:"none", name: 'Risque pour la Sant\u00e9'}];
-	var dataS = [{ x: [28, 19, 19, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 28, 28, 36, 28, 28, 28, 28, 28, 28, 36, 28, 28, 36, 28, 28, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 28, 28, 36, 28, 28, 19, 28, 28, 28, 28, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 28], y: [0, 0, 0, 0, 0, 9, 9, 18, 18, 27, 27, 0, 0, 0, 9, 9, 9, 0, 9, 9, 0, 9, 9, 9, 18, 18, 18, 9, 9, 0, 9, 9, 18, 18, 0, 18, 18, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 0, 0], z: [19, 19, 36, 36, 10, 10, 19, 19, 28, 28, 36, 36, 10, 10, 10, 10, 10, 10, 10, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 10, 10, 19], type:'scatter3d', mode:'lines', line: {color: 'green', width:2}, hoverinfo:"none", name: 'Travail Protecteur' }, { x: [9, 9, 9, 9, 9, 9, 9, 18, 18, 9, 18, 18, 9, 18, 18, 18, 18, 0, 18, 18, 9, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9, 9, 9, 0, 9, 9, 9, 9, 9, 9, 18, 18, 9, 9, 9, 18, 18], y: [36, 19, 28, 28, 28, 19, 28, 28, 28, 28, 28, 36, 36, 36, 36, 19, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 19, 19, 19, 19, 19, 10, 10, 10, 10, 0, 10, 10, 0, 10, 10, 19, 19, 28, 28, 36, 36, 36, 36, 0, 0, 0, 0, 0, 0, 0, 19, 19, 10, 19, 19, 19, 19, 19, 19, 19, 19, 28], z: [18, 18, 18, 27, 9, 9, 9, 9, 18, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 18, 18, 36, 36, 36, 36, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 18, 18, 27, 27, 36, 36, 36, 36, 0, 0, 9, 9, 0, 0, 0, 0, 0, 9, 9, 9, 0, 0, 9, 9, 18, 9, 9, 9], type:'scatter3d', mode:'lines', line: {color: 'red', width:2}, hoverinfo:"none", name: 'Risque pour la Sant\u00e9'}];
-	var layoutkarasek = {modebar: {orientation: "v", color: "black", activecolor: "red"}, dragmode: 'turntable', showlegend: true, legend:{x: 0, y: 0}, scene: {xaxis:{range: [0, 36], title: {text:'Soutien'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, yaxis:{range: [0, 36], title: {text:'Exigences'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, zaxis:{range: [0, 36], title: {text:'Autonomie'},  tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, camera: {up: {y: 0, x: 0, z: 1}, center: {y: 0, x: 0, z: -0.5}, eye: {y: 2.5, x: 1.5, z: 1}}}, margin:{l: 0, r: 0, b: 0, t: 0, pad: 1}};
-	var layoutsiegrist = {modebar: {orientation: "v", color: "black", activecolor: "red"}, dragmode: 'turntable', showlegend: true, legend:{x: 0, y: 0}, scene: {xaxis:{range: [0, 36], title: {text:'Reconnaissance'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, yaxis:{range: [0, 36], title: {text:'Exigences'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, zaxis: {range: [0, 36], title: {text:'Autonomie'},  tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, camera: {up: {y: 0, x: 0, z: 1}, center: {y: 0, x: 0, z: -0.5}, eye: {y: 2.5, x: 1.5, z: 1}}}, margin:{l: 0, r: 0, b: 0, t: 0, pad: 1}};	
+	let dataK = [{ x: [28, 19, 19, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 28, 28, 36, 28, 28, 28, 28, 28, 28, 36, 28, 28, 36, 28, 28, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 28, 28, 36, 28, 28, 19, 28, 28, 28, 28, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 28], y: [0, 0, 0, 0, 0, 9, 9, 18, 18, 27, 27, 0, 0, 0, 9, 9, 9, 0, 9, 9, 0, 9, 9, 9, 18, 18, 18, 9, 9, 0, 9, 9, 18, 18, 0, 18, 18, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 0, 0], z: [19, 19, 36, 36, 10, 10, 19, 19, 28, 28, 36, 36, 10, 10, 10, 10, 10, 10, 10, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 10, 10, 19], type:'scatter3d', mode:'lines', line: {color: 'green', width:2}, hoverinfo:"none", name: 'Travail Protecteur' }, { x: [9, 9, 9, 9, 9, 9, 9, 18, 18, 9, 18, 18, 9, 18, 18, 18, 18, 0, 18, 18, 9, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9, 9, 9, 0, 9, 9, 9, 9, 9, 9, 18, 18, 9, 9, 9, 18, 18], y: [36, 19, 28, 28, 28, 19, 28, 28, 28, 28, 28, 36, 36, 36, 36, 19, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 19, 19, 19, 19, 19, 10, 10, 10, 10, 0, 10, 10, 0, 10, 10, 19, 19, 28, 28, 36, 36, 36, 36, 0, 0, 0, 0, 0, 0, 0, 19, 19, 10, 19, 19, 19, 19, 19, 19, 19, 19, 28], z: [18, 18, 18, 27, 9, 9, 9, 9, 18, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 18, 18, 36, 36, 36, 36, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 18, 18, 27, 27, 36, 36, 36, 36, 0, 0, 9, 9, 0, 0, 0, 0, 0, 9, 9, 9, 0, 0, 9, 9, 18, 9, 9, 9], type:'scatter3d', mode:'lines', line: {color: 'red', width:2}, hoverinfo:"none", name: 'Risque pour la Sant\u00e9'}];
+	let dataS = [{ x: [28, 19, 19, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 28, 28, 36, 28, 28, 28, 28, 28, 28, 36, 28, 28, 36, 28, 28, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 28, 28, 36, 28, 28, 19, 28, 28, 28, 28, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 28], y: [0, 0, 0, 0, 0, 9, 9, 18, 18, 27, 27, 0, 0, 0, 9, 9, 9, 0, 9, 9, 0, 9, 9, 9, 18, 18, 18, 9, 9, 0, 9, 9, 18, 18, 0, 18, 18, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 0, 0], z: [19, 19, 36, 36, 10, 10, 19, 19, 28, 28, 36, 36, 10, 10, 10, 10, 10, 10, 10, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 28, 28, 36, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 28, 36, 28, 28, 28, 28, 19, 28, 28, 28, 10, 10, 19], type:'scatter3d', mode:'lines', line: {color: 'green', width:2}, hoverinfo:"none", name: 'Travail Protecteur' }, { x: [9, 9, 9, 9, 9, 9, 9, 18, 18, 9, 18, 18, 9, 18, 18, 18, 18, 0, 18, 18, 9, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9, 9, 9, 0, 9, 9, 9, 9, 9, 9, 18, 18, 9, 9, 9, 18, 18], y: [36, 19, 28, 28, 28, 19, 28, 28, 28, 28, 28, 36, 36, 36, 36, 19, 36, 36, 36, 36, 36, 36, 28, 28, 28, 28, 28, 28, 19, 19, 19, 19, 19, 19, 10, 10, 10, 10, 0, 10, 10, 0, 10, 10, 19, 19, 28, 28, 36, 36, 36, 36, 0, 0, 0, 0, 0, 0, 0, 19, 19, 10, 19, 19, 19, 19, 19, 19, 19, 19, 28], z: [18, 18, 18, 27, 9, 9, 9, 9, 18, 18, 18, 18, 18, 18, 0, 0, 0, 0, 0, 18, 18, 36, 36, 36, 36, 27, 27, 27, 27, 27, 27, 18, 18, 18, 18, 18, 18, 9, 9, 9, 9, 9, 9, 18, 18, 27, 27, 36, 36, 36, 36, 0, 0, 9, 9, 0, 0, 0, 0, 0, 9, 9, 9, 0, 0, 9, 9, 18, 9, 9, 9], type:'scatter3d', mode:'lines', line: {color: 'red', width:2}, hoverinfo:"none", name: 'Risque pour la Sant\u00e9'}];
+	let layoutkarasek = {modebar: {orientation: "v", color: "black", activecolor: "red"}, dragmode: 'turntable', showlegend: true, legend:{x: 0, y: 0}, scene: {xaxis:{range: [0, 36], title: {text:'Soutien'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, yaxis:{range: [0, 36], title: {text:'Exigences'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, zaxis:{range: [0, 36], title: {text:'Autonomie'},  tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, camera: {up: {y: 0, x: 0, z: 1}, center: {y: 0, x: 0, z: -0.5}, eye: {y: 2.5, x: 1.5, z: 1}}}, margin:{l: 0, r: 0, b: 0, t: 0, pad: 1}};
+	let layoutsiegrist = {modebar: {orientation: "v", color: "black", activecolor: "red"}, dragmode: 'turntable', showlegend: true, legend:{x: 0, y: 0}, scene: {xaxis:{range: [0, 36], title: {text:'Reconnaissance'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, yaxis:{range: [0, 36], title: {text:'Exigences'}, tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, zaxis: {range: [0, 36], title: {text:'Autonomie'},  tickmode: 'linear', dtick: 9, mirror: true, nticks: 9, type: 'linear', autorange: false, showline: true}, camera: {up: {y: 0, x: 0, z: 1}, center: {y: 0, x: 0, z: -0.5}, eye: {y: 2.5, x: 1.5, z: 1}}}, margin:{l: 0, r: 0, b: 0, t: 0, pad: 1}};	
 	Plotly.newPlot(document.getElementById('karasek'+lebongraphique), dataK, layoutkarasek, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false,lebongraphique);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true,lebongraphique);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages(lebongraphique);}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {pleinecran("karasek"+lebongraphique);}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
 	Plotly.newPlot(document.getElementById('siegrist'+lebongraphique), dataS, layoutsiegrist, {modeBarButtonsToAdd: [{name:'Effacer le dernier ajout', icon: Plotly.Icons.eraseshape, click: function(gd) {purge(false,lebongraphique);}}, {name:'Effacer entièrement', icon: Plotly.Icons.home, click: function(gd) {purge(true,lebongraphique);}}, {name: 'Sauvegarder', icon: Plotly.Icons.camera, click: function(gd) {sauveimages(lebongraphique);}}, {name: 'Passer en plein écran', icon: Plotly.Icons.zoombox, click: function(gd) {pleinecran("siegrist"+lebongraphique);}}], modeBarButtonsToRemove: ['zoom3d', 'toImage', 'sendDataToCloud', 'resetCameraDefault3d', 'resetCameraLastSave3d', 'hoverClosest3d'], displayModeBar: true, displaylogo: false, responsive: true});
 }
@@ -1372,7 +1327,7 @@ function pleinecran(labonnediv)
 	document.addEventListener('fullscreenchange', () => {
   		if (!document.fullscreenElement)
 		{
-			var plotContainer = document.getElementById(labonnediv);
+			let plotContainer = document.getElementById(labonnediv);
     		plotContainer.style.width = '700px';
     		plotContainer.style.height = '450px';
     		Plotly.Plots.resize(plotContainer);
@@ -1381,11 +1336,11 @@ function pleinecran(labonnediv)
 }
 function purge(flag,lebongraphique)
 {
-    if ((document.getElementById("karasek"+lebongraphique).data != undefined) && (document.getElementById("siegrist"+lebongraphique).data != undefined))
+    if ((document.getElementById("karasek"+lebongraphique).data !== undefined) && (document.getElementById("siegrist"+lebongraphique).data !== undefined))
 	{
         if(document.getElementById('karasek'+lebongraphique).data.length > 2 && document.getElementById('siegrist'+lebongraphique).data.length > 2)
         {
-            var zonelog;
+            let zonelog;
             switch (lebongraphique)
             {
                 case "questionnaire":
@@ -1431,7 +1386,7 @@ function chargergroupe()
 		const d = new Date();		
 		document.getElementById("chargementqvtgroupe").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => Chargement de " + filesToLoadg.length + " fichiers en tant que groupe.";
 		compteurg = 0;
-		for (var n = 0; n < filesToLoadg.length; n++)
+		for (let n = 0; n < filesToLoadg.length; n++)
 		{
 			if (!(filesToLoadg[n].size > 0 && filesToLoadg[n].name.slice(0,17) === "questionnaireQVT_" && filesToLoadg[n].name.slice(-4) === ".csv"))
 			{
@@ -1440,7 +1395,7 @@ function chargergroupe()
 			}
 			else
 			{
-				if ((document.getElementById("karasekgroupe").innerHTML == "") || (document.getElementById("siegristgroupe").innerHTML == ""))
+				if ((document.getElementById("karasekgroupe").innerHTML === "") || (document.getElementById("siegristgroupe").innerHTML === ""))
 				{
 					prechargement("groupe");
 				}
@@ -1461,25 +1416,25 @@ function chargergroupe()
 			jaunes = 0;
 			oranges = 0;
 			rouges = 0;
-			var fileReader = new FileReader();
+			let fileReader = new FileReader();
 			fileReader.readAsText(filesToLoadg[n], "UTF-8");
 			fileReader.onload = function(fileLoadedEvent)
 			{
-				var textFromFileLoaded = fileLoadedEvent.target.result;
-				var lignes = textFromFileLoaded.split("\n");
-				var ligneA = lignes[0].split(",");
-				var ligneB = lignes[1].split(",");
-				var ligneC = lignes[2].split(",");
-				var ligneD = lignes[3].split(",");
-				var tableauA = [[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[3,2,1,0],[0,1,2,3],[0,1,2,3]];
-				var tableauB = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[3,2,1,0]];
-				var tableauC = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3]];
-				var tableauD = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3]];
-				var scoreexigences = 0;
-				var scoreautonomie = 0;
-				var scoresoutien = 0;
-				var scorereconnaissance = 0;
-				for (var i = 0; i < 12; i++)
+				let textFromFileLoaded = fileLoadedEvent.target.result;
+				let lignes = textFromFileLoaded.split("\n");
+				let ligneA = lignes[0].split(",");
+				let ligneB = lignes[1].split(",");
+				let ligneC = lignes[2].split(",");
+				let ligneD = lignes[3].split(",");
+				let tableauA = [[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[3,2,1,0],[0,1,2,3],[0,1,2,3]];
+				let tableauB = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[3,2,1,0]];
+				let tableauC = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3]];
+				let tableauD = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3]];
+				let scoreexigences = 0;
+				let scoreautonomie = 0;
+				let scoresoutien = 0;
+				let scorereconnaissance = 0;
+				for (let i = 0; i < 12; i++)
 				{
 					switch (ligneA[i])
 					{
@@ -1566,10 +1521,10 @@ function chargergroupe()
 				reconnaissance[compteurg] = scorereconnaissance;
 				exigences[compteurg] = scoreexigences;
 				autonomie[compteurg] = scoreautonomie;
-				var positionK = positionpoint(scoresoutien,scoreexigences,scoreautonomie);
-				var positionS = positionpoint(scorereconnaissance,scoreexigences,scoreautonomie);
-				var textepointK;
-				var textepointS;
+				let positionK = positionpoint(scoresoutien,scoreexigences,scoreautonomie);
+				let positionS = positionpoint(scorereconnaissance,scoreexigences,scoreautonomie);
+				let textepointK;
+				let textepointS;
 				switch (positionK)
 				{
 					case 1:
@@ -1624,10 +1579,10 @@ function chargergroupe()
 				}
 				textepointK += '<br>' + filesToLoadg[compteurg].name;
 				textepointS += '<br>' + filesToLoadg[compteurg].name;
-				var updateK = { x:[scoresoutien], y:[scoreexigences], z:[scoreautonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointK}, text: textepointK, marker:{color: couleurpointK}};
-				var updateS = { x:[scorereconnaissance], y:[scoreexigences], z:[scoreautonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointS}, text: textepointS, marker:{color: couleurpointS}};
-				var layout = {showlegend: false};
-				var style = {showlegend: true};
+				let updateK = { x:[scoresoutien], y:[scoreexigences], z:[scoreautonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointK}, text: textepointK, marker:{color: couleurpointK}};
+				let updateS = { x:[scorereconnaissance], y:[scoreexigences], z:[scoreautonomie], type:'scatter3d', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurpointS}, text: textepointS, marker:{color: couleurpointS}};
+				let layout = {showlegend: false};
+				let style = {showlegend: true};
 				Plotly.addTraces(document.getElementById('karasekgroupe'), updateK);
 				Plotly.addTraces(document.getElementById('siegristgroupe'), updateS);
 				Plotly.restyle(document.getElementById('karasekgroupe'),layout);
@@ -1636,13 +1591,13 @@ function chargergroupe()
 				Plotly.restyle(document.getElementById('siegristgroupe'),style,[0,1]);
 				if (compteurg === (filesToLoadg.length - 1))
 				{
-					var moyexigences, moyautonomie, moysoutien, moyreconnaissance, medexigences, medautonomie, medsoutien, medreconnaissance;
+					let moyexigences, moyautonomie, moysoutien, moyreconnaissance, medexigences, medautonomie, medsoutien, medreconnaissance;
 					moyexigences = (exigences.reduce(function(a, b) { return a + b; }) / exigences.length).toFixed(2);
 					moyautonomie = (autonomie.reduce(function(a, b) { return a + b; }) / autonomie.length).toFixed(2);
 					moysoutien = (soutien.reduce(function(a, b) { return a + b; }) / soutien.length).toFixed(2);
 					moyreconnaissance = (reconnaissance.reduce(function(a, b) { return a + b; }) / reconnaissance.length).toFixed(2);
-					var numbers = exigences.slice(0).sort((a,b) => a - b);
-					var middle = Math.floor(numbers.length / 2);
+					let numbers = exigences.slice(0).sort((a,b) => a - b);
+					let middle = Math.floor(numbers.length / 2);
 					if (numbers.length % 2 === 0)
 					{
 						medexigences = ((numbers[middle] + numbers[middle - 1]) / 2).toFixed(2);
@@ -1713,7 +1668,7 @@ function chargercollectif()
 		const d = new Date();		
 		document.getElementById("chargementqvtcollectif").innerHTML += "<br/>" + String(d.getHours()).padStart(2, '0') + ":" + String(d.getMinutes()).padStart(2, '0') + ":" + String(d.getSeconds()).padStart(2, '0') + "." + String(d.getMilliseconds()).padStart(3, '0') + " => Chargement de " + filesToLoadc.length + " fichiers en tant que collectif.";
 		compteurc = 0;
-		for (var n = 0; n < filesToLoadc.length; n++)
+		for (let n = 0; n < filesToLoadc.length; n++)
 		{
 			if (!(filesToLoadc[n].size > 0 && filesToLoadc[n].name.slice(0,17) === "questionnaireQVT_" && filesToLoadc[n].name.slice(-4) === ".csv"))
 			{
@@ -1738,25 +1693,25 @@ function chargercollectif()
 				jaunes = 0;
 				oranges = 0;
 				rouges = 0;
-				var fileReader = new FileReader();
+				let fileReader = new FileReader();
 				fileReader.readAsText(filesToLoadc[n], "UTF-8");
 				fileReader.onload = function(fileLoadedEvent)
 				{
-                    var textFromFileLoaded = fileLoadedEvent.target.result;
-					var lignes = textFromFileLoaded.split("\n");
-					var ligneA = lignes[0].split(",");
-					var ligneB = lignes[1].split(",");
-					var ligneC = lignes[2].split(",");
-					var ligneD = lignes[3].split(",");
-					var tableauA = [[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[3,2,1,0],[0,1,2,3],[0,1,2,3]];
-					var tableauB = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[3,2,1,0]];
-					var tableauC = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3]];
-					var tableauD = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3]];
-					var scoreexigences = 0;
-					var scoreautonomie = 0;
-					var scoresoutien = 0;
-					var scorereconnaissance = 0;
-					for (var i = 0; i < 12; i++)
+                    let textFromFileLoaded = fileLoadedEvent.target.result;
+					let lignes = textFromFileLoaded.split("\n");
+					let ligneA = lignes[0].split(",");
+					let ligneB = lignes[1].split(",");
+					let ligneC = lignes[2].split(",");
+					let ligneD = lignes[3].split(",");
+					let tableauA = [[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[3,2,1,0],[0,1,2,3],[0,1,2,3]];
+					let tableauB = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[3,2,1,0]];
+					let tableauC = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3]];
+					let tableauD = [[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[3,2,1,0],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3]];
+					let scoreexigences = 0;
+					let scoreautonomie = 0;
+					let scoresoutien = 0;
+					let scorereconnaissance = 0;
+					for (let i = 0; i < 12; i++)
 					{
 						switch (ligneA[i])
 						{
@@ -1843,10 +1798,10 @@ function chargercollectif()
                     reconnaissance[compteurc] = scorereconnaissance;
                     exigences[compteurc] = scoreexigences;
                     autonomie[compteurc] = scoreautonomie;
-					var positionK = positionpoint(scoresoutien,scoreexigences,scoreautonomie);
-					var positionS = positionpoint(scorereconnaissance,scoreexigences,scoreautonomie);
-					var textepointK;
-					var textepointS;
+					let positionK = positionpoint(scoresoutien,scoreexigences,scoreautonomie);
+					let positionS = positionpoint(scorereconnaissance,scoreexigences,scoreautonomie);
+					let textepointK;
+					let textepointS;
                     switch (positionK)
 					{
 						case 1:
@@ -1907,13 +1862,13 @@ function chargercollectif()
 					couleurS[compteurc] = couleurpointS;
                     if (compteurc === (filesToLoadc.length - 1))
 					{
-						var moyexigences, moyautonomie, moysoutien, moyreconnaissance, medexigences, medautonomie, medsoutien, medreconnaissance;
+						let moyexigences, moyautonomie, moysoutien, moyreconnaissance, medexigences, medautonomie, medsoutien, medreconnaissance;
 						moyexigences = (exigences.reduce(function(a, b) { return a + b; }) / exigences.length).toFixed(2);
 						moyautonomie = (autonomie.reduce(function(a, b) { return a + b; }) / autonomie.length).toFixed(2);
 						moysoutien = (soutien.reduce(function(a, b) { return a + b; }) / soutien.length).toFixed(2);
 						moyreconnaissance = (reconnaissance.reduce(function(a, b) { return a + b; }) / reconnaissance.length).toFixed(2);
-						var numbers = exigences.slice(0).sort((a,b) => a - b);
-  						var middle = Math.floor(numbers.length / 2);
+						let numbers = exigences.slice(0).sort((a,b) => a - b);
+  						let middle = Math.floor(numbers.length / 2);
 						if (numbers.length % 2 === 0)
 						{
 							medexigences = ((numbers[middle] + numbers[middle - 1]) / 2).toFixed(2);
@@ -1969,14 +1924,14 @@ function chargercollectif()
                         document.getElementById("crjaune").innerHTML = jaunes;
                         document.getElementById("crorange").innerHTML = oranges;
                         document.getElementById("crrouge").innerHTML = rouges;
-						if ((document.getElementById("karasekcollectif").innerHTML == "") || (document.getElementById("siegristcollectif").innerHTML == ""))
+						if ((document.getElementById("karasekcollectif").innerHTML === "") || (document.getElementById("siegristcollectif").innerHTML === ""))
 						{
 							prechargement("collectif");
 						}
-						var updateK = { x: soutien, y: exigences, z: autonomie, type:'scatter3d', mode:'markers', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurK}, text: texteK, marker:{symbol: 'diamond', size: 4, opacity: 0.5} };
-						var updateS = { x: reconnaissance, y: exigences, z: autonomie, type:'scatter3d', mode:'markers', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurS}, text: texteS, marker:{symbol: 'diamond', size: 4, opacity: 0.5}};
-						var layout = {showlegend: false};
-						var style = {showlegend: true};
+						let updateK = { x: soutien, y: exigences, z: autonomie, type:'scatter3d', mode:'markers', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurK}, text: texteK, marker:{symbol: 'diamond', size: 4, opacity: 0.5} };
+						let updateS = { x: reconnaissance, y: exigences, z: autonomie, type:'scatter3d', mode:'markers', hoverinfo:'x+y+z+text', hoverlabel:{bgcolor: couleurS}, text: texteS, marker:{symbol: 'diamond', size: 4, opacity: 0.5}};
+						let layout = {showlegend: false};
+						let style = {showlegend: true};
 						Plotly.addTraces(document.getElementById('karasekcollectif'), updateK);
 						Plotly.addTraces(document.getElementById('siegristcollectif'), updateS);
 						Plotly.restyle(document.getElementById('karasekcollectif'),layout);
@@ -1992,143 +1947,19 @@ function chargercollectif()
 }
 function recupTextAsFile(nomrecup)
 {
-	var cocheA = false;
-	var cocheB = false;
-	var cocheC = false;
-	var cocheD = false;
-	var manqueA = [];
-	var manqueB = [];
-	var manqueC = [];
-	var manqueD = [];
-	var exigences = 0;
-	var autonomie = 0;
-	var soutien = 0;
-	var reconnaissance = 0;
-	for (var x = 1; x < 13; x++)
+	if (!ensureQuestionnaireIsComplete("i"))
 	{
-		var scoreA = document.getElementsByName("iA" + x);
-		var scoreB = document.getElementsByName("iB" + x);
-		var scoreC = document.getElementsByName("iC" + x);
-		var scoreD = document.getElementsByName("iD" + x);
-		for (var i = 0; i < 4; i++)
-		{
-			if (scoreA[i].checked)
-			{
-				exigences += parseInt(scoreA[i].value);
-				cocheA = true;
-			}
-			if (scoreB[i].checked)
-			{			
-				autonomie += parseInt(scoreB[i].value);
-				cocheB = true;
-			}
-			if (scoreC[i].checked)
-			{	
-				soutien += parseInt(scoreC[i].value);
-				cocheC = true;
-			}
-			if (scoreD[i].checked)
-			{
-				reconnaissance += parseInt(scoreD[i].value);
-				cocheD = true;
-			}
-		}
-		if (cocheA === false)
-		{
-			manqueA[(x-1)] = "iA" + x;
-			break;
-		}
-		if (cocheB === false)
-		{
-			manqueB[(x-1)] = "iB" + x;
-			break;
-		}
-		if (cocheC === false)
-		{
-			manqueC[(x-1)] = "iC" + x;
-			break;
-		}		
-		if (cocheD === false)
-		{
-			manqueD[(x-1)] = "iD" + x;
-			break;
-		}
-		cocheA = false;
-		cocheB = false;
-		cocheC = false;
-		cocheD = false;
-	}
-	if (manqueA.length > 0)
-	{
-		var indexpremier = manqueA.findIndex(function(element){return element != null;});
-		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Exigences");		
-		if (indexpremier === 0)
-		{
-			window.scrollTo(0,0);
-		}
-		else
-		{
-			document.getElementById("iA" + (indexpremier) + "3").scrollIntoView(true);			
-		}
 		return;
 	}
-	if (manqueB.length > 0)
+    let textToSave = "";
+	let commentairesExigences = document.getElementById("icommentairesExigences").value;
+	let commentairesAutonomie = document.getElementById("icommentairesAutonomie").value;
+	let commentairesSoutien = document.getElementById("icommentairesSoutien").value;
+	let commentairesReconnaissance = document.getElementById("icommentairesReconnaissance").value;
+	for (let x = 1; x < 13; x++)
 	{
-		var indexpremier = manqueB.findIndex(function(element){return element != null;});
-		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Autonomie");		
-		if (indexpremier === 0)
-		{
-			document.getElementById("iB123").scrollIntoView(true);
-			document.getElementById("iA123").scrollIntoView(true);			
-		}
-		else
-		{
-			document.getElementById("iB123").scrollIntoView(true);
-			document.getElementById("iB" + (indexpremier) + "3").scrollIntoView(true);			
-		}
-		return;
-	}
-	if (manqueC.length > 0)
-	{
-		var indexpremier = manqueC.findIndex(function(element){return element != null;});
-		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Soutien");		
-		if (indexpremier === 0)
-		{
-			document.getElementById("iC123").scrollIntoView(true);
-			document.getElementById("iB123").scrollIntoView(true);			
-		}
-		else
-		{
-			document.getElementById("iC123").scrollIntoView(true);
-			document.getElementById("iC" + (indexpremier) + "3").scrollIntoView(true);			
-		}
-		return;
-	}
-	if (manqueD.length > 0)
-	{
-		var indexpremier = manqueD.findIndex(function(element){return element != null;});
-		window.alert("Questionnaire incomplet : question " + (indexpremier + 1) + " de la partie Reconnaissance");		
-		if (indexpremier === 0)
-		{
-			document.getElementById("iD123").scrollIntoView(true);
-			document.getElementById("iC123").scrollIntoView(true);			
-		}
-		else
-		{
-			document.getElementById("iD123").scrollIntoView(true);
-			document.getElementById("iD" + (indexpremier) + "3").scrollIntoView(true);			
-		}
-		return;
-	}
-    var textToSave = "";
-	var commentairesExigences = document.getElementById("icommentairesExigences").value;
-	var commentairesAutonomie = document.getElementById("icommentairesAutonomie").value;
-	var commentairesSoutien = document.getElementById("icommentairesSoutien").value;
-	var commentairesReconnaissance = document.getElementById("icommentairesReconnaissance").value;
-	for (var x = 1; x < 13; x++)
-	{
-		var questionA = document.getElementsByName("iA" + x);
-		for (var i = 0; i < 4; i++)
+		let questionA = document.getElementsByName("iA" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (questionA[i].checked)
 			{
@@ -2156,10 +1987,10 @@ function recupTextAsFile(nomrecup)
 	}
 	textToSave += commentairesExigences.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
 	textToSave += "\n";
-	for (var x = 1; x < 13; x++)
+	for (let x = 1; x < 13; x++)
 	{
-		var questionB = document.getElementsByName("iB" + x);
-		for (var i = 0; i < 4; i++)
+		let questionB = document.getElementsByName("iB" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (questionB[i].checked)
 			{
@@ -2187,10 +2018,10 @@ function recupTextAsFile(nomrecup)
 	}
 	textToSave += commentairesAutonomie.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
 	textToSave += "\n";
-	for (var x = 1; x < 13; x++)
+	for (let x = 1; x < 13; x++)
 	{
-		var questionC = document.getElementsByName("iC" + x);
-		for (var i = 0; i < 4; i++)
+		let questionC = document.getElementsByName("iC" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (questionC[i].checked)
 			{
@@ -2218,10 +2049,10 @@ function recupTextAsFile(nomrecup)
 	}
 	textToSave += commentairesSoutien.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
 	textToSave += "\n";
-	for (var x = 1; x < 13; x++)
+	for (let x = 1; x < 13; x++)
 	{
-		var questionD = document.getElementsByName("iD" + x);
-		for (var i = 0; i < 4; i++)
+		let questionD = document.getElementsByName("iD" + x);
+		for (let i = 0; i < 4; i++)
 		{
 			if (questionD[i].checked)
 			{
@@ -2248,10 +2079,10 @@ function recupTextAsFile(nomrecup)
 		textToSave += ",";
 	}
 	textToSave += commentairesReconnaissance.replace(/\n/g, "/").replace(/\r/g, "/").replace(/,/g, ';');
-    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
-    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-	var fileNameToSaveAs = nomrecup;
-	var downloadLink = document.createElement("a");
+    let textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    let textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+	let fileNameToSaveAs = nomrecup;
+	let downloadLink = document.createElement("a");
     downloadLink.download = fileNameToSaveAs;
     downloadLink.innerHTML = "T&eacute;l&eacute;charger le fichier " + fileNameToSaveAs;
     downloadLink.href = textToSaveAsURL;
