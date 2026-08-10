@@ -1,50 +1,54 @@
-const CACHE_NAME = 'sociometres-pwa-v2';
-const ASSETS = [
-  './',
-  './index.html',
-  './styles.css',
-  './sociometres.js',
-  './sw.js',
-  './plotly.min.js',
-  './plotly-locale-fr.js',
-  './manifest.json',
-  './coquelicotpetit.png',
-  './favicon.ico'
+const CACHE_NAME = "rps-sociometres-v1";
+const APP_SHELL = [
+  "./",
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./manifest.webmanifest",
+  "./icon-192.svg",
+  "./icon-512.svg",
 ];
 
-self.addEventListener('install', event=>{
-  event.waitUntil(caches.open(CACHE_NAME).then(cache=> cache.addAll(ASSETS)));
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(APP_SHELL);
+    }),
+  );
   self.skipWaiting();
 });
 
-self.addEventListener('activate', event=>{
+self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then(cacheNames =>
-      Promise.all(cacheNames.filter(name => name !== CACHE_NAME).map(name => caches.delete(name)))
-    ).then(() => self.clients.claim())
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys
+          .filter((key) => key !== CACHE_NAME)
+          .map((key) => caches.delete(key)),
+      );
+    }),
   );
+  self.clients.claim();
 });
 
-self.addEventListener('fetch', event=>{
-  const request = event.request;
-  if (request.method !== 'GET') {
-    return;
-  }
-  // For navigation requests, try network first, fallback to cache
-  if(request.mode === 'navigate'){
-    event.respondWith(
-      fetch(request).then(resp=>{
-        // update cache cache with latest HTML
-        const copy = resp.clone();
-        caches.open(CACHE_NAME).then(c=> c.put('./', copy));
-        return resp;
-      }).catch(()=> caches.match('./'))
-    );
+self.addEventListener("fetch", (event) => {
+  if (event.request.method !== "GET") {
     return;
   }
 
-  // For other requests, try cache first
   event.respondWith(
-    caches.match(request).then(cached => cached || fetch(request).catch(()=> caches.match('./')))
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      return fetch(event.request)
+        .then((networkResponse) => {
+          const clonedResponse = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clonedResponse));
+          return networkResponse;
+        })
+        .catch(() => caches.match("./index.html"));
+    }),
   );
 });

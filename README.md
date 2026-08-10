@@ -1,1 +1,1 @@
-Sociomètres UGICT CGT
+# sociometres

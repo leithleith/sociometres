@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Sociomètres">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2838"/>
+      <stop offset="100%" stop-color="#2f5874"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="40" fill="url(#g1)"/>
+  <circle cx="63" cy="68" r="17" fill="#dff1ff"/>
+  <circle cx="129" cy="68" r="17" fill="#dff1ff"/>
+  <circle cx="96" cy="129" r="17" fill="#f2dbc5"/>
+  <path d="M63 83 L96 113 L129 83" fill="none" stroke="#f7f4ec" stroke-width="8" stroke-linecap="round"/>
+</svg>
