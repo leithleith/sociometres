@@ -1,7 +1,7 @@
 {
-  "name": "Questionnaires RPS et Sociomètres",
-  "short_name": "Questionnaires RPS et Sociomètres",
-  "description": "Application progressive web dédiée aux sociomètres et questionnaires RPS.",
+  "name": "Sociomètres",
+  "short_name": "Sociomètres",
+  "description": "Application progressive web dédiée aux sociomètres.",
   "lang": "fr",
   "start_url": "./",
   "scope": "./",

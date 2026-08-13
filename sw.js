@@ -1,4 +1,4 @@
-const CACHE_NAME = "rps-sociometres-v1";
+const CACHE_NAME = "sociometres-v1";
 const APP_SHELL = [
   "./",
   "./index.html",
