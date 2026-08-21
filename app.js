@@ -47,8 +47,8 @@ const menuData = [
   },
 ];
 const externalMenuLinks = {
-  github: "https://github.com/mattru_microsoft/sociometres",
-  "cc-by-nc-nd-4-0": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en",
+  github: "https://github.com/leithleith/sociometres",
+  "cc-by-nc-nd-4-0": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.fr",
 };
 const menuRoot = document.getElementById("menu");
 const contentRoot = document.getElementById("content");
@@ -495,7 +495,7 @@ const contentData = {
       "Bibliothèque graphique | Plotly.js graphing library: <a href='https://plotly.com/javascript/' target='_blank' rel='noopener noreferrer'>Plotly.js</a>",
       "Palettes de couleurs accessibles | colour-blind friendly color palettes: <a href='https://jfly.uni-koeln.de/color/#pallet' target='_blank' rel='noopener noreferrer'>Okabe-Ito</a> + <a href='https://sronpersonalpages.nl/~pault/#sec:colour_blindness' target='_blank' rel='noopener noreferrer'>Paul Tol muted</a>",
       "<a href='https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.fr' target='_blank' rel='noopener noreferrer'>Contenu sous licence CC BY-NC-ND 4.0</a> | <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en' target='_blank' rel='noopener noreferrer'>Content under CC BY-NC-ND 4.0 licence</a>",
-      "<a href='https://opensource.org/licenses/MIT' target='_blank' rel='noopener noreferrer'>Code sous licence MIT | Code under MIT licence</a>: <a href='https://github.com/mattru_microsoft/RPS' target='_blank' rel='noopener noreferrer'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20'><path d='M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.263.82-.583 0-.288-.01-1.05-.015-2.06-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.335-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.045.138 3.003.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.242 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.815 1.096.815 2.21 0 1.595-.015 2.88-.015 3.27 0 .322.216.698.825.58C20.565 21.795 24 17.297 24 12c0-6.63-5.37-12-12-12z'/></svg></a>",
+      "<a href='https://opensource.org/licenses/MIT' target='_blank' rel='noopener noreferrer'>Code sous licence MIT | Code under MIT licence</a>: <a href='https://github.com/leithleith/sociometres' target='_blank' rel='noopener noreferrer'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20'><path d='M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.263.82-.583 0-.288-.01-1.05-.015-2.06-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.335-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.02.005 2.045.138 3.003.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.242 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.815 1.096.815 2.21 0 1.595-.015 2.88-.015 3.27 0 .322.216.698.825.58C20.565 21.795 24 17.297 24 12c0-6.63-5.37-12-12-12z'/></svg></a>",
     ],
   },
 };
